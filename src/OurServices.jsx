@@ -34,7 +34,7 @@ const OurServices = () => {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-6 lg:gap-4 items-start md:items-end">
         {/* Left: Heading */}
         <div className="mb-6 md:mb-0 lg:-ml-20">
-          <h4 className="font-['Satisfy'] text-2xl mt-11 sm:text-3xl lg:text-[32px] font-bold lg:leading-[84px] text-[#A8C082] text-left lg:-mb-[15px] sm:mt-5">
+          <h4 className="font-['Raleway'] font-bold text-2xl mt-11 sm:text-3xl lg:text-[32px] font-bold lg:leading-[84px] text-[#A8C082] text-left lg:-mb-[15px] sm:mt-5">
             Our Services
           </h4>
           <h2 className="font-[dmSans] font-normal text-3xl sm:text-4xl lg:text-[48px] leading-tight lg:leading-[50px] text-gray-900 mt-2 text-left">
