@@ -1,13 +1,30 @@
-import React from 'react';
-import Header from './components/Header';
-import './index.css'; // Make sure Tailwind is connected
-import HeroSection from './components/HeroSection';
+import './App.css';
+
+import OurServices from './OurServices';
+import EcoFriendlyCleaning from './EcoFriendly';
+import FAQ from './FAQ';
+import Footer from './Footer';
+import HeartHero from "./HeartHero";
+import Navbar from './NavHero';
+import Reviews from './Reviews';
+import StepsSection from './Steps';
+import EstimateBanner from './EstimateBanner';
+import MainHero from './MainHero';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <HeroSection />
+    <div className="App">
+     <Navbar/>
+     <MainHero/>
+     <OurServices/>
+     <HeartHero/>
+     <EcoFriendlyCleaning/>
+     <StepsSection/>
+     <Reviews/>
+     <FAQ/>
+     <EstimateBanner/>
+     <Footer/>
+
     </div>
   );
 }
