@@ -103,7 +103,7 @@ const MainHero = () => {
       <div className="hidden lg:flex w-full grid lg:grid-cols-2 items-center gap-10 pt-0 mt-0">
         {/* Left Content */}
         <div className="max-w-lg">
-          <h1 className="font-['Satisfy'] font-bold text-[60px] leading-[60px] tracking-[0%] text-black text-left">
+          <h1 className="font-['Satisfy'] text-[60px] leading-[60px] tracking-[0%] text-black text-left">
             <span className="text-[rgba(168,192,130,1)]">Eco-Friendly</span> Cleaning for your Home
           </h1>
           <p className="font-['dmSans'] font-normal text-[20px] leading-[28px] tracking-[0%] text-gray-600 mt-4 text-left">
