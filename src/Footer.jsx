@@ -1,5 +1,5 @@
 import React from 'react';
-import Heart from "./pictures/Heart.png";
+import Heart from "./pictures/Heart & Home_square.png";
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="text-center md:text-left mb-8 md:mb-0">
             <img 
               alt="Heart & Home Green Clean logo with a house and a leaf" 
-              className="w-[187.382px] h-[153px] top-[40px] left-[75px]" 
+              className="w-[200px] h-[200px] top-[40px] left-[75px]" 
               src={Heart}
             />
             <p className="font-albertsans font-normal text-base leading-[160%] tracking-[0.3px] text-[rgba(113,113,113,1)]">

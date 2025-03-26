@@ -25,7 +25,7 @@ const Navbar = () => {
           <div className="flex-1">
             <img
               alt="Logo with a house and a leaf"
-              className="w-[100px] h-auto"
+              className="w-[120px] h-auto"
               src={House}
             />
           </div>
@@ -37,7 +37,7 @@ const Navbar = () => {
             <svg
               className="w-6 h-6"
               fill="none"
-              stroke="currentColor"
+              stroke="rgba(168,192,130,1)"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >

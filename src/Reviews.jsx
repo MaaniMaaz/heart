@@ -54,7 +54,7 @@ const Reviews = () => {
             <img 
               src={Left} 
               alt="Previous" 
-              className="h-7 w-4 md:h-6 md:w-6"
+              className="h-4 w-4 md:h-6 md:w-6 lg:h-6 lg:w-6"
             />
           </button>
 
@@ -67,7 +67,7 @@ const Reviews = () => {
             <img 
               src={Right}
               alt="Next" 
-              className="h-7 w-4 md:h-6 md:w-6"
+              className="h-4 w-4 md:h-6 md:w-6 lg:h-6 lg:w-6"
             />
           </button>
         </div>
