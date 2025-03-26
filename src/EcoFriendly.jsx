@@ -75,10 +75,10 @@ const EcoFriendlyCleaning = () => {
         {/* Text and button container */}
         <div className="absolute inset-0 flex flex-col justify-center items-start p-4 md:p-8 lg:p-12 z-10">
           <div className="max-w-[80%] md:max-w-[70%] lg:max-w-[60%]">
-            <h1 className="font-['Raleway'] font-bold text-lg sm:text-xl md:text-3xl lg:text-[54px] leading-tight md:leading-[50px] tracking-normal  text-left text-[rgba(222,157,157,1)]">
+            <h1 className="font-['Raleway'] font-bold text-[2.125rem] sm:text-xl md:text-3xl lg:text-[54px] leading-tight md:leading-[50px] tracking-normal  text-left text-[rgba(222,157,157,1)]">
               Eco-Friendly <br /> Cleaning With A <br/>Heart.
             </h1>
-            <button className="mt-2 lg:mt-4 w-[120px] sm:w-[160px] md:w-[200px] h-[28px] sm:h-[36px] md:h-[44px] rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] 
+            <button className="mt-2 lg:mt-4 w-[130px] sm:w-[160px] md:w-[200px] h-[36px] sm:h-[36px] md:h-[44px] rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] 
                             bg-[rgba(168,192,130,1)] text-white 
                             font-['Poppins'] font-semibold text-[10px] sm:text-xs md:text-sm lg:text-[16px] 
                             flex justify-center items-center">

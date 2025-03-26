@@ -13,6 +13,13 @@ export default {
         inter: ["Inter", "sans-serif"],
         poppins: ["Poppins",],
       },
+      screens: {
+        'iphone-se': '375px', // Custom breakpoint for iPhone SE
+        'iphone-xr': '414px',
+        'iphone-12-pro': '390px', 
+        'galaxy-s8-plus': '360px',
+        'ipad-air': '820px',
+      },
     },
   },
   plugins: [],

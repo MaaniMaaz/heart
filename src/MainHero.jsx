@@ -10,9 +10,9 @@ import Brush from "./pictures/Brush.png";
 
 const MainHero = () => {
   return (
-    <div className="bg-[#F9F6F3] min-h-screen flex flex-col items-end justify-start pl-24 pr-0 py-0 relative">
+    <div className="bg-[#F9F6F3] lg:min-h-screen min-h-[80vh] iphone-se:min-h-[100vh] iphone-xr:min-h-[75vh] iphone-12-pro:min-h-[80vh] galaxy-s8-plus:min-h-[90vh] ipad-air:min-h-[60vh] sm:min-h-[50vh] md:min-h-[80vh] flex flex-col items-end justify-start pl-24 pr-0 py-0 relative">
       {/* Mobile-specific overlay (hidden on lg) */}
-      <div className="lg:hidden absolute inset-0 bg-[#F9F6F3] z-10 flex flex-col px-4 pt-8">
+      <div className="lg:hidden absolute inset-0 bg-[#F9F6F3] z-10 flex flex-col px-4">
         {/* Text Content First on Mobile */}
         <div className="text-center mb-6">
           <h1 className="font-['Raleway'] font-bold text-4xl leading-[1.1] text-black">

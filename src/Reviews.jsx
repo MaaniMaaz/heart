@@ -44,7 +44,7 @@ const Reviews = () => {
         </p>
 
         {/* Arrow Navigation Controls */}
-        <div className="flex items-center justify-end mt-4 md:mt-6 gap-4">
+        <div className="flex items-center justify-end mt-4 md:mt-6 gap-0">
           {/* Previous Arrow */}
           <button
             onClick={prevReview}
