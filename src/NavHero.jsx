@@ -35,7 +35,7 @@ const Navbar = () => {
           <div className="flex-1">
             <img
               alt="Logo with a house and a leaf"
-              className="w-[100px] h-auto"
+              className="w-[160px] h-auto"
               src={House}
             />
           </div>

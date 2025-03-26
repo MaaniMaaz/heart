@@ -37,7 +37,7 @@ const EcoFriendlyCleaning = () => {
   return (
     <div ref={containerRef} className="bg-white flex items-center justify-center py-8 md:py-16 lg:py-0 lg:min-h-screen">
       {/* Main container with increased height for mobile */}
-      <div className="relative w-full max-w-[1306px] h-[400px] sm:h-[450px] md:aspect-[1306/515] md:h-auto rounded-tl-3xl rounded-br-3xl overflow-hidden mx-4 md:mx-8">
+      <div className="relative w-full max-w-[1306px] h-[380px] sm:h-[450px] md:aspect-[1306/515] md:h-auto rounded-tl-3xl rounded-br-3xl overflow-hidden mx-4 md:mx-8">
         {/* Background option 1: Placeholder image until video loads */}
         <div className="w-full h-full bg-gray-100">
           {/* You can add a placeholder image here */}
@@ -74,11 +74,11 @@ const EcoFriendlyCleaning = () => {
         
         {/* Text and button container */}
         <div className="absolute inset-0 flex flex-col justify-center items-start p-4 md:p-8 lg:p-12 z-10">
-          <div className="max-w-[80%] md:max-w-[70%] lg:max-w-[60%]">
-            <h1 className="font-['Raleway'] font-bold text-[2.125rem] sm:text-xl md:text-3xl lg:text-[54px] leading-tight md:leading-[50px] tracking-normal  text-left text-[rgba(222,157,157,1)]">
+          <div className="max-w-[80%] md:max-w-[70%] lg:max-w-[60%] max-h-10">
+            <h1 className="font-['Raleway'] font-bold text-[16px] sm:text-xl md:text-3xl lg:text-[54px] leading-tight md:leading-[50px] tracking-normal  text-left text-[rgba(222,157,157,1)]">
               Eco-Friendly <br /> Cleaning With A <br/>Heart.
             </h1>
-            <button className="mt-2 lg:mt-4 w-[130px] sm:w-[160px] md:w-[200px] h-[36px] sm:h-[36px] md:h-[44px] rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] 
+            <button className="mt-4 lg:mt-4 w-[130px] sm:w-[160px] md:w-[200px] h-[36px] sm:h-[36px] md:h-[44px] rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] 
                             bg-[rgba(168,192,130,1)] text-white 
                             font-['Poppins'] font-semibold text-[10px] sm:text-xs md:text-sm lg:text-[16px] 
                             flex justify-center items-center">
