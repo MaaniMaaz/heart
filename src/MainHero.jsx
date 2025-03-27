@@ -59,7 +59,7 @@ const MainHero = () => {
   };
 
   return (
-    <div className="bg-[#F9F6F3] lg:min-h-screen min-h-[100vh] iphone-se:min-h-[120vh] iphone-xr:min-h-[95vh] iphone-12-pro:min-h-[100vh] galaxy-s8-plus:min-h-[110vh] ipad-air:min-h-[80vh] sm:min-h-[70vh] md:min-h-[100vh] flex flex-col items-end justify-start lg:pl-24 pr-0 py-0 relative">
+    <div className="bg-[#F9F6F3] lg:min-h-screen min-h-[100vh] iphone-se:min-h-[120vh] iphone-xr:min-h-[95vh] iphone-12-pro:min-h-[100vh] galaxy-s8-plus:min-h-[110vh] ipad-air:min-h-[80vh] sm:min-h-[70vh] md:min-h-[100vh] flex flex-col items-end justify-start lg:pl-24 pr-0 py-0 relative pb-14">
       {/* Mobile-specific overlay (hidden on lg) */}
       <div className="lg:hidden absolute inset-0 bg-[#F9F6F3] z-10 flex flex-col px-4 pb-24">
         {/* Text Content First on Mobile */}
@@ -95,7 +95,7 @@ const MainHero = () => {
         
         {/* Image Content Second on Mobile - Full coverage with badges */}
         <motion.div 
-          className="relative w-full max-w-md mx-auto mt-4 mb-24"
+          className="relative w-full max-w-md mx-auto mt-4 mb-12"
           initial="hidden"
           animate="visible"
           variants={fadeIn}
@@ -306,8 +306,12 @@ const MainHero = () => {
         </motion.div>
       </div>
 
-      {/* Bottom Icons Section - with higher z-index */}
-      <div className="absolute bottom-8 lg:-bottom-[2rem] border-white border-[1.5px] bg-[#F9F6F3] left-1/2 transform -translate-x-1/2 h-12 lg:h-16 rounded-[15px] lg:rounded-[25px] w-[90%] lg:w-[785px] px-3 lg:px-6 py-2 lg:py-3 flex items-center justify-between gap-1 lg:gap-2 z-50">
+      {/* Fixed Bottom Icons Section */}
+      <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-8 
+                    border-white border-[1.5px] bg-[#F9F6F3] 
+                    h-12 lg:h-16 rounded-[15px] lg:rounded-[25px] 
+                    w-[90%] lg:w-[785px] px-3 lg:px-6 py-2 lg:py-3 
+                    flex items-center justify-between gap-1 lg:gap-2 z-50">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
