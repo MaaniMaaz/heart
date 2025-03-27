@@ -43,11 +43,11 @@ export default function FAQ() {
 
         <div className="absolute  top-[70px] left-[-346px] w-32 h-32 lg:w-72 lg:h-72 bg-[rgba(222,127,127,0.5)] rounded-full"></div>
         {/* Top Right Circle */}
-        <div className="absolute  top-[280px] right-[-280px] w-28 h-28 lg:w-36 lg:h-36 bg-[rgba(255,199,199,1)] rounded-full"></div>
+        <div className="absolute  top-[280px] right-[-160px] w-28 h-28 lg:w-36 lg:h-36 bg-[rgba(255,199,199,1)] rounded-full"></div>
         {/* Bottom Left Circle */}
         
         {/* Bottom Right Circle */}
-        <div className="absolute  bottom-[-80px] right-[-322px]  w-32 h-32 lg:w-64 lg:h-64 bg-[rgba(222,127,127,0.5)] rounded-full"></div>
+        <div className="absolute  bottom-[-80px] right-[-160px]  w-32 h-32 lg:w-64 lg:h-64 bg-[rgba(222,127,127,0.5)] rounded-full"></div>
       </div>
 
       {/* FAQ Content */}

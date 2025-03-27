@@ -59,9 +59,9 @@ const MainHero = () => {
   };
 
   return (
-    <div className="bg-[#F9F6F3] lg:min-h-screen min-h-[100vh] iphone-se:min-h-[120vh] iphone-xr:min-h-[95vh] iphone-12-pro:min-h-[100vh] galaxy-s8-plus:min-h-[110vh] ipad-air:min-h-[80vh] sm:min-h-[70vh] md:min-h-[100vh] flex flex-col items-end justify-start lg:pl-24 pr-0 py-0 relative pb-14">
-      {/* Mobile-specific overlay (hidden on lg) */}
-      <div className="lg:hidden absolute inset-0 bg-[#F9F6F3] z-10 flex flex-col px-4 pb-24">
+    <div className="bg-[#F9F6F3] flex flex-col items-end justify-start lg:pl-24 pr-0 relative ">
+      {/* Mobile-specific content (hidden on lg) */}
+      <div className="lg:hidden bg-[#F9F6F3] flex flex-col px-4 w-full pt-6">
         {/* Text Content First on Mobile */}
         <motion.div 
           className="text-center mb-6"
@@ -93,14 +93,14 @@ const MainHero = () => {
           </motion.button>
         </motion.div>
         
-        {/* Image Content Second on Mobile - Full coverage with badges */}
+        {/* Image Content Second on Mobile */}
         <motion.div 
-          className="relative w-full max-w-md mx-auto mt-4 mb-12"
+          className="relative w-full max-w-md mx-auto"
           initial="hidden"
           animate="visible"
           variants={fadeIn}
         >
-          <div className="relative w-full h-[350px]">
+          <div className="relative w-full h-[280px]">
             {/* Pink background with rounded corners */}
             <div className="absolute inset-0 rounded-tl-[60px] rounded-br-[60px]"></div>
             
@@ -187,10 +187,13 @@ const MainHero = () => {
             />
           </div>
         </motion.div>
+        
+        {/* Fixed space for the bottom icons */}
+        <div className="h-16 w-full"></div>
       </div>
 
       {/* Original LG design (hidden on mobile) */}
-      <div className="hidden lg:flex w-full grid lg:grid-cols-2 items-center gap-10 pt-0 mt-0">
+      <div className="hidden lg:flex w-full grid lg:grid-cols-2 items-center gap-10 pt-6 min-h-screen pb-8">
         {/* Left Content */}
         <motion.div 
           className="max-w-[720px]"
@@ -306,61 +309,75 @@ const MainHero = () => {
         </motion.div>
       </div>
 
-      {/* Fixed Bottom Icons Section */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-8 
-                    border-white border-[1.5px] bg-[#F9F6F3] 
-                    h-12 lg:h-16 rounded-[15px] lg:rounded-[25px] 
-                    w-[90%] lg:w-[785px] px-3 lg:px-6 py-2 lg:py-3 
-                    flex items-center justify-between gap-1 lg:gap-2 z-50">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex items-center gap-1 lg:gap-2 text-gray-600"
-        >
-          <img 
-            src={Clock} 
-            alt="Clock" 
-            className="w-5 h-5 lg:w-7 lg:h-7" 
-          />
-          <span className="font-inter font-semibold text-xs lg:text-[20px] text-black">
-            24/4 Support
-          </span>
-        </motion.div>
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex items-center gap-1 lg:gap-2 text-gray-600"
-        >
-          <img 
-            src={Spray} 
-            alt="Spray" 
-            className="w-4 h-5 lg:w-5 lg:h-7" 
-          />
-          <span className="font-inter font-semibold text-xs lg:text-[18px] text-black">
-            Top-Notch Service
-          </span>
-        </motion.div>
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex items-center gap-1 lg:gap-2 text-gray-600"
-        >
-          <img 
-            src={Secure} 
-            alt="Secure" 
-            className="w-5 h-4 lg:w-7 lg:h-6" 
-          />
-          <span className="font-inter font-semibold text-xs lg:text-[20px] text-black">
-            Secure Payment
-          </span>
-        </motion.div>
+      {/* Bottom Icons Section - with fixed position and high z-index */}
+      <div className="fixed-position-wrapper mt-8">
+        <div className=" absolute left-1/2 transform -translate-x-1/2 
+                      bottom-0
+                      border-white border-[1.5px] bg-[#F9F6F3] 
+                      h-12 lg:h-16 rounded-[15px] lg:rounded-[25px] 
+                      w-[90%] lg:w-[785px] px-3 lg:px-6 py-2 lg:py-3 
+                      flex items-center justify-between gap-1 lg:gap-2 z-[100]
+                      shadow-md">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex items-center gap-1 lg:gap-2 text-gray-600"
+          >
+            <img 
+              src={Clock} 
+              alt="Clock" 
+              className="w-5 h-5 lg:w-7 lg:h-7" 
+            />
+            <span className="font-inter font-semibold text-xs lg:text-[20px] text-black">
+              24/4 Support
+            </span>
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="flex items-center gap-1 lg:gap-2 text-gray-600"
+          >
+            <img 
+              src={Spray} 
+              alt="Spray" 
+              className="w-4 h-5 lg:w-5 lg:h-7" 
+            />
+            <span className="font-inter font-semibold text-xs lg:text-[18px] text-black">
+              Top-Notch Service
+            </span>
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="flex items-center gap-1 lg:gap-2 text-gray-600"
+          >
+            <img 
+              src={Secure} 
+              alt="Secure" 
+              className="w-5 h-4 lg:w-7 lg:h-6" 
+            />
+            <span className="font-inter font-semibold text-xs lg:text-[20px] text-black">
+              Secure Payment
+            </span>
+          </motion.div>
+        </div>
       </div>
+
+      {/* Add this CSS to your component or global styles */}
+      <style jsx>{`
+        .fixed-position-wrapper {
+          position: relative;
+          width: 100%;
+          height: 0;
+          overflow: visible;
+        }
+      `}</style>
     </div>
   );
 };
