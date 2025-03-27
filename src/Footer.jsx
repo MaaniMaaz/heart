@@ -1,6 +1,6 @@
 import React from 'react';
 import Heart from "./pictures/Heart & Home_square.png";
-import HomeBg from "./pictures/HeartHDbg.png"
+import HomeBg from "./pictures/HeartHDbg (1).png"
 
 const Footer = () => {
   return (
@@ -39,9 +39,9 @@ const Footer = () => {
             <p>
               <a 
                 className="text-[rgba(113,113,113,1)] hover:underline font-albertsans font-normal text-base leading-[160%] tracking-[0.3px]" 
-                href="mailto:HeartHomeGreenClean@gmail.com"
+                href="mailto:info@heartandhomegreenclean.com"
               >
-                HeartHomeGreenClean@gmail.com
+                 info@heartandhomegreenclean.com
               </a>
             </p>
           </div>

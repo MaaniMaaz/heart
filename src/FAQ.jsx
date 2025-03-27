@@ -5,26 +5,26 @@ import Down from "./pictures/downarrow.png";
 
 const faqs = [
   {
-    question: "What is UX design?",
+    question: "What areas do you serve?",
     answer:
-      "UX design stands for User Experience design. It is the process of designing digital or physical products that are easy to use, intuitive, and enjoyable for the user.",
+      "We proudly serve Arizona West Valley, including surrounding communities",
   },
   {
-    question: "What are the key principles of UX design?",
-    answer: "UX design stands for User Experience design.",
+    question: "Are your cleaning products safe for children and pets?",
+    answer: "Yes! We use 100% eco-friendly, non-toxic products that are safe for kids, pets, and allergy-sensitive households.",
   },
   {
-    question: "What is the difference between UX and UI design?",
-    answer: "UX design stands for User Experience design.",
+    question: "How do I book a cleaning?",
+    answer: "You can schedule online, call/text us at (480) 999-8018, or email us at info@heartandhomegreenclean.com.",
   },
-  {
-    question: "What is a wireframe?",
-    answer: "UX design stands for User Experience design.",
-  },
-  {
-    question: "What is user testing?",
-    answer: "UX design stands for User Experience design.",
-  },
+  // {
+  //   question: "What is a wireframe?",
+  //   answer: "UX design stands for User Experience design.",
+  // },
+  // {
+  //   question: "What is user testing?",
+  //   answer: "UX design stands for User Experience design.",
+  // },
 ];
 
 export default function FAQ() {

@@ -39,11 +39,14 @@ const Reviews = () => {
           {testimonials[currentIndex].name}
         </h3>
         
-        <p className="font-['DM-Sans'] text-base sm:text-lg md:text-xl lg:text-[28px] leading-normal md:leading-[50px] text-left text-gray-800 mt-2 md:mt-4">
-          "{testimonials[currentIndex].review}"
-        </p>
+        {/* Fixed-height container with reduced height */}
+        <div className="min-h-[100px] md:min-h-[120px] lg:min-h-[150px]">
+          <p className="font-['DM-Sans'] text-base sm:text-lg md:text-xl lg:text-[28px] leading-normal md:leading-[50px] text-left text-gray-800 mt-2 md:mt-4">
+            "{testimonials[currentIndex].review}"
+          </p>
+        </div>
 
-        {/* Arrow Navigation Controls */}
+        {/* Arrow Navigation Controls - Original style with darker arrows */}
         <div className="flex items-center justify-end mt-4 md:mt-6 gap-0">
           {/* Previous Arrow */}
           <button
@@ -55,6 +58,7 @@ const Reviews = () => {
               src={Left} 
               alt="Previous" 
               className="h-4 w-4 md:h-6 md:w-6 lg:h-6 lg:w-6"
+              style={{ filter: 'brightness(0) invert(1) contrast(1.75)' }}
             />
           </button>
 
@@ -68,6 +72,7 @@ const Reviews = () => {
               src={Right}
               alt="Next" 
               className="h-4 w-4 md:h-6 md:w-6 lg:h-6 lg:w-6"
+              style={{ filter: 'brightness(0) invert(1) contrast(1.75)' }}
             />
           </button>
         </div>
