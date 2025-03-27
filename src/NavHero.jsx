@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import House from "./pictures/HeartHDbg (1).png";
 import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
             href="#"
             whileHover={{ scale: 1.1 }}
           >
-            Home
+           <Link to="/">Home</Link> 
           </motion.a>
           <motion.a 
             initial={{ y: -10, opacity: 0 }}
@@ -48,7 +49,7 @@ const Navbar = () => {
             href="#"
             whileHover={{ scale: 1.1 }}
           >
-            Services
+            <Link to="/services"> Services </Link> 
           </motion.a>
           <motion.a 
             initial={{ y: -10, opacity: 0 }}
@@ -58,7 +59,7 @@ const Navbar = () => {
             href="#"
             whileHover={{ scale: 1.1 }}
           >
-            Contact
+           <Link to="/contact">Contact </Link>
           </motion.a>
         </div>
 
@@ -122,7 +123,7 @@ const Navbar = () => {
               className="block font-averia text-xl font-bold tracking-[0.3px] px-4 py-2" 
               href="#"
             >
-              Home
+             <Link to="/"> Home </Link>
             </motion.a>
             <motion.a 
               initial={{ x: -20, opacity: 0 }}
@@ -140,7 +141,7 @@ const Navbar = () => {
               className="block font-averia text-xl font-bold tracking-[0.3px] px-4 py-2" 
               href="#"
             >
-              Services
+             <Link to="/services"> Services </Link>
             </motion.a>
             <motion.a 
               initial={{ x: -20, opacity: 0 }}
@@ -149,7 +150,7 @@ const Navbar = () => {
               className="block font-averia text-xl font-bold tracking-[0.3px] px-4 py-2" 
               href="#"
             >
-              Contact
+            <Link to="/contact">Contact</Link>  
             </motion.a>
           </motion.div>
         )}

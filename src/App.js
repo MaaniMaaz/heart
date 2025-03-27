@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import OurServices from './OurServices';
 import EcoFriendlyCleaning from './EcoFriendly';
@@ -10,11 +11,17 @@ import Reviews from './Reviews';
 import StepsSection from './Steps';
 import EstimateBanner from './EstimateBanner';
 import MainHero from './MainHero';
+import Services from "./Services/Services"
+import Contact from "./Contact/Contact"
 
 function App() {
   return (
     <div className="App">
+      <Router>
      <Navbar/>
+     <Routes>
+      <Route path='/' element={
+        <> 
      <MainHero/>
      <OurServices/>
      <HeartHero/>
@@ -23,7 +30,13 @@ function App() {
      <Reviews/>
      <FAQ/>
      <EstimateBanner/>
+     </>
+      }/>
+      <Route path='/services' element={<Services/>} />
+      <Route path='/contact' element={<Contact/>} />
+     </Routes>
      <Footer/>
+     </Router>
 
     </div>
   );
