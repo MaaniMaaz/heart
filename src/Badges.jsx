@@ -30,7 +30,7 @@ const BadgeGrid = () => {
 
   return (
     <div className="container px-4 mx-auto">
-      <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8 px-4 sm:px-8 md:px-12 lg:px-20 pb-8">
+      <div className="flex flex-wrap justify-center gap-[2px] md:gap-6 lg:gap-8 px-4 sm:px-8 md:px-12 lg:px-20 pb-8">
         {imageData.map((image) => (
           <div 
             key={image.id} 

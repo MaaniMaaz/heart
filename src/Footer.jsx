@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="bg-[#f5f5f0] text-gray-700 px-8 lg:px-12 xl:px-32">
-      <div className='flex lg:justify-end justify-end lg:-mr-[100px] '> 
+      <div className='flex lg:justify-end justify-end lg:-mr-[100px] ipad-pro:-mr-[20px] '> 
      <img src={logo} alt='' className='w-24 h-16' />
      </div>
       <div className="container mx-auto pt-0 pb-10  px-4 lg:-mt-[60px]">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo and Description */}
-          <div className="text-center md:text-left mb-8 md:mb-0">
+          <div className="text-center md:text-left mb-8 md:mb-0 ">
             <img 
               alt="Heart & Home Green Clean logo with a house and a leaf" 
               className="w-[200px] h-[200px] top-[40px] left-0 relative" 

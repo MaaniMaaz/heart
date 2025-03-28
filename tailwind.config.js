@@ -19,6 +19,7 @@ export default {
         'iphone-12-pro': '390px', 
         'galaxy-s8-plus': '360px',
         'ipad-air': '820px',
+        'ipad-pro': { 'min': '1024px', 'max': '1366px' },
       },
     },
   },
