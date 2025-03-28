@@ -13,6 +13,7 @@ import EstimateBanner from './EstimateBanner';
 import MainHero from './MainHero';
 import Services from "./Services/Services"
 import Contact from "./Contact/Contact"
+import About from "./About/AboutUs"
 
 function App() {
   return (
@@ -34,6 +35,8 @@ function App() {
       }/>
       <Route path='/services' element={<Services/>} />
       <Route path='/contact' element={<Contact/>} />
+      <Route path='/about' element={<About/>} />
+    
      </Routes>
      <Footer/>
      </Router>

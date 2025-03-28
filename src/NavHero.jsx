@@ -29,7 +29,7 @@ const Navbar = () => {
             href="#"
             whileHover={{ scale: 1.1 }}
           >
-            About
+           <Link to="/about">About </Link> 
           </motion.a>
           <div className="flex flex-col items-center">
             <motion.img
