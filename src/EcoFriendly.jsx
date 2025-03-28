@@ -7,7 +7,7 @@ const EcoFriendlyCleaning = () => {
   const containerRef = useRef(null);
 
   return (
-    <div ref={containerRef} className="bg-white flex items-center justify-center py-8 md:py-16 lg:py-0 lg:min-h-screen">
+    <div ref={containerRef} className="bg-white flex items-center justify-center py-8 md:py-16 lg:py-0 lg:min-h-screen md:min-h-[60vh]">
       {/* Main container with asymmetric rounded corners exactly matching the image */}
       <div className="relative w-full max-w-[1500px] h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden mx-4 md:mx-8" 
            style={{
