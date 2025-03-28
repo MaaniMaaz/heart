@@ -1,0 +1,111 @@
+/* iPad Pro (portrait and landscape) */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    /* Main container adjustments */
+    .bg-\[\#F9F6F3\] {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  
+    /* Show mobile layout but with larger spacing */
+    .lg\:hidden {
+      display: flex;
+      padding-top: 4rem;
+    }
+    
+    .lg\:flex {
+      display: none;
+    }
+  
+    /* Text content adjustments */
+    .font-\[\'Raleway\'\] {
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+  
+    .font-\[\'dmSans\'\] {
+      font-size: 1.1rem;
+      line-height: 1.6rem;
+    }
+  
+    /* Image container adjustments */
+    .relative.w-full.max-w-md.mx-auto {
+      max-width: 600px;
+      margin-top: 3rem;
+    }
+  
+    .relative.w-full.h-\[280px\] {
+      height: 350px;
+    }
+  
+    /* Badge positioning adjustments */
+    .absolute.-top-5.-left-3 {
+      top: -1.5rem;
+      left: -1rem;
+    }
+  
+    .absolute.-top-4.right-0 {
+      top: -1rem;
+      right: 1rem;
+    }
+  
+    .absolute.-bottom-4.-left-2 {
+      bottom: -1rem;
+      left: 0.5rem;
+    }
+  
+    /* Button adjustments */
+    .mt-4.w-full.h-\[46px\] {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    /* Bottom icons bar adjustments */
+    .absolute.left-1\/2.transform.-translate-x-1\/2 {
+      width: 95%;
+      bottom: -1rem;
+    }
+  
+    /* Star decorations adjustments */
+    .absolute.top-8.right-8 {
+      top: 3rem;
+      right: 3rem;
+    }
+  
+    .absolute.top-24.left-4 {
+      top: 6rem;
+      left: 2rem;
+    }
+  
+    .absolute.-left-3.bottom-16 {
+      left: -0.5rem;
+      bottom: 5rem;
+    }
+  }
+  
+  /* iPad Pro landscape specific adjustments */
+  @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+    /* Slightly different layout for landscape */
+    .lg\:hidden {
+      flex-direction: row;
+      align-items: center;
+      gap: 3rem;
+      padding-top: 2rem;
+    }
+  
+    .text-center.mb-6 {
+      text-align: left;
+      margin-bottom: 0;
+      flex: 1;
+    }
+  
+    .relative.w-full.max-w-md.mx-auto {
+      flex: 1;
+      margin-top: 0;
+    }
+  
+    .mt-4.w-full.h-\[46px\] {
+      width: auto;
+      margin-left: 0;
+    }
+  }

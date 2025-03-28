@@ -8,6 +8,7 @@ import Shield from "./pictures/Shield-Done.png";
 import Activity from "./pictures/Activity.png";
 import Star from "./pictures/Star.png";
 import Brush from "./pictures/Brush.png";
+import "./MainHero.css";
 
 const MainHero = () => {
   // Animation variants

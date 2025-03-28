@@ -14,6 +14,7 @@ import MainHero from './MainHero';
 import Services from "./Services/Services"
 import Contact from "./Contact/Contact"
 import About from "./About/AboutUs"
+import TeamSection from './TeamSection';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
      <EcoFriendlyCleaning/>
      <StepsSection/>
      <Reviews/>
+     <TeamSection/>
      <FAQ/>
      <EstimateBanner/>
      </>

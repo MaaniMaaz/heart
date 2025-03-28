@@ -95,7 +95,7 @@ const CleanHomeSteps = () => {
           <div className="bg-[rgba(222,157,157,1)] w-[100px] p-6 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mb-4 top-[237px] left-[282px] pulse-on-hover">
             <img src={Dollar} alt="Estimate" className="w-12 floating" />
           </div>
-          <h3 className="font-dm-sans font-semibold text-base leading-[100%] tracking-normal text-center capitalize text-gray-500">Get Your Free Estimate</h3>
+          <h3 className="font-[dmSans] font-semibold text-base leading-[100%] tracking-normal text-center capitalize text-gray-500">Get Your Free Estimate</h3>
           <p className="font-roboto font-light text-sm leading-6 tracking-normal text-[#423D3D] mt-2">
             Simply fill out our easy estimate form or call us at 
             <a href="tel:4809998018" className="text-[#DE9D9D] font-medium transition-colors duration-300 hover:text-[#c77e7e]"> (480) 999-8018 </a> 
