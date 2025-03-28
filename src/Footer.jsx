@@ -2,6 +2,7 @@ import React from 'react';
 import Heart from "./pictures/Heart & Home_square.png";
 import HomeBg from "./pictures/HeartHDbg (1).png";
 import logo from "./pictures/Ecologo.png";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="bg-[#f5f5f0] text-gray-700 px-8 lg:px-12 xl:px-32">
@@ -57,22 +58,22 @@ const Footer = () => {
             <ul className="mt-2 space-y-2">
               <li>
                 <a className="text-[rgba(113,113,113,1)] hover:text-gray-900 hover:underline" href="#">
-                  Home
+                <Link to="/">Home</Link>  
                 </a>
               </li>
               <li>
                 <a className="text-[rgba(113,113,113,1)] hover:text-gray-900 hover:underline" href="#">
-                  About
+                  <Link to="/about">About</Link> 
                 </a>
               </li>
               <li>
                 <a className="text-[rgba(113,113,113,1)] hover:text-gray-900 hover:underline" href="#">
-                  Services
+                 <Link to="/services">Services</Link> 
                 </a>
               </li>
               <li>
                 <a className="text-[rgba(113,113,113,1)] hover:text-gray-900 hover:underline" href="#">
-                  Contact
+                  <Link to="/contact">Contact</Link>
                 </a>
               </li>
             </ul>
