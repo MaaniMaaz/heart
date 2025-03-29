@@ -72,7 +72,7 @@ const OurServices = () => {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-7 lg:gap-4 items-start md:items-end">
         {/* Left: Heading */}
         <motion.div 
-          className="mb-6 ipad-pro:mb-0 lg:-ml-20 xl:-ml-20 ipad-pro:-ml-8 md:mb-12 "
+          className="mb-6 ipad-pro:mb-0 lg:-ml-20 xl:-ml-20 ipad-pro:-ml-8 ipad-air::mb-12 "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
