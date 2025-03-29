@@ -132,7 +132,7 @@ const Navbar = () => {
               className="block font-['Raleway'] text-xl font-bold tracking-[0.3px] px-4 py-2" 
               href="#"
             >
-              About
+             <Link to="/about">About</Link> 
             </motion.a>
             <motion.a 
               initial={{ x: -20, opacity: 0 }}
