@@ -49,9 +49,9 @@ const EcoFriendlyCleaning = () => {
         </div>
         
         {/* Mobile positioning uses absolute distance from left instead of percentage */}
-        <div className="absolute top-1/2 sm:left-[20%] transform -translate-y-1/2 sm:-translate-x-1/2 z-10 pl-3 sm:pl-0">
+        <div className="absolute top-1/2 sm:left-[20%] transform -translate-y-1/2 sm:-translate-x-1/2 z-10 pl-3 sm:pl-0 ">
           <div>
-            <h1 className="font-['Raleway'] font-bold text-[18px] sm:text-3xl md:text-[2rem] lg:text-5xl leading-tight tracking-normal text-left text-[#f5b7b7]" 
+            <h1 className="font-['Raleway'] font-bold text-[18px] sm:text-3xl md:text-[2rem] lg:text-5xl leading-tight tracking-normal text-left text-[#f5b7b7] ipad-pro:pl-7" 
                 style={{ 
                   textShadow: '2px 2px 4px rgba(0,0,0,0.2)',
                   letterSpacing: '0.5px'
@@ -66,7 +66,7 @@ const EcoFriendlyCleaning = () => {
               <button className="w-[90px] h-[25px] sm:w-[160px] sm:h-[36px] md:w-[200px] md:h-[44px] rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] 
                             bg-[rgba(168,192,130,1)] text-white 
                             font-['Raleway']font-semibold text-[9px] sm:text-xs md:text-sm lg:text-[16px] 
-                            flex justify-center items-center">
+                            flex justify-center items-center ipad-pro:pl-7">
                 Get Your Free Estimate
               </button>
             </div>
