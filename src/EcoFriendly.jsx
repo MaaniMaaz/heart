@@ -51,7 +51,7 @@ const EcoFriendlyCleaning = () => {
         {/* Mobile positioning uses absolute distance from left instead of percentage */}
         <div className="absolute top-1/2 sm:left-[20%] transform -translate-y-1/2 sm:-translate-x-1/2 z-10 pl-3 sm:pl-0">
           <div>
-            <h1 className="font-['Raleway'] font-bold text-[18px] sm:text-3xl md:text-4xl lg:text-5xl leading-tight tracking-normal text-left text-[#f5b7b7]" 
+            <h1 className="font-['Raleway'] font-bold text-[18px] sm:text-3xl md:text-[2rem] lg:text-5xl leading-tight tracking-normal text-left text-[#f5b7b7]" 
                 style={{ 
                   textShadow: '2px 2px 4px rgba(0,0,0,0.2)',
                   letterSpacing: '0.5px'

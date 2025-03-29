@@ -3,7 +3,7 @@ import Dollar from "./pictures/Doll.png";
 import Bad from "./pictures/bad.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBroom } from '@fortawesome/free-solid-svg-icons';
-import { faBed } from '@fortawesome/free-regular-svg-icons'
+import { faStar } from '@fortawesome/free-regular-svg-icons'
 import TopArrow from "./pictures/TopArrow.png";
 import BottomArrow from "./pictures/BottomArrow.png";
 
@@ -118,13 +118,26 @@ const CleanHomeSteps = () => {
         
         {/* Step 3 */}
         <div className="flex flex-col items-center max-w-xs animate-on-scroll step-3">
-          <div className="bg-[rgba(222,157,157,1)] w-[100px] p-6 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mb-4 top-[237px] left-[282px] pulse-on-hover">
-            <img src={Bad} alt="Relax" className="w-12 h-12 floating" />
-          </div>
-          <h3 className="font-dm-sans font-semibold text-base leading-[100%] tracking-normal capitalize text-gray-500">Your Sit Back And Relax Goes Here</h3>
-          <p className="font-['Raleway'] font-light text-sm leading-6 tracking-normal text-[#423D3D] mt-2">
-            Come back to a clean home and spend your time with those you love and doing what you love.
-          </p>
+        <div className="bg-[rgba(222,157,157,1)] w-[100px] p-6 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mb-4 top-[237px] left-[282px] pulse-on-hover">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="48"  
+    height="48" 
+    fill="none"
+    stroke="white"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="floating"
+  >
+    <path d="m12 3l-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275zM5 3v4m14 10v4M3 5h4m10 14h4" />
+  </svg>
+</div>
+<h3 className="font-dm-sans font-semibold text-base leading-[100%] tracking-normal capitalize text-gray-500">Your Sit Back And Relax Goes Here</h3>
+<p className="font-['Raleway'] font-light text-sm leading-6 tracking-normal text-[#423D3D] mt-2">
+  Come back to a clean home and spend your time with those you love and doing what you love.
+</p>
         </div>
       </div>
     </div>
