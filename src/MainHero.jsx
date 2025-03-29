@@ -8,6 +8,13 @@ import Shield from "./pictures/Shield-Done.png";
 import Activity from "./pictures/Activity.png";
 import Star from "./pictures/Star.png";
 import Brush from "./pictures/Brush.png";
+
+// Import the images for the badges
+import Insured from './pictures/insuredresize.png';
+import LocallyOwned from './pictures/locallyresize.png';
+import Satisfaction from './pictures/satisfactionresize.png';
+import Ssa from './pictures/ssaresize.png';
+
 import "./MainHero.css";
 
 const MainHero = () => {
@@ -58,6 +65,30 @@ const MainHero = () => {
       }
     })
   };
+
+  // Badge data
+  const imageData = [
+    {
+      id: 1,
+      src: Insured,
+      alt: "Bonded Satisfaction Guaranteed",
+    },
+    {
+      id: 2,
+      src: LocallyOwned,
+      alt: "100% Locally Owned",
+    },
+    {
+      id: 3,
+      src: Satisfaction,
+      alt: "Surprise",
+    },
+    {
+      id: 4,
+      src: Ssa,
+      alt: "Featured on AZ Mom Podcast",
+    },
+  ];
 
   return (
     <div className="bg-[#F9F6F3] flex flex-col items-end justify-start lg:pl-24 pr-0 relative ">
@@ -140,9 +171,9 @@ const MainHero = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-gray-800">Qualified</p>
-                  <p className="text-xs text-gray-800">Locally Owned &</p>
-                  <p className="text-xs text-gray-800">Operated</p>
+                  <p className="text-sm font-bold text-gray-800">Trusted</p>
+                  <p className="text-xs text-gray-800"> Eco-Friendly &</p>
+                  <p className="text-xs text-gray-800"> Family-Owned</p>
                 </div>
               </div>
             </motion.div>
@@ -158,8 +189,8 @@ const MainHero = () => {
                   <div className="absolute -top-1 -right-1 w-2 h-2 bg-[rgba(168,192,130,1)] rounded-full"></div>
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-gray-800">Best</p>
-                  <p className="text-xs text-gray-800">Insured & Bonded</p>
+                  <p className="text-sm font-bold text-gray-800">Reliable</p>
+                  <p className="text-xs text-gray-800">Fully Insured & Bonded for Your Peace of Mind</p>
                 </div>
               </div>
             </motion.div>
@@ -292,7 +323,7 @@ const MainHero = () => {
             variants={badgeAnimation}
           >
             <img src={Activity} alt="Check Icon" className="w-12 h-13 text-[rgba(168,192,130,1)]" />
-            <h1 className="font-poppins font-semibold text-[16px] text-gray-700 text-left">Best <br /><span className="font-poppins font-medium text-[16px] text-[#2F2F2F]">Insured & Bonded</span></h1>
+            <h1 className="font-poppins font-semibold text-[16px] text-gray-700 text-left">Reliable <br /><span className="font-poppins font-medium text-[16px] text-[#2F2F2F]"> Fully Insured & Bonded for Your Peace of Mind</span></h1>
           </motion.div>
 
           <motion.div 
@@ -305,68 +336,36 @@ const MainHero = () => {
                 <path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65z" />
               </svg>
             </div>
-            <h1 className="font-poppins font-semibold text-[16px] text-gray-700 text-left ml-5">Qualified<br /><span className="font-poppins font-medium text-[16px] text-[#2F2F2F]">Locally Owned & Operated</span></h1>
+            <h1 className="font-poppins font-semibold text-[16px] text-gray-700 text-left ml-5">Trusted<br /><span className="font-poppins font-medium text-[16px] text-[#2F2F2F]">Eco-Friendly & Family-Owned"</span></h1>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Bottom Icons Section - with fixed position and high z-index */}
-      <div className="fixed-position-wrapper mt-8">
-        <div className=" absolute left-1/2 transform -translate-x-1/2 
-                      bottom-0
-                      border-white border-[1.5px] bg-[#F9F6F3] 
-                      h-12 lg:h-16 rounded-[15px] lg:rounded-[25px] 
-                      w-[90%] lg:w-[785px] px-3 lg:px-6 py-2 lg:py-3 
-                      flex items-center justify-between gap-1 lg:gap-2 z-[100]
-                      shadow-md">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex items-center gap-1 lg:gap-2 text-gray-600"
-          >
-            <img 
-              src={Clock} 
-              alt="Clock" 
-              className="w-5 h-5 lg:w-7 lg:h-7" 
-            />
-            <span className="font-inter font-semibold text-xs lg:text-[20px] text-black">
-              24/4 Support
-            </span>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex items-center gap-1 lg:gap-2 text-gray-600"
-          >
-            <img 
-              src={Spray} 
-              alt="Spray" 
-              className="w-4 h-5 lg:w-5 lg:h-7" 
-            />
-            <span className="font-inter font-semibold text-xs lg:text-[18px] text-black">
-              Top-Notch Service
-            </span>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex items-center gap-1 lg:gap-2 text-gray-600"
-          >
-            <img 
-              src={Secure} 
-              alt="Secure" 
-              className="w-5 h-4 lg:w-7 lg:h-6" 
-            />
-            <span className="font-inter font-semibold text-xs lg:text-[20px] text-black">
-              Secure Payment
-            </span>
-          </motion.div>
+      {/* REPLACED: Bottom Icons Section with BadgeGrid - Transparent background & larger images */}
+      <div className="fixed-position-wrapper mt-20">
+        <div className="absolute left-1/2 transform -translate-x-1/2 
+                      bottom-[-80px] md:bottom-[-90px]
+                      w-[95%] lg:w-[800px] px-2 py-6
+                      flex items-center justify-center z-[100]">
+          {/* Badge Grid inside the fixed position container - No background */}
+          <div className="flex flex-row justify-center items-center w-full gap-0 lg:gap-12">
+            {imageData.map((image) => (
+              <motion.div 
+                key={image.id} 
+                className="group overflow-hidden flex items-center justify-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.5, delay: 0.3 + (image.id * 0.1) }}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 object-contain"
+                />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
 
