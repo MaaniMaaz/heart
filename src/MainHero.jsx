@@ -9,6 +9,7 @@ import Activity from "./pictures/Activity.png";
 import Star from "./pictures/Star.png";
 import Brush from "./pictures/Brush.png";
 import "./MainHero.css";
+import BadgeGrid from "./Badges"
 
 const MainHero = () => {
   // Animation variants
@@ -312,7 +313,7 @@ const MainHero = () => {
 
       {/* Bottom Icons Section - with fixed position and high z-index */}
       <div className="fixed-position-wrapper mt-8">
-        <div className=" absolute left-1/2 transform -translate-x-1/2 
+        {/* <div className=" absolute left-1/2 transform -translate-x-1/2 
                       bottom-0
                       border-white border-[1.5px] bg-[#F9F6F3] 
                       h-12 lg:h-16 rounded-[15px] lg:rounded-[25px] 
@@ -367,7 +368,9 @@ const MainHero = () => {
               Secure Payment
             </span>
           </motion.div>
-        </div>
+        </div> */}
+        <BadgeGrid/>
+        
       </div>
 
       {/* Add this CSS to your component or global styles */}

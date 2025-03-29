@@ -20,9 +20,16 @@ const services = [
     type: "image",
   },
   {
-    title: "Move Out/Move In",
+    title: "Move In/Move Out",
     description:
       "Get your home ready for the next chapter.",
+    icon: Box,
+    type: "image",
+  },
+  {
+    title: "Commercial Cleaning ",
+    description:
+      "Maintain a healthy and spotless workspace.",
     icon: Box,
     type: "image",
   },
@@ -62,7 +69,7 @@ const OurServices = () => {
   return (
     <div className="bg-white px-5 py-10 sm:px-6 sm:py-8 md:px-20 md:py-12">
       {/* Header Section */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-6 lg:gap-4 items-start md:items-end">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-6 lg:gap-4 items-start md:items-end ipad-pro:mt-6">
         {/* Left: Heading */}
         <motion.div 
           className="mb-6 md:mb-0 lg:-ml-20"
@@ -107,7 +114,7 @@ const OurServices = () => {
 
       {/* Service Cards */}
       <motion.div 
-        className="mt-10 sm:mt-8 md:mt-12 lg:mt-[90px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4 md:gap-6 justify-center"
+        className="mt-10 lg:flex sm:mt-8 md:mt-12 lg:mt-[90px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4 md:gap-6 justify-center lg:gap-8 ipad-pro:flex ipad-pro:flex-wrap"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
@@ -147,7 +154,7 @@ const OurServices = () => {
             {/* Card Content */}
             <div className="mt-6 sm:mt-4 lg:mt-2">
               <motion.h3 
-                className="font-[dmSans] text-xl sm:text-2xl lg:text-[36px] font-normal leading-snug lg:leading-[50px] tracking-[0%] text-[#717171] text-justify mt-4"
+                className="font-[dmSans] text-xl sm:text-2xl lg:text-[29px]  font-normal leading-snug lg:leading-[50px] tracking-[0%] text-[#717171] text-left mt-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.5 + index * 0.1 }}
@@ -155,7 +162,7 @@ const OurServices = () => {
                 {service.title}
               </motion.h3>
               <motion.p 
-                className="font-[dmSans] text-xs sm:text-sm lg:text-[16px] font-normal leading-normal lg:leading-[20px] tracking-[0%] text-[#717171] mt-1 sm:mt-2 text-justify"
+                className="font-[dmSans] text-xs sm:text-sm lg:text-[20px] font-normal leading-normal lg:leading-[20px] tracking-[0%] text-[#717171] mt-1 sm:mt-2 text-left"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
@@ -165,6 +172,19 @@ const OurServices = () => {
             </div>
           </motion.div>
         ))}
+      </motion.div>
+      <motion.div 
+        className="mt-16 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        <button 
+          className="bg-[rgba(168,192,130,1)] hover:bg-[#94a871] text-white font-poppins font-bold py-4 px-8 rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] text-sm sm:text-xl transition-colors duration-300 hover:shadow-xl"
+        >
+          Book Your Eco-Friendly Cleaning Now
+        </button>
       </motion.div>
     </div>
   );

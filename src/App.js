@@ -15,7 +15,7 @@ import Services from "./Services/Services"
 import Contact from "./Contact/Contact"
 import About from "./About/AboutUs"
 import TeamSection from './TeamSection';
-import BadgeGrid from './Badges';
+
 
 function App() {
   return (
@@ -29,7 +29,6 @@ function App() {
      <OurServices/>
      <HeartHero/>
      <EcoFriendlyCleaning/>
-     <BadgeGrid/>
      <StepsSection/>
      <Reviews/>
      <TeamSection/>

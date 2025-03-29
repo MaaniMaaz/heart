@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import Dollar from "./pictures/Doll.png";
-import Pro from "./pictures/Pro.png";
 import Bad from "./pictures/bad.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBroom } from '@fortawesome/free-solid-svg-icons';
+import { faBed } from '@fortawesome/free-regular-svg-icons'
 import TopArrow from "./pictures/TopArrow.png";
 import BottomArrow from "./pictures/BottomArrow.png";
 
@@ -106,7 +108,7 @@ const CleanHomeSteps = () => {
         {/* Step 2 */}
         <div className="flex flex-col items-center max-w-xs animate-on-scroll step-2">
           <div className="bg-[rgba(222,157,157,1)] w-[100px] p-6 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mb-4 top-[237px] left-[282px] pulse-on-hover">
-            <img src={Pro} alt="Professional Cleaning" className="w-12 floating" />
+            <FontAwesomeIcon icon={faBroom} className="w-12 h-12 text-white floating" />
           </div>
           <h3 className="font-dm-sans font-semibold text-base leading-[100%] tracking-normal capitalize text-gray-500">Our Professionals Will Clean Your Home</h3>
           <p className="font-roboto font-light text-sm leading-6 tracking-normal text-[#423D3D] mt-2">
