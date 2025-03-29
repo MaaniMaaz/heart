@@ -4,16 +4,16 @@ import Right from "./pictures/RightArrow.png";
 
 const testimonials = [
   {
-    name: "Julie L.",
-    review: "Pink's Window Services is by far the BEST! Not only do they do an amazing job on ALL services, but their staff is top-notch—the most professional and kind humans! I thank you all for your service and will always recommend you as my window cleaners.",
+    name: "Rebecca Moxie",
+    review: "Consistent, friendly, and always do a thorough job. We have worked with CP Complete Care Cleaning for 3 years & they always make our home clean & refreshed. Highly recommend.",
   },
   {
-    name: "Michael R.",
-    review: "I've used several cleaning services before, but nothing compares to Pink's! They are professional, detail-oriented, and extremely reliable. I highly recommend them!",
+    name: "Todd Gartman",
+    review: "Jessica, Chelsea and their team ensures that our home is cleaned with care when they visit. We appreciate them and the service they give us.",
   },
   {
-    name: "Samantha K.",
-    review: "Absolutely love their eco-friendly approach! My home is spotless, and I feel great knowing that no harmful chemicals were used. Best cleaning service ever!",
+    name: "Anita Regalado-Geddes",
+    review: "Jessica, Chelsea, and Mikey are amazing!My house has never been so clean.Thank you for a great job! ",
   },
 ];
 
