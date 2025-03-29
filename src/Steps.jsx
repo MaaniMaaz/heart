@@ -35,7 +35,7 @@ const CleanHomeSteps = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center text-center bg-pink-50 py-12 px-4">
+    <div className="flex flex-col items-center text-center bg-pink-50 py-12 px-4 font-['Raleway']">
       {/* CSS Animations */}
       <style jsx>{`
         /* Animation classes */
@@ -86,7 +86,7 @@ const CleanHomeSteps = () => {
         }
       `}</style>
 
-      <h2 className="font-[dmSans] font-normal text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight md:leading-[50px] tracking-normal text-center text-gray-800 mb-[80px] animate-on-scroll">
+      <h2 className="font-['Raleway'] font-normal text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight md:leading-[50px] tracking-normal text-center text-gray-800 mb-[80px] animate-on-scroll">
         3 Easy Steps To A <span className="text-green-600">Clean Home</span>
       </h2>
       <div className="flex flex-col md:flex-row items-center justify-center gap-20 max-w-4xl mb-3">
@@ -95,8 +95,8 @@ const CleanHomeSteps = () => {
           <div className="bg-[rgba(222,157,157,1)] w-[100px] p-6 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mb-4 top-[237px] left-[282px] pulse-on-hover">
             <img src={Dollar} alt="Estimate" className="w-12 floating" />
           </div>
-          <h3 className="font-[dmSans] font-semibold text-base leading-[100%] tracking-normal text-center capitalize text-gray-500">Get Your Free Estimate</h3>
-          <p className="font-roboto font-light text-sm leading-6 tracking-normal text-[#423D3D] mt-2">
+          <h3 className="font-['Raleway'] font-semibold text-base leading-[100%] tracking-normal text-center capitalize text-gray-500">Get Your Free Estimate</h3>
+          <p className="font-['Raleway'] font-light text-sm leading-6 tracking-normal text-[#423D3D] mt-2">
             Simply fill out our easy estimate form or call us at 
             <a href="tel:4809998018" className="text-[#DE9D9D] font-medium transition-colors duration-300 hover:text-[#c77e7e]"> (480) 999-8018 </a> 
              to get your estimate and we will schedule your cleaning!
@@ -108,8 +108,8 @@ const CleanHomeSteps = () => {
           <div className="bg-[rgba(222,157,157,1)] w-[100px] p-6 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mb-4 top-[237px] left-[282px] pulse-on-hover">
             <img src={Pro} alt="Professional Cleaning" className="w-12 floating" />
           </div>
-          <h3 className="font-dm-sans font-semibold text-base leading-[100%] tracking-normal capitalize text-gray-500">Our Professionals Will Clean Your Home</h3>
-          <p className="font-roboto font-light text-sm leading-6 tracking-normal text-[#423D3D] mt-2">
+          <h3 className="font-['Raleway'] font-semibold text-base leading-[100%] tracking-normal capitalize text-gray-500">Our Professionals Will Clean Your Home</h3>
+          <p className="font-['Raleway'] font-light text-sm leading-6 tracking-normal text-[#423D3D] mt-2">
             Our professional cleaners will arrive promptly to your home at the scheduled time to clean.
           </p>
         </div>
@@ -119,8 +119,8 @@ const CleanHomeSteps = () => {
           <div className="bg-[rgba(222,157,157,1)] w-[100px] p-6 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mb-4 top-[237px] left-[282px] pulse-on-hover">
             <img src={Bad} alt="Relax" className="w-12 h-12 floating" />
           </div>
-          <h3 className="font-dm-sans font-semibold text-base leading-[100%] tracking-normal capitalize text-gray-500">Your Sit Back And Relax Goes Here</h3>
-          <p className="font-roboto font-light text-sm leading-6 tracking-normal text-[#423D3D] mt-2">
+          <h3 className="font-['Raleway'] font-semibold text-base leading-[100%] tracking-normal capitalize text-gray-500">Your Sit Back And Relax Goes Here</h3>
+          <p className="font-['Raleway'] font-light text-sm leading-6 tracking-normal text-[#423D3D] mt-2">
             Come back to a clean home and spend your time with those you love and doing what you love.
           </p>
         </div>

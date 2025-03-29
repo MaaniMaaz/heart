@@ -11,7 +11,8 @@ export default {
         dmSans: ["DM Sans"],
         albertsans: ["Albert Sans", "sans-serif"],
         inter: ["Inter", "sans-serif"],
-        poppins: ["Poppins",],
+        poppins: ["Poppins"],
+        raleway: ["Raleway", "sans-serif"], // Added Raleway font
       },
       screens: {
         'iphone-se': '375px', // Custom breakpoint for iPhone SE
