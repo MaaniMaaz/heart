@@ -69,17 +69,17 @@ const OurServices = () => {
   return (
     <div className="bg-white px-5 py-10 sm:px-6 sm:py-8 md:px-20 md:py-12">
       {/* Header Section */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-6 lg:gap-4 items-start md:items-end">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-7 lg:gap-4 items-start md:items-end">
         {/* Left: Heading */}
         <motion.div 
-          className="mb-6 md:mb-0 lg:-ml-20"
+          className="mb-6 md:mb-0 lg:-ml-20 xl:-ml-20 ipad-pro:-ml-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
         >
           <motion.h4 
-            className="font-['Raleway'] font-bold text-2xl mt-11 sm:text-3xl lg:text-[32px] font-bold lg:leading-[84px] text-[#A8C082] text-left lg:-mb-[15px] sm:mt-5"
+            className="font-['Raleway'] font-bold text-2xl mt-11 sm:text-3xl lg:text-[32px] lg:leading-[84px] text-[#A8C082] text-left lg:-mb-[15px] sm:mt-5"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -88,7 +88,7 @@ const OurServices = () => {
             Our Services
           </motion.h4>
           <motion.h2 
-            className="font-[dmSans] font-normal text-3xl sm:text-4xl lg:text-[48px] leading-tight lg:leading-[50px] text-gray-900 mt-2 text-left"
+            className="font-['Raleway'] font-normal text-3xl sm:text-4xl lg:text-[48px] leading-tight lg:leading-[50px] text-gray-900 mt-2 text-left lg:mb-20 ipad-pro:text-[40px]"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -100,7 +100,7 @@ const OurServices = () => {
 
         {/* Right: Why Choose Us - IMPROVED ALIGNMENT */}
         <motion.div 
-          className="mt-6 md:mt-20 lg:ml-16 bg-gray-50 rounded-lg p-6 shadow-sm border border-gray-100"
+          className="mt-6 md:mt-20 lg:ml-0 xl:ml-16 bg-gray-50 rounded-lg p-6 shadow-sm border border-gray-100 w-full max-w-none"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
@@ -191,7 +191,7 @@ const OurServices = () => {
             {/* Card Content */}
             <div className="mt-6 sm:mt-4 lg:mt-2">
               <motion.h3 
-                className="font-[dmSans] text-xl sm:text-2xl lg:text-[29px]  font-normal leading-snug lg:leading-[50px] tracking-[0%] text-[#717171] text-left mt-4"
+                className="font-['Raleway'] text-xl sm:text-2xl lg:text-[29px]  font-normal leading-snug lg:leading-[50px] tracking-[0%] text-[#717171] text-left mt-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.5 + index * 0.1 }}
@@ -199,7 +199,7 @@ const OurServices = () => {
                 {service.title}
               </motion.h3>
               <motion.p 
-                className="font-[dmSans] text-xs sm:text-sm lg:text-[20px] font-normal leading-normal lg:leading-[20px] tracking-[0%] text-[#717171] mt-1 sm:mt-2 text-left"
+                className="font-['Raleway'] text-xs sm:text-sm lg:text-[20px] font-normal leading-normal lg:leading-[20px] tracking-[0%] text-[#717171] mt-1 sm:mt-2 text-left"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
@@ -218,7 +218,7 @@ const OurServices = () => {
         viewport={{ once: true }}
       >
         <button 
-          className="bg-[rgba(168,192,130,1)] hover:bg-[#94a871] text-white font-poppins font-bold py-4 px-8 rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] text-sm sm:text-xl transition-colors duration-300 hover:shadow-xl"
+          className="bg-[rgba(168,192,130,1)] hover:bg-[#94a871] text-white font-['Raleway']font-bold py-4 px-8 rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] text-sm sm:text-xl transition-colors duration-300 hover:shadow-xl"
         >
           Book Your Eco-Friendly Cleaning Now
         </button>

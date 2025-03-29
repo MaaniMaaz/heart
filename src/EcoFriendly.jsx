@@ -65,7 +65,7 @@ const EcoFriendlyCleaning = () => {
               {/* Also increased button text size for mobile */}
               <button className="w-[90px] h-[25px] sm:w-[160px] sm:h-[36px] md:w-[200px] md:h-[44px] rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] 
                             bg-[rgba(168,192,130,1)] text-white 
-                            font-['Poppins'] font-semibold text-[9px] sm:text-xs md:text-sm lg:text-[16px] 
+                            font-['Raleway']font-semibold text-[9px] sm:text-xs md:text-sm lg:text-[16px] 
                             flex justify-center items-center">
                 Get Your Free Estimate
               </button>

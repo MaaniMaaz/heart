@@ -170,7 +170,7 @@ const Services = () => {
       {/* <NavHero /> */}
       <div className="bg-[rgba(251,246,243,1)] flex items-center justify-center  lg:min-h-60 min-h-5">
         <div className="text-center">
-          <p className="font-bold text-xl md:text-2xl lg:text-5xl font-averia leading-10 lg:mb-14">
+          <p className="font-bold text-xl md:text-2xl lg:text-5xl font-['Raleway'] leading-10 lg:mb-14">
             From Homes to Businesses, We<br />
             Clean with Care—<span className="text-[rgba(168,192,130,1)]">Naturally!</span>
           </p>
@@ -181,7 +181,7 @@ const Services = () => {
         {/* Header Section */}
         <div className="">
           <div className="mb-6 md:mb-0">
-            <h2 className="font-averia font-bold text-3xl sm:text-4xl lg:text-[48px] leading-tight lg:leading-[100%] text-gray-900 mt-2">
+            <h2 className="font-['Raleway'] font-bold text-3xl sm:text-4xl lg:text-[48px] leading-tight lg:leading-[100%] text-gray-900 mt-2">
               Your All In One Destination <br/> For{" "}
               <span className="text-[rgba(168,192,130,1)]">Green Clean</span>
             </h2>

@@ -18,13 +18,13 @@ const Footer = () => {
               className="w-[200px] h-[200px] top-[40px] left-0 relative" 
               src={HomeBg}
             />
-            <p className="font-albertsans font-normal text-base leading-[160%] tracking-[0.3px] text-[rgba(113,113,113,1)] relative">
+            <p className="font-['Raleway'] font-normal text-base leading-[160%] tracking-[0.3px] text-[rgba(113,113,113,1)] relative">
               We are the premier cleaning <br/> service in the West Valley, <br/>Arizona area.
             </p>
           </div>
 
           {/* Contact Information */}
-          <div className="text-center md:text-left mb-8 md:mb-0 font-albertsans font-normal text-base leading-[160%] tracking-[0.3px] pt-12 lg:mt-20">
+          <div className="text-center md:text-left mb-8 md:mb-0 font-['Raleway'] font-normal text-base leading-[160%] tracking-[0.3px] pt-12 lg:mt-20">
             <h2 className="text-[28px] mb-4">
               Contact Us
             </h2>
@@ -33,7 +33,7 @@ const Footer = () => {
             </p>
             <p className='text-[rgba(113,113,113,1)]'>
               Like Us on{' '}
-              <a className="text-[rgba(113,113,113,1)] hover:underline font-albertsans font-normal text-base leading-[160%] tracking-[0.3px]" href="#">
+              <a className="text-[rgba(113,113,113,1)] hover:underline font-['Raleway'] font-normal text-base leading-[160%] tracking-[0.3px]" href="#">
                 Facebook
               </a>
             </p>
@@ -42,7 +42,7 @@ const Footer = () => {
             </p>
             <p>
               <a 
-                className="text-[rgba(113,113,113,1)] hover:underline font-albertsans font-normal text-base leading-[160%] tracking-[0.3px]" 
+                className="text-[rgba(113,113,113,1)] hover:underline font-['Raleway'] font-normal text-base leading-[160%] tracking-[0.3px]" 
                 href="mailto:info@heartandhomegreenclean.com"
               >
                  info@heartandhomegreenclean.com
@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation */}
-          <div className="text-center md:text-left mb-8 md:mb-0 font-albertsans font-normal text-base leading-[160%] tracking-[0.3px] pt-12 lg:mt-[70px]">
+          <div className="text-center md:text-left mb-8 md:mb-0 font-['Raleway'] font-normal text-base leading-[160%] tracking-[0.3px] pt-12 lg:mt-[70px]">
             <h2 className="text-[28px] mb-4">
               Navigation
             </h2>

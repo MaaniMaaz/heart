@@ -35,13 +35,13 @@ const Reviews = () => {
   return (
     <div className="bg-[url('./pictures/reveiws-section.jpg')] bg-cover bg-center w-full py-16 md:py-12 px-4 md:px-6 relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <h3 className="font-['DM-Sans'] font-normal text-2xl sm:text-3xl md:text-4xl lg:text-[48px] tracking-normal mt-2 md:mt-4 text-left">
+        <h3 className="font-['Raleway'] font-normal text-2xl sm:text-3xl md:text-4xl lg:text-[48px] tracking-normal mt-2 md:mt-4 text-left">
           {testimonials[currentIndex].name}
         </h3>
         
         {/* Fixed-height container with reduced height */}
         <div className="min-h-[100px] md:min-h-[120px] lg:min-h-[150px]">
-          <p className="font-['DM-Sans'] text-base sm:text-lg md:text-xl lg:text-[28px] leading-normal md:leading-[50px] text-left text-gray-800 mt-2 md:mt-4">
+          <p className="font-['Raleway'] text-base sm:text-lg md:text-xl lg:text-[28px] leading-normal md:leading-[50px] text-left text-gray-800 mt-2 md:mt-4">
             "{testimonials[currentIndex].review}"
           </p>
         </div>

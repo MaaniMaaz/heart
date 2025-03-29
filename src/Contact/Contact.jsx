@@ -16,10 +16,10 @@ const Contact =()=>{
          {/* <NavHero/> */}
         <div className="bg-[rgba(251,246,243,1)] flex items-center justify-center  lg:min-h-60 min-h-5 rounded-[10px]">
         <div className="text-center">
-          <p className="font-bold text-xl md:text-2xl lg:text-5xl font-averia leading-10 lg:mb-6">
+          <p className="font-bold text-xl md:text-2xl lg:text-5xl font-['Raleway'] leading-10 lg:mb-6">
           Get Your Free Estimate Now!
           </p>
-          <p className="font-poppins text-[rgba(113,113,113,1)] text-[18px] mb-[20px]">
+          <p className="font-['Raleway'] text-[rgba(113,113,113,1)] text-[18px] mb-[20px]">
            Any question or remarks? Just write us a message!
           </p>
         </div>
@@ -33,24 +33,24 @@ const Contact =()=>{
           <a href="#" className="lg:hidden absolute top-0 left-0 w-full h-1/3 z-10"></a>
           
           <div className="mb-12">
-            <h2 className="text-2xl mb-1 text-left font-poppins font-[600]">Get Your Free Estimate!</h2>
-            <p className="text-sm text-left font-poppins font-[400] ">Say something to start a live chat!</p>
+            <h2 className="text-2xl mb-1 text-left font-['Raleway'] font-[600]">Get Your Free Estimate!</h2>
+            <p className="text-sm text-left font-['Raleway'] font-[400] ">Say something to start a live chat!</p>
           </div>
 
           <div className="space-y-6 -mt-9 mb-8">
             <div className="flex items-center">
               <FaPhone className="mr-3" />
-              <span className="font-poppins font-[400] text-[16px] ">+1012 3456 789</span>
+              <span className="font-['Raleway'] font-[400] text-[16px] ">+1012 3456 789</span>
             </div>
 
             <div className="flex items-center">
               <FaEnvelope className="mr-3" />
-              <span className="font-poppins font-[400] text-[16px] ">demo@gmail.com</span>
+              <span className="font-['Raleway'] font-[400] text-[16px] ">demo@gmail.com</span>
             </div>
 
             <div className="flex items-start">
               <FaMapMarkerAlt className="mr-3 mt-1" />
-              <span className="font-poppins font-[400] text-[16px] text-left ">132 Dartmouth Street Boston, Massachusetts 02156 United States</span>
+              <span className="font-['Raleway'] font-[400] text-[16px] text-left ">132 Dartmouth Street Boston, Massachusetts 02156 United States</span>
             </div>
           </div>
 
@@ -87,7 +87,7 @@ const Contact =()=>{
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="firstName" className="flex text-[12px] font-poppins font-[500] text-[rgba(141,141,141,1)] mb-1 ">First Name</label>
+                <label htmlFor="firstName" className="flex text-[12px] font-['Raleway'] font-[500] text-[rgba(141,141,141,1)] mb-1 ">First Name</label>
                 <input
                   id="firstName"
                   type="text"
@@ -96,7 +96,7 @@ const Contact =()=>{
                 />
               </div>
               <div>
-                <label htmlFor="lastName" className="flex text-[12px] font-poppins font-[500] text-[rgba(141,141,141,1)] mb-1">Last Name</label>
+                <label htmlFor="lastName" className="flex text-[12px] font-['Raleway'] font-[500] text-[rgba(141,141,141,1)] mb-1">Last Name</label>
                 <input
                   id="lastName"
                   type="text"
@@ -109,7 +109,7 @@ const Contact =()=>{
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="email" className="flex text-[12px] font-poppins font-[500] text-[rgba(141,141,141,1)] mb-1">Email</label>
+                <label htmlFor="email" className="flex text-[12px] font-['Raleway'] font-[500] text-[rgba(141,141,141,1)] mb-1">Email</label>
                 <input
                   id="email"
                   type="email"
@@ -118,7 +118,7 @@ const Contact =()=>{
                 />
               </div>
               <div>
-                <label htmlFor="phone" className="flex text-[12px] font-poppins font-[500] text-[rgba(141,141,141,1)] mb-1">Phone Number</label>
+                <label htmlFor="phone" className="flex text-[12px] font-['Raleway'] font-[500] text-[rgba(141,141,141,1)] mb-1">Phone Number</label>
                 <input
                   id="phone"
                   type="tel"
@@ -130,7 +130,7 @@ const Contact =()=>{
             </div>
 
             <div>
-              <label className="flex text-sm font-poppins font-[600] mb-3 ">Select Subject?</label>
+              <label className="flex text-sm font-['Raleway'] font-[600] mb-3 ">Select Subject?</label>
               <div className="flex flex-wrap gap-6">
                 <div className="flex items-center">
                   <input
@@ -141,7 +141,7 @@ const Contact =()=>{
                     className="w-4 h-4 mr-2 accent-black"
                     defaultChecked
                   />
-                  <label htmlFor="general" className="text-[12px] font-poppins font-[400]">General Inquiry</label>
+                  <label htmlFor="general" className="text-[12px] font-['Raleway'] font-[400]">General Inquiry</label>
                 </div>
                 <div className="flex items-center">
                   <input
@@ -151,7 +151,7 @@ const Contact =()=>{
                     value="support"
                     className="w-4 h-4 mr-2 accent-black"
                   />
-                  <label htmlFor="support" className="text-[12px] font-poppins font-[400]">Support</label>
+                  <label htmlFor="support" className="text-[12px] font-['Raleway'] font-[400]">Support</label>
                 </div>
                 <div className="flex items-center">
                   <input
@@ -161,7 +161,7 @@ const Contact =()=>{
                     value="sales"
                     className="w-4 h-4 mr-2 accent-black"
                   />
-                  <label htmlFor="sales" className="text-[12px] font-poppins font-[400]">Sales</label>
+                  <label htmlFor="sales" className="text-[12px] font-['Raleway'] font-[400]">Sales</label>
                 </div>
                 <div className="flex items-center">
                   <input
@@ -171,13 +171,13 @@ const Contact =()=>{
                     value="other"
                     className="w-4 h-4 mr-2 accent-black"
                   />
-                  <label htmlFor="other" className="text-[12px] font-poppins font-[400]">Other</label>
+                  <label htmlFor="other" className="text-[12px] font-['Raleway'] font-[400]">Other</label>
                 </div>
               </div>
             </div>
 
             <div>
-              <label htmlFor="message" className="flex text-[12px] font-poppins font-[500] text-[rgba(141,141,141,1)] mb-1">Message</label>
+              <label htmlFor="message" className="flex text-[12px] font-['Raleway'] font-[500] text-[rgba(141,141,141,1)] mb-1">Message</label>
               <textarea
                 id="message"
                 className="w-full border-b border-gray-300 focus:outline-none focus:border-gray-500 py-2 resize-none"
@@ -189,7 +189,7 @@ const Contact =()=>{
             <div className="flex justify-end">
               <button
                 type="submit"
-                className="bg-[rgba(168,192,130,1)] hover:bg-[#95bb7e] text-white px-6 py-3 rounded-md font-medium transition-colors text-[16px] font-poppins"
+                className="bg-[rgba(168,192,130,1)] hover:bg-[#95bb7e] text-white px-6 py-3 rounded-md font-medium transition-colors text-[16px] font-['Raleway']"
               >
                 Send Message
               </button>

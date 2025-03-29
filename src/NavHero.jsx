@@ -15,7 +15,7 @@ const Navbar = () => {
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4 }}
-            className="font-averia text-[24px] font-bold leading-[14px] tracking-[0.3px]" 
+            className="font-['Raleway'] text-[24px] font-bold leading-[14px] tracking-[0.3px]" 
             href="#"
             whileHover={{ scale: 1.1 }}
           >
@@ -25,7 +25,7 @@ const Navbar = () => {
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="font-averia text-[24px] font-bold leading-[14px] tracking-[0.3px]" 
+            className="font-['Raleway'] text-[24px] font-bold leading-[14px] tracking-[0.3px]" 
             href="#"
             whileHover={{ scale: 1.1 }}
           >
@@ -45,7 +45,7 @@ const Navbar = () => {
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.2 }}
-            className="font-averia text-[24px] font-bold leading-[14px] tracking-[0.3px]" 
+            className="font-['Raleway'] text-[24px] font-bold leading-[14px] tracking-[0.3px]" 
             href="#"
             whileHover={{ scale: 1.1 }}
           >
@@ -55,7 +55,7 @@ const Navbar = () => {
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.3 }}
-            className="font-averia text-[24px] font-bold leading-[14px] tracking-[0.3px]" 
+            className="font-['Raleway'] text-[24px] font-bold leading-[14px] tracking-[0.3px]" 
             href="#"
             whileHover={{ scale: 1.1 }}
           >
@@ -120,7 +120,7 @@ const Navbar = () => {
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.1 }}
-              className="block font-averia text-xl font-bold tracking-[0.3px] px-4 py-2" 
+              className="block font-['Raleway'] text-xl font-bold tracking-[0.3px] px-4 py-2" 
               href="#"
             >
              <Link to="/"> Home </Link>
@@ -129,7 +129,7 @@ const Navbar = () => {
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="block font-averia text-xl font-bold tracking-[0.3px] px-4 py-2" 
+              className="block font-['Raleway'] text-xl font-bold tracking-[0.3px] px-4 py-2" 
               href="#"
             >
               About
@@ -138,7 +138,7 @@ const Navbar = () => {
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="block font-averia text-xl font-bold tracking-[0.3px] px-4 py-2" 
+              className="block font-['Raleway'] text-xl font-bold tracking-[0.3px] px-4 py-2" 
               href="#"
             >
              <Link to="/services"> Services </Link>
@@ -147,7 +147,7 @@ const Navbar = () => {
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="block font-averia text-xl font-bold tracking-[0.3px] px-4 py-2" 
+              className="block font-['Raleway'] text-xl font-bold tracking-[0.3px] px-4 py-2" 
               href="#"
             >
             <Link to="/contact">Contact</Link>  

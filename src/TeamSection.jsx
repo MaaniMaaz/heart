@@ -27,8 +27,8 @@ const TeamSection = () => {
     return (
         <div className="py-16 bg-gradient-to-b from-pick-50 to-white">
                 <div className="text-center mb-16">
-                    <h2 className="font-[dmSans] font-normal text-3xl sm:text-4xl md:text-5xl lg:text-[48px] md:leading-[50px] tracking-normal text-center text-gray-800 mb-[10px] ">Meet Our Team</h2>
-                    <p className="font-dmSans max-w-3xl mx-auto text-gray-600 px-4">
+                    <h2 className="font-['Raleway'] font-normal text-3xl sm:text-4xl md:text-5xl lg:text-[48px] md:leading-[50px] tracking-normal text-center text-gray-800 mb-[10px] ">Meet Our Team</h2>
+                    <p className="font-['Raleway'] max-w-3xl mx-auto text-gray-600 px-4">
                         Our team of trained cleaning professionals is passionate about creating cleaner, healthier living environments.
                         We treat your home with respect and attention to detail, ensuring every clean meets our high standards.
                     </p>
@@ -48,8 +48,8 @@ const TeamSection = () => {
 
                                     {/* Text overlay with gradient background */}
                                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent pt-10 px-4 pb-4 text-white">
-                                        <h3 className="text-xl font-bold font-dmSans">{member.name}</h3>
-                                        <p className="text-gray-200 text-sm font-dmSans">{member.role}</p>
+                                        <h3 className="text-xl font-bold font-['Raleway']">{member.name}</h3>
+                                        <p className="text-gray-200 text-sm font-['Raleway']">{member.role}</p>
                                     </div>
                                 </div>
                             </div>

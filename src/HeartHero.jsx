@@ -127,7 +127,7 @@ const HeartHero = () => {
 
         {/* Text Content - Fully Responsive */}
         <div className="w-full md:w-1/2 space-y-4 md:space-y-6 text-center md:text-left">
-          <h1 className="font-dm-sans font-normal text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight md:leading-[50px] tracking-normal text-gray-800 title-animate">
+          <h1 className="font-['Raleway'] font-normal text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight md:leading-[50px] tracking-normal text-gray-800 title-animate">
            {' '}
             <span className="text-[rgba(168,192,130,1)] font-bold block md:inline relative">
               Green Clean
@@ -138,13 +138,13 @@ const HeartHero = () => {
           </h1>
           
           <div className="space-y-4">
-            <p className="font-dm-sans font-light text-base sm:text-lg md:text-xl lg:text-[20px] leading-relaxed md:leading-[25px] tracking-normal text-[rgba(113,113,113,1)] paragraph-animate" data-index="0">
+            <p className="font-['Raleway'] font-light text-base sm:text-lg md:text-xl lg:text-[20px] leading-relaxed md:leading-[25px] tracking-normal text-[rgba(113,113,113,1)] paragraph-animate" data-index="0">
             At Heart & Home Green Clean, we believe that a clean home shouldn’t come at the expense of your health or the environment. Our eco-conscious cleaning services provide a deep clean using plant-based, non-toxic products, ensuring a safe and chemical-free space for your familyAt Heart & Home Green Clean, we believe that a clean home shouldn’t come at the expense of your health or the environment. Our eco-conscious cleaning services provide a deep clean using plant-based, non-toxic products, ensuring a safe and chemical-free space for your family
             </p>
-            {/* <p className="font-dm-sans font-light text-base sm:text-lg md:text-xl lg:text-[20px] leading-relaxed md:leading-[25px] tracking-normal text-[rgba(113,113,113,1)] paragraph-animate" data-index="1">
+            {/* <p className="font-['Raleway'] font-light text-base sm:text-lg md:text-xl lg:text-[20px] leading-relaxed md:leading-[25px] tracking-normal text-[rgba(113,113,113,1)] paragraph-animate" data-index="1">
               Our goal is to enrich the lives of our clients and their families by providing residential and commercial cleaning and organizational services.
             </p>
-            <p className="font-dm-sans font-light text-base sm:text-lg md:text-xl lg:text-[20px] leading-relaxed md:leading-[25px] tracking-normal text-[rgba(113,113,113,1)] paragraph-animate" data-index="2">
+            <p className="font-['Raleway'] font-light text-base sm:text-lg md:text-xl lg:text-[20px] leading-relaxed md:leading-[25px] tracking-normal text-[rgba(113,113,113,1)] paragraph-animate" data-index="2">
               We believe that your time is valuable and pride ourselves on helping maximize it for you.
             </p> */}
           </div>

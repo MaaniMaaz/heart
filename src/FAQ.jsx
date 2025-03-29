@@ -51,7 +51,7 @@ export default function FAQ() {
       </div>
 
       {/* FAQ Content */}
-      <h2 className="font-['Poppins'] font-normal text-[24px] sm:text-[28px] lg:text-[36px] leading-[100%] tracking-[0%] text-black text-center mb-6 lg:mt-14 lg:mb-11">
+      <h2 className="font-['Raleway'] font-normal text-[24px] sm:text-[28px] lg:text-[36px] leading-[100%] tracking-[0%] text-black text-center mb-6 lg:mt-14 lg:mb-11">
         Frequently Asked Questions
       </h2>
       <div className="space-y-2 lg:space-y-6">
@@ -66,7 +66,7 @@ export default function FAQ() {
               className="flex justify-between items-center w-full text-left"
               onClick={() => toggleFAQ(index)}
             >
-              <span className="font-['Poppins'] font-semibold text-[16px] sm:text-[18px] lg:text-[22px]">
+              <span className="font-['Raleway'] font-semibold text-[16px] sm:text-[18px] lg:text-[22px]">
                 {faq.question}
               </span>
               {openIndex === index ? (
@@ -76,7 +76,7 @@ export default function FAQ() {
               )}
             </button>
             {openIndex === index && faq.answer && (
-              <p className="mt-2 font-['Poppins'] font-normal text-[14px] sm:text-[16px] lg:text-[18px] lg:mt-4 text-black">
+              <p className="mt-2 font-['Raleway'] font-normal text-[14px] sm:text-[16px] lg:text-[18px] lg:mt-4 text-black">
                 {faq.answer}
               </p>
             )}

@@ -27,10 +27,10 @@ const ServiceCard = ({ service, onClick }) => {
 
       {/* Card Content */}
       <div className="mt-6 sm:mt-4 lg:mt-2 flex-grow">
-        <h3 className="font-[dmSans] text-xl sm:text-2xl lg:text-[36px] font-normal leading-snug lg:leading-[50px] tracking-[0%] text-[#717171] text-justify mt-4">
+        <h3 className="font-['Raleway']text-xl sm:text-2xl lg:text-[36px] font-normal leading-snug lg:leading-[50px] tracking-[0%] text-[#717171] text-justify mt-4">
           {service.title}
         </h3>
-        <p className="font-[dmSans] text-xs sm:text-sm lg:text-[16px] font-normal leading-normal lg:leading-[20px] tracking-[0%] text-[#717171] mt-1 sm:mt-2 text-justify">
+        <p className="font-['Raleway']text-xs sm:text-sm lg:text-[16px] font-normal leading-normal lg:leading-[20px] tracking-[0%] text-[#717171] mt-1 sm:mt-2 text-justify">
           {service.description}
         </p>
       </div>
@@ -39,7 +39,7 @@ const ServiceCard = ({ service, onClick }) => {
       <div className="mt-auto pt-3 flex">
         <button 
           onClick={() => onClick(service)}
-          className="inline-flex items-center font-[albertsans] text-xs sm:text-sm lg:text-[16px] font-[500] text-[rgba(222,157,157,1)] hover:underline cursor-pointer"
+          className="inline-flex items-center font-['Raleway'] text-xs sm:text-sm lg:text-[16px] font-[500] text-[rgba(222,157,157,1)] hover:underline cursor-pointer"
         >
           View More
           <img 

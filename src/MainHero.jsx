@@ -77,7 +77,7 @@ const MainHero = () => {
             Arizona West Valley
           </motion.h1>
           <motion.p 
-            className="font-['dmSans'] font-normal text-base leading-normal text-gray-600 mt-3"
+            className="font-['Raleway'] font-normal text-base leading-normal text-gray-600 mt-3"
             variants={fadeIn}
           >
             Welcome to Heart & Home Green Clean, your trusted provider of eco-friendly house cleaning services in Arizona West Valley. We specialize in non-toxic, sustainable cleaning solutions that keep your home fresh, safe, and spotless. Whether you need routine cleaning, deep cleaning, or move-in/move-out services, we're here to help
@@ -147,7 +147,7 @@ const MainHero = () => {
 
             {/* Bottom left badge - Best Insured */}
             <motion.div 
-              className="absolute -bottom-4 -left-2 z-20"
+              className="absolute -bottom-4 -left-2 z-20 ipad-pro:text-left text-left"
               variants={badgeAnimation}
             >
               <div className="bg-white py-3 px-3 rounded-[30px] shadow-md flex items-center">
@@ -156,7 +156,7 @@ const MainHero = () => {
                   <div className="absolute -top-1 -right-1 w-2 h-2 bg-[rgba(168,192,130,1)] rounded-full"></div>
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-gray-800">Reliable</p>
+                  <p className="text-sm font-bold text-gray-800 text-left">Reliable</p>
                   <p className="text-xs text-gray-800">Fully Insured & Bonded for Your Peace of Mind</p>
                 </div>
               </div>
@@ -209,7 +209,7 @@ const MainHero = () => {
             Arizona West Valley
           </motion.h1>
           <motion.p 
-            className="font-['dmSans'] font-normal text-[20px] leading-[28px] tracking-[0%] text-gray-600 mt-4 text-left"
+            className="font-['Raleway'] font-normal text-[20px] leading-[28px] tracking-[0%] text-gray-600 mt-4 text-left"
             variants={fadeIn}
           >
             Welcome to <strong> Heart & Home Green Clean</strong>, your trusted provider of eco-friendly house cleaning services in Arizona West Valley. We specialize in non-toxic, sustainable cleaning solutions that keep your home fresh, safe, and spotless. Whether you need routine cleaning, deep cleaning, or move-in/move-out services, we're here to help
@@ -279,18 +279,19 @@ const MainHero = () => {
 
           {/* Badges Positioned on Image */}
           <motion.div 
-            className="w-[114px] h-[114px] absolute bg-white rounded-[30px] flex items-center justify-center -left-11 top-11 z-20"
+            className="absolute w-[284px] h-[109px] gap-2 bg-white rounded-[30px] flex items-center justify-center -left-28 top-11 z-20"
             variants={badgeAnimation}
           >
-            <img src={Shield} alt="Check Icon" className="w-12 h-14 text-[rgba(168,192,130,1)]" />
+            <img src={Shield} alt="Check Icon" className="w-12 h-14 text-[rgba(168,192,130,1)] lg:ml-2" />
+            <h1 className="font-['Raleway'] font-semibold text-[16px] text-gray-700 text-left ipad-pro:text-left">Safe <br /><span className="font-['Raleway'] font-medium text-[16px] text-[#2F2F2F]"> Non-Toxic & Pet-Friendly Cleaning Solutions</span></h1>
           </motion.div>
 
           <motion.div 
             className="absolute -left-28 top-80 w-[284px] h-[109px] bg-white rounded-[30px] flex items-center gap-2 justify-center z-20"
             variants={badgeAnimation}
           >
-            <img src={Activity} alt="Check Icon" className="w-12 h-13 text-[rgba(168,192,130,1)]" />
-            <h1 className="font-poppins font-semibold text-[16px] text-gray-700 text-left">Reliable <br /><span className="font-poppins font-medium text-[16px] text-[#2F2F2F]"> Fully Insured & Bonded for Your Peace of Mind</span></h1>
+            <img src={Activity} alt="Check Icon" className="w-12 h-13 text-[rgba(168,192,130,1)] lg:ml-2" />
+            <h1 className="font-['Raleway'] font-semibold text-[16px] text-gray-700 text-left ipad-pro:text-left">Reliable <br /><span className="font-['Raleway'] font-medium text-[16px] text-[#2F2F2F]"> Fully Insured & Bonded for Your Peace of Mind</span></h1>
           </motion.div>
 
           <motion.div 
@@ -303,7 +304,7 @@ const MainHero = () => {
                 <path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65z" />
               </svg>
             </div>
-            <h1 className="font-poppins font-semibold text-[16px] text-gray-700 text-left ml-5">Trusted<br /><span className="font-poppins font-medium text-[16px] text-[#2F2F2F]">Eco-Friendly & Family-Owned</span></h1>
+            <h1 className="font-['Raleway'] font-semibold text-[16px] text-gray-700 text-left ml-5">Trusted<br /><span className="font-['Raleway'] font-medium text-[16px] text-[#2F2F2F]">Eco-Friendly & Family-Owned</span></h1>
           </motion.div>
         </motion.div>
       </div>
