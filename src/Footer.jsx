@@ -1,8 +1,9 @@
 import React from 'react';
 import Heart from "./pictures/Heart & Home_square.png";
-import HomeBg from "./pictures/HeartHDbg (1).png";
+// import HomeBg from "./pictures/HeartHDbg (1).png";
 import logo from "./pictures/Ecologo.png";
 import { Link } from "react-router-dom";
+import HomeBg from "./pictures/4-cropped.svg"
 const Footer = () => {
   return (
     <div className="bg-[#f5f5f0] text-gray-700 px-8 lg:px-12 xl:px-32">
@@ -12,10 +13,10 @@ const Footer = () => {
       <div className="container mx-auto pt-0 pb-10  px-4 lg:-mt-[60px]">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo and Description */}
-          <div className="text-center md:text-left mb-8 md:mb-0 ">
+          <div className="text-center md:text-left mb-8 md:mb-0 lg:-mb-[50px] ">
             <img 
               alt="Heart & Home Green Clean logo with a house and a leaf" 
-              className="w-[200px] h-[200px] top-[40px] left-0 relative" 
+              className="w-28 h-28 top-[10px] left-9 relative" 
               src={HomeBg}
             />
             <p className="font-['Raleway'] font-normal text-base leading-[160%] tracking-[0.3px] text-[rgba(113,113,113,1)] relative">

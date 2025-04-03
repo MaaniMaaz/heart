@@ -17,31 +17,14 @@ const services = [
       description: "Our comprehensive routine cleaning service covers all essential areas of your home.",
       sections: [
         {
-          title: "All Rooms Include:",
+          title: "Regular cleaning to keep your home consistently spotless. Services include:",
           items: [
-            "Light Dusting - Furniture, fixtures, and appliances",
-            "Light Tidying - Bed, side tables, dresser",
-            "Wipe down and polish - furniture, fixtures, appliances",
-            "Vacuum/Mop - vacuum and/or mop all areas",
-            "Garbage removal - bag replaced"
+            "Dusting & vacuuming",
+            "Mopping & surface sanitization",
+            "Bathroom & kitchen cleaning",
           ]
         },
-        {
-          title: "Bathrooms:",
-          items: [
-            "ALL THINGS LISTED ABOVE",
-            "Grout maintenance - Shower and toilets",
-            "Wipe down - counters, mirrors, and sink"
-          ]
-        },
-        {
-          title: "Kitchen:",
-          items: [
-            "ALL THINGS LISTED ABOVE",
-            "Wipe down - Counter top, oven front, fridge door, dishwasher door, cabinets (as needed)",
-            "Microwave cleaning - inside and out"
-          ]
-        }
+    
       ]
     }
   },
@@ -54,22 +37,18 @@ const services = [
       description: "Our intensive deep cleaning service reaches every corner of your home for a thorough refresh.",
       sections: [
         {
-          title: "Service Includes:",
+          title: "A thorough cleaning service for hard-to-reach areas:",
           items: [
-            "Baseboard and crown molding cleaning",
-            "Inside appliance cleaning (oven, fridge)",
-            "Window track and sill cleaning",
-            "Blind and shutter dusting",
-            "Cabinet front and handle sanitization",
-            "Light fixture dusting",
-            "Door and frame cleaning"
+            "Baseboards, ceiling fans & vents",
+            "Interior windows & blinds",
+            "Appliance deep cleaning",
           ]
         }
       ]
     }
   },
   {
-    title: "Move Out/Move In",
+    title: "Move In/Move Out",
     description: "Your move is already stressful. We'll clean where you're leaving, where you're going, or both so you can enjoy your new home sooner.",
     icon: Box,
     type: "image",
@@ -77,54 +56,33 @@ const services = [
       description: "We specialize in making transitions smooth with comprehensive cleaning for moving situations.",
       sections: [
         {
-          title: "Standard Package:",
+          title: "Perfect for renters, homeowners, and property managers:",
           items: [
-            "Complete interior wipe-down of all surfaces",
-            "Appliance deep cleaning (inside and out)",
-            "Cabinet interior cleaning",
-            "Closet and storage area cleaning",
-            "Final touch-up before handing over keys",
-            "Wall spot cleaning",
-            "Window interior cleaning"
+            "Floor-to-ceiling deep clean",
+            "Cabinet & appliance sanitization",
+            "Spotless kitchens & bathrooms",
           ]
         }
       ]
     }
   },
   {
-    title: "Routine Cleaning",
-    description: "We'll fight the mess for you. Our routine weekly, biweekly or monthly cleanings will keep your home tidy.",
+    title: "Commercial Cleaning",
+    description: "Maintain a healthy and spotless workspace.",
     icon: Cleaning,
     type: "image",
     details: {
       description: "Our comprehensive routine cleaning service covers all essential areas of your home.",
       sections: [
         {
-          title: "All Rooms Include:",
+          title: "Tailored cleaning solutions for offices and businesses:",
           items: [
-            "Light Dusting - Furniture, fixtures, and appliances",
-            "Light Tidying - Bed, side tables, dresser",
-            "Wipe down and polish - furniture, fixtures, appliances",
-            "Vacuum/Mop - vacuum and/or mop all areas",
-            "Garbage removal - bag replaced"
+            "Workstation & breakroom sanitization",
+            "Carpet & floor care",
+            "Green cleaning for a healthier workspace",
           ]
         },
-        {
-          title: "Bathrooms:",
-          items: [
-            "ALL THINGS LISTED ABOVE",
-            "Grout maintenance - Shower and toilets",
-            "Wipe down - counters, mirrors, and sink"
-          ]
-        },
-        {
-          title: "Kitchen:",
-          items: [
-            "ALL THINGS LISTED ABOVE",
-            "Wipe down - Counter top, oven front, fridge door, dishwasher door, cabinets (as needed)",
-            "Microwave cleaning - inside and out"
-          ]
-        }
+    
       ]
     }
   },
@@ -137,18 +95,16 @@ const services = [
       description: "Our intensive deep cleaning service reaches every corner of your home for a thorough refresh.",
       sections: [
         {
-          title: "Service Includes:",
+          title: "A thorough cleaning service for hard-to-reach areas:",
           items: [
-            "Baseboard and crown molding cleaning",
-            "Inside appliance cleaning (oven, fridge)",
-            "Window track and sill cleaning",
-            "Blind and shutter dusting",
-            "Cabinet front and handle sanitization"
+            "Baseboards, ceiling fans & vents",
+            "Interior windows & blinds",
+            "Appliance deep cleaning",
           ]
         }
       ]
     }
-  }
+  },
 ];
 
 const Services = () => {

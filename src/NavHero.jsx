@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import House from "./pictures/HeartHDbg (1).png";
 import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
+import HouseSVG from "./pictures/4-cropped.svg"
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,8 +39,8 @@ const Navbar = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, type: "spring", stiffness: 200 }}
               alt="Logo with a house and a leaf"
-              className="h-48 w-48"
-              src={House}
+              className="h-36 w-28 lg:ml-5 lg:mr-5"
+              src={HouseSVG}
             />
           </div>
           <motion.a 
@@ -71,8 +73,8 @@ const Navbar = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
               alt="Logo with a house and a leaf"
-              className="w-[160px] h-auto -ml-7"
-              src={House}
+              className="w-[105px] h-auto -ml-[0.25rem] mt-5"
+              src={HouseSVG}
             />
           </div>
           
