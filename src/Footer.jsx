@@ -1,5 +1,5 @@
 import React from 'react';
-import Heart from "./pictures/Heart & Home_square.png";
+// import Heart from "./pictures/Heart & Home_square.png";
 // import HomeBg from "./pictures/HeartHDbg (1).png";
 import logo from "./pictures/Ecologo.png";
 import { Link } from "react-router-dom";
@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="text-center md:text-left mb-8 md:mb-0 lg:-mb-[50px] ">
             <img 
               alt="Heart & Home Green Clean logo with a house and a leaf" 
-              className="w-28 h-28 top-[10px] left-9 relative" 
+              className="w-28 h-28 top-[10px] lg:left-9 left-[3.25rem] relative" 
               src={HomeBg}
             />
             <p className="font-['Raleway'] font-normal text-base leading-[160%] tracking-[0.3px] text-[rgba(113,113,113,1)] relative">
