@@ -3,6 +3,7 @@ import Navbar from "../NavHero";
 import Footer from "../Footer";
 import DandS from "../pictures/D&S.png";
 import Review from "../Reviews";
+import FeatureSection from "./Mission"
 
 
 const About=()=>{
@@ -56,6 +57,7 @@ const About=()=>{
         </div>
       </div>
     </div>
+    <FeatureSection/>
     <Review/>
 
         {/* <Footer/> */}
