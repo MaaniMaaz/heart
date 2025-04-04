@@ -31,7 +31,7 @@ function App() {
      <EcoFriendlyCleaning/>
      <StepsSection/>
      <Reviews/>
-     <TeamSection/>
+     {/* <TeamSection/> */}
      <FAQ/>
      <EstimateBanner/>
      </>

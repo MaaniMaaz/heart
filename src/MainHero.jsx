@@ -80,7 +80,7 @@ const MainHero = () => {
             className="font-['Raleway'] font-normal text-base leading-normal text-gray-600 mt-3"
             variants={fadeIn}
           >
-            Welcome to Heart & Home Green Clean, your trusted provider of eco-friendly house cleaning services in Arizona West Valley. We specialize in non-toxic, sustainable cleaning solutions that keep your home fresh, safe, and spotless. Whether you need routine cleaning, deep cleaning, or move-in/move-out services, we're here to help
+            Welcome to Heart & Home Green Clean, your trusted provider of eco-friendly house cleaning services in Arizona West Valley. We specialize in non-toxic, sustainable cleaning solutions that keep your home fresh, safe, and spotless. Whether you need routine cleaning, deep cleaning, or move-in/move-out services, we're here to help.
           </motion.p>
           <motion.button 
             className="mt-4 w-full h-[46px] bg-[rgba(168,192,130,1)] text-white font-semibold px-6 py-3 rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] transition hover:bg-opacity-90"
@@ -212,7 +212,7 @@ const MainHero = () => {
             className="font-['Raleway'] font-normal text-[20px] leading-[28px] tracking-[0%] text-gray-600 mt-4 text-left"
             variants={fadeIn}
           >
-            Welcome to <strong> Heart & Home Green Clean</strong>, your trusted provider of eco-friendly house cleaning services in Arizona West Valley. We specialize in non-toxic, sustainable cleaning solutions that keep your home fresh, safe, and spotless. Whether you need routine cleaning, deep cleaning, or move-in/move-out services, we're here to help
+            Welcome to <strong> Heart & Home Green Clean</strong>, your trusted provider of eco-friendly house cleaning services in Arizona West Valley. We specialize in non-toxic, sustainable cleaning solutions that keep your home fresh, safe, and spotless. Whether you need routine cleaning, deep cleaning, or move-in/move-out services, we're here to help.
           </motion.p>
           <motion.button 
             className="mt-6 w-[215px] h-[46px] bg-[rgba(168,192,130,1)] text-white font-semibold px-6 py-3 rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] transition hover:bg-opacity-90 flex"

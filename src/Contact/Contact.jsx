@@ -1,7 +1,7 @@
 import React from "react";
 import NavHero from "../NavHero"
 import Footer from "../Footer"
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaInstagram, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import Brush from "../pictures/Brush_clean.png"
 const Contact = () => {
     const handleSubmit = (e) => {
@@ -37,16 +37,19 @@ const Contact = () => {
                         <div className="space-y-6 -mt-9 mb-8">
                             <div className="flex items-center">
                                 <FaPhone className="mr-3" />
-                                <span className="font-['Raleway'] font-[400] text-[16px] ">+1012 3456 789</span>
+                                <span className="font-['Raleway'] font-[400] text-[16px] ">(480) 999-8018</span>
                             </div>
                             <div className="flex items-center">
                                 <FaEnvelope className="mr-3" />
-                                <span className="font-['Raleway'] font-[400] text-[16px] ">demo@gmail.com</span>
+                                <span className="font-['Raleway'] font-[400] text-[16px] ">info@heartandhomegreenclean.com</span>
                             </div>
+                            
+                        
                             <div className="flex items-start">
                                 <FaMapMarkerAlt className="mr-3 mt-1" />
+                               
                                 <span className="font-['Raleway'] font-[400] text-[16px] text-left ">
-                                    Heart & Home Green Clean<br />
+                                    
                                     15000 W Gelding Dr<br />
                                     Surprise, AZ 85379<br />
                                     United States
@@ -55,15 +58,15 @@ const Contact = () => {
                         </div>
                         {/* Social Media Icons */}
                         <div className="absolute lg:bottom-8 bottom-4 left-8 flex space-x-4">
-                            <a href="#" className="bg-black bg-opacity-20 p-2 rounded-full cursor-pointer">
+                            {/* <a href="#" className="bg-black bg-opacity-20 p-2 rounded-full cursor-pointer">
                                 <FaTwitter className="text-white" />
+                            </a> */}
+                            <a href="https://www.facebook.com/heartandhomegreenclean" className="bg-black bg-opacity-20 p-2 rounded-full cursor-pointer">
+                                <FaFacebook className="text-white" />
                             </a>
-                            <a href="#" className="bg-black bg-opacity-20 p-2 rounded-full cursor-pointer">
-                                <FaInstagram className="text-white" />
-                            </a>
-                            <a href="#" className="bg-black bg-opacity-20 p-2 rounded-full cursor-pointer">
+                            {/* <a href="#" className="bg-black bg-opacity-20 p-2 rounded-full cursor-pointer">
                                 <FaLinkedin className="text-white" />
-                            </a>
+                            </a> */}
                         </div>
                         {/* Background decoration - Broom icon stylized */}
                         <div className="absolute lg:bottom-12 lg:right-12 hidden lg:block">
@@ -190,7 +193,7 @@ const Contact = () => {
                 </div>
                 {/* Map Section */}
                 <div className="mt-10 mb-6">
-                    <h2 className="text-3xl font-bold mb-8 font-['Raleway'] text-center">Find Us on Google Maps</h2>
+                    <h2 className="text-4xl font-bold mb-8 font-['Raleway'] text-center">Our Location</h2>
                     <div className="shadow-lg rounded-lg overflow-hidden">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.1143657854254!2d-112.39580842432442!3d33.62738597258842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b455b9550c6cb%3A0xcac93a90d7304b10!2s15000%20W%20Gelding%20Dr%2C%20Surprise%2C%20AZ%2085379%2C%20USA!5e0!3m2!1sen!2s!4v1712174129095!5m2!1sen!2s"

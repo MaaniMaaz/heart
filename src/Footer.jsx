@@ -34,7 +34,7 @@ const Footer = () => {
             </p>
             <p className='text-[rgba(113,113,113,1)]'>
               Like Us on{' '}
-              <a className="text-[rgba(113,113,113,1)] hover:underline font-['Raleway'] font-normal text-base leading-[160%] tracking-[0.3px]" href="#">
+              <a className="text-[rgba(113,113,113,1)] hover:underline font-['Raleway'] font-normal text-base leading-[160%] tracking-[0.3px]" href="https://www.facebook.com/heartandhomegreenclean">
                 Facebook
               </a>
             </p>

@@ -29,44 +29,6 @@ const services = [
     }
   },
   {
-    title: "Deep Cleaning",
-    description: "More than a routine cleaning, deep cleans leave dirt and grime nowhere to hide.",
-    icon: HomeIcon,
-    type: "image",
-    details: {
-      description: "Our intensive deep cleaning service reaches every corner of your home for a thorough refresh.",
-      sections: [
-        {
-          title: "A thorough cleaning service for hard-to-reach areas:",
-          items: [
-            "Baseboards, ceiling fans & vents",
-            "Interior windows & blinds",
-            "Appliance deep cleaning",
-          ]
-        }
-      ]
-    }
-  },
-  {
-    title: "Move In/Move Out",
-    description: "Your move is already stressful. We'll clean where you're leaving, where you're going, or both so you can enjoy your new home sooner.",
-    icon: Box,
-    type: "image",
-    details: {
-      description: "We specialize in making transitions smooth with comprehensive cleaning for moving situations.",
-      sections: [
-        {
-          title: "Perfect for renters, homeowners, and property managers:",
-          items: [
-            "Floor-to-ceiling deep clean",
-            "Cabinet & appliance sanitization",
-            "Spotless kitchens & bathrooms",
-          ]
-        }
-      ]
-    }
-  },
-  {
     title: "Commercial Cleaning",
     description: "Maintain a healthy and spotless workspace.",
     icon: Cleaning,
@@ -105,6 +67,27 @@ const services = [
       ]
     }
   },
+  {
+    title: "Move In/Move Out",
+    description: "Your move is already stressful. We'll clean where you're leaving, where you're going, or both so you can enjoy your new home sooner.",
+    icon: Box,
+    type: "image",
+    details: {
+      description: "We specialize in making transitions smooth with comprehensive cleaning for moving situations.",
+      sections: [
+        {
+          title: "Perfect for renters, homeowners, and property managers:",
+          items: [
+            "Floor-to-ceiling deep clean",
+            "Cabinet & appliance sanitization",
+            "Spotless kitchens & bathrooms",
+          ]
+        }
+      ]
+    }
+  },
+
+ 
 ];
 
 const Services = () => {
@@ -146,27 +129,39 @@ const Services = () => {
 
         {/* Service Cards */}
         <div className="mt-10 sm:mt-8 md:mt-12 lg:mt-[90px]">
-          {/* First row with 3 cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4 md:gap-6 justify-center">
-            {services.slice(0, 3).map((service, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4 md:gap-6 lg:gap-8">
+            {/* First column */}
+            <div>
               <ServiceCard 
-                key={index} 
-                service={service} 
+                key={0} 
+                service={services[0]} 
                 onClick={handleCardClick}
               />
-            ))}
-          </div>
-
-          {/* Second row with 2 centered cards */}
-          <div className="flex justify-center mt-6 sm:mt-4 md:mt-6 lg:mt-16">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-4 md:gap-6 lg:max-w-[50rem] lg:gap-[2.5rem]">
-              {services.slice(3, 5).map((service, index) => (
+            </div>
+            
+            {/* Second column - Deep Cleaning with Commercial Cleaning below it */}
+            <div className="flex flex-col gap-6 sm:gap-4 md:gap-6">
+              <ServiceCard 
+                key={1} 
+                service={services[1]} 
+                onClick={handleCardClick}
+              />
+              <div className="mt-8 lg:mt-6">
                 <ServiceCard 
-                  key={index + 3} 
-                  service={service} 
+                  key={3} 
+                  service={services[3]} 
                   onClick={handleCardClick}
                 />
-              ))}
+              </div>
+            </div>
+            
+            {/* Third column */}
+            <div>
+              <ServiceCard 
+                key={2} 
+                service={services[2]} 
+                onClick={handleCardClick}
+              />
             </div>
           </div>
         </div>

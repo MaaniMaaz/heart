@@ -89,7 +89,8 @@ const CleanHomeSteps = () => {
       `}</style>
 
       <h2 className="font-['Raleway'] font-normal text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight md:leading-[50px] tracking-normal text-center text-gray-800 mb-[80px] animate-on-scroll">
-        3 Easy Steps To A <span className="text-green-600">Clean Home</span>
+        3 Easy Steps To A <span className="text-[rgba(168,192,130,1)]">Cleaner, Healthier Home</span>
+
       </h2>
       <div className="flex flex-col md:flex-row items-center justify-center gap-20 max-w-4xl mb-3">
         {/* Step 1 */}
@@ -134,7 +135,7 @@ const CleanHomeSteps = () => {
     <path d="m12 3l-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275zM5 3v4m14 10v4M3 5h4m10 14h4" />
   </svg>
 </div>
-<h3 className="font-dm-sans font-semibold text-base leading-[100%] tracking-normal capitalize text-gray-500">Your Sit Back And Relax Goes Here</h3>
+<h3 className="font-dm-sans font-semibold text-base leading-[100%] tracking-normal capitalize text-gray-500">Relax, We've Got the Cleaning Covered</h3>
 <p className="font-['Raleway'] font-light text-sm leading-6 tracking-normal text-[#423D3D] mt-2">
   Come back to a clean home and spend your time with those you love and doing what you love.
 </p>
