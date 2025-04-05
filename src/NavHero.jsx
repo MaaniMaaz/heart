@@ -61,7 +61,7 @@ const Navbar = () => {
             href="#"
             whileHover={{ scale: 1.1 }}
           >
-           <Link to="/contact">Contact </Link>
+           <Link to="/contact">Request  Qoute </Link>
           </motion.a>
         </div>
 

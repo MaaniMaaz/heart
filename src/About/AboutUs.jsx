@@ -4,6 +4,7 @@ import Footer from "../Footer";
 import DandS from "../pictures/D&S.png";
 import Review from "../Reviews";
 
+
 const About = () => {
   return (
     <> 
@@ -11,14 +12,13 @@ const About = () => {
       <div className="bg-[rgba(251,246,243,1)] flex items-center justify-center lg:min-h-60 min-h-5">
         <div className="text-center">
           <p className="font-bold text-xl md:text-2xl lg:text-5xl font-['Raleway'] lg:leading-[60px] mt-5">
-            Transforming <span className="text-[rgba(255,174,174,1)]">Heart & Homes,</span>
+          Where Clean Meets <span className="text-[rgba(168,192,130,1)] ">Green</span>
           </p>
-          <p className="font-bold text-xl md:text-2xl lg:text-5xl font-['Raleway'] lg:leading-[60px]">
-            Protecting the Planet
-          </p>
+        
           <p className="font-bold text-xl md:text-2xl lg:text-5xl font-['Raleway'] lg:leading-[60px] lg:mb-14">
-            One <span className="text-[rgba(168,192,130,1)]">Eco-Friendly</span> Shine at a Time!
+          Our <span className="text-[rgba(255,174,174,1)]">Commitment</span>  to You
           </p>
+         
         </div>
       </div>
 

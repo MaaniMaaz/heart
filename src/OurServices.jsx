@@ -94,7 +94,7 @@ const OurServices = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            We Work Many Fields To Clean Your Surroundings
+            Eco-Friendly Cleaning, Trusted by Your Neighbors
           </motion.h2>
         </motion.div>
 
