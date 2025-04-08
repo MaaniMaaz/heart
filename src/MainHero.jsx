@@ -9,6 +9,9 @@ import "./MainHero.css";
 import BadgeGrid from "./Badges"
 
 const MainHero = () => {
+
+
+
   // Animation variants
   const fadeIn = {
     hidden: { opacity: 0 },

@@ -4,6 +4,15 @@ import HomeIcon from "./pictures/home.png";
 import Cleaning from "./pictures/cleaning.png";
 import Box from "./pictures/Box.png";
 
+// Added laptop icon SVG
+const LaptopIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5 lg:w-10 lg:h-10 text-[#A8C082]">
+    <rect width="18" height="12" x="3" y="4" rx="2" ry="2" />
+    <line x1="2" y1="20" x2="22" y2="20" />
+    <line x1="12" y1="20" x2="12" y2="16" />
+  </svg>
+);
+
 const services = [
   {
     title: "Routine Cleaning",
@@ -27,11 +36,11 @@ const services = [
     type: "image",
   },
   {
-    title: "Commercial Cleaning ",
+    title: "Office Cleaning ",
     description:
       "Maintain a healthy and spotless workspace.",
-    icon: Box,
-    type: "image",
+    icon: <LaptopIcon />, // Changed from Box to LaptopIcon
+    type: "svg", // Changed from "image" to "svg"
   },
 ];
 

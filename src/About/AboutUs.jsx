@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../NavHero";
 import Footer from "../Footer";
-import DandS from "../pictures/D&S.png";
+import DandS from "../pictures/D.JPG";
 import Review from "../Reviews";
 
 
