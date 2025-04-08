@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import DandS from "./pictures/D&S.png";
+import DandS from "./pictures/D.JPG";
 
 const HeartHero = () => {
   useEffect(() => {
