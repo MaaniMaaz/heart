@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import Cleaning from "./pictures/Rectangle 36.png";
+// import Cleaning from "./pictures/Rectangle 36.png";
+import Cleaning from "./pictures/hero-1.jpg";
 import Shield from "./pictures/Shield-Done.png";
 import Activity from "./pictures/Activity.png";
 import Star from "./pictures/Star.png";
@@ -227,14 +228,14 @@ const MainHero = () => {
           </motion.button>
         </motion.div>
 
-        {/* Right Content - Image pushed to the right-most with proper image coverage */}
+        {/* Right Content - Image with increased width */}
         <motion.div 
           className="relative flex justify-end ml-auto"
           initial="hidden"
           animate="visible"
           variants={fadeIn}
         >
-          <div className="relative w-[578px] h-[529px]">
+          <div className="relative w-[650px] h-[529px]">
             {/* Pink background with rounded corners */}
             <div className="absolute inset-0 rounded-tl-[100px] rounded-br-[100px]"></div>
             

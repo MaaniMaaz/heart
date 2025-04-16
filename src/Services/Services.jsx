@@ -6,6 +6,7 @@ import CleaningModal from "./CleaningModal";
 import HomeIcon from "../pictures/home.png";
 import Cleaning from "../pictures/cleaning.png";
 import Box from "../pictures/Box.png";
+import './Services.css';
 
 // Add Laptop Icon SVG Component
 const LaptopIcon = () => (
@@ -162,6 +163,10 @@ const services = [
   },
 ];
 
+// Import the interior image
+// Note: You'll need to add this image to your project files
+import InteriorImage from "../pictures/hero-1.jpg"; 
+
 const Services = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
@@ -199,9 +204,55 @@ const Services = () => {
           </div>
         </div>
 
+        {/* New Section: Our Approach with the Image */}
+        <div className="mt-12 lg:mt-16">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
+            {/* Left side: Image */}
+            <div className="w-full md:w-1/2">
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src={InteriorImage} 
+                  alt="Clean, natural interior space" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+            
+            {/* Right side: Text content */}
+            <div className="w-full md:w-1/2">
+              <h3 className="font-['Raleway'] font-bold text-2xl sm:text-3xl text-gray-900 mb-4">
+                Experience the <span className="text-[rgba(168,192,130,1)]">Difference</span>
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Our eco-friendly approach doesn't just clean your space—it transforms it. We believe that a truly clean environment should feel fresh and natural, without harsh chemicals or artificial fragrances.
+              </p>
+              <p className="text-gray-700 mb-6">
+                Using environmentally conscious products and methods, we create spaces that are not only spotless but also healthier for you, your family, your employees, and our planet.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 rounded-full bg-[rgba(168,192,130,1)]"></div>
+                  <span className="text-gray-700 font-medium">Eco-friendly Products</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 rounded-full bg-[rgba(168,192,130,1)]"></div>
+                  <span className="text-gray-700 font-medium">Allergen Reduction</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 rounded-full bg-[rgba(168,192,130,1)]"></div>
+                  <span className="text-gray-700 font-medium">Sustainable Practices</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Service Cards - 2x2 Grid Layout with reduced column spacing */}
-        <div className="mt-10 sm:mt-8 md:mt-12 lg:mt-[90px]">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-y-9 md:gap-x-1">
+        <div className="mt-16 sm:mt-16 md:mt-20 lg:mt-24">
+          <h3 className="font-['Raleway'] font-bold text-2xl sm:text-3xl text-gray-900 mb-8 text-center">
+            Our <span className="text-[rgba(168,192,130,1)]">Services</span>
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-y-9 md:gap-x-6 laptop-padding">
             {/* First row */}
             <ServiceCard 
               key={0} 

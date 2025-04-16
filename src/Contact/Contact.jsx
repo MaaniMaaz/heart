@@ -45,14 +45,14 @@ const Contact = () => {
                                 <FaEnvelope className="mr-3" />
                                 <span className="font-['Raleway'] font-[400] text-[16px]">info@heartandhomegreenclean.com</span>
                             </div>
-                            <div className="flex items-start">
+                            {/* <div className="flex items-start">
                                 <FaMapMarkerAlt className="mr-3 mt-1" />
                                 <span className="font-['Raleway'] font-[400] text-[16px] text-left ">
                                     15000 W Gelding Dr<br />
                                     Surprise, AZ 85379<br />
                                     United States
                                 </span>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="absolute lg:bottom-8 bottom-4 left-8 flex space-x-4">
                             <a href="https://www.facebook.com/heartandhomegreenclean" className="bg-black bg-opacity-20 p-2 rounded-full cursor-pointer">
