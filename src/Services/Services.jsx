@@ -7,7 +7,7 @@ import HomeIcon from "../pictures/home.png";
 import Cleaning from "../pictures/cleaning.png";
 import Box from "../pictures/Box.png";
 import './Services.css';
-
+import InteriorImage from "../pictures/hero-1.jpg"; 
 // Add Laptop Icon SVG Component
 const LaptopIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5 lg:w-10 lg:h-10 text-[#A8C082]">
@@ -165,7 +165,7 @@ const services = [
 
 // Import the interior image
 // Note: You'll need to add this image to your project files
-import InteriorImage from "../pictures/hero-1.jpg"; 
+
 
 const Services = () => {
   const [modalOpen, setModalOpen] = useState(false);
