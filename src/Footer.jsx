@@ -74,6 +74,11 @@ const Footer = () => {
               </li>
               <li>
                 <a className="text-[rgba(113,113,113,1)] hover:text-gray-900 hover:underline" href="#">
+                 <Link to="/blog">Blog</Link> 
+                </a>
+              </li>
+              <li>
+                <a className="text-[rgba(113,113,113,1)] hover:text-gray-900 hover:underline" href="#">
                   <Link to="/contact">Contact</Link>
                 </a>
               </li>

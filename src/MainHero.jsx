@@ -6,7 +6,7 @@ import Shield from "./pictures/Shield-Done.png";
 import Activity from "./pictures/Activity.png";
 import Star from "./pictures/Star.png";
 import Brush from "./pictures/Brush.png";
-import "./MainHero.css";
+// import "./MainHero.css";
 import BadgeGrid from "./Badges"
 
 const MainHero = () => {
@@ -235,7 +235,7 @@ const MainHero = () => {
           animate="visible"
           variants={fadeIn}
         >
-          <div className="relative w-[650px] h-[529px]">
+          <div className="relative w-[700px] h-[500px]">
             {/* Pink background with rounded corners */}
             <div className="absolute inset-0 rounded-tl-[100px] rounded-br-[100px]"></div>
             
@@ -283,33 +283,33 @@ const MainHero = () => {
 
           {/* Badges Positioned on Image */}
           <motion.div 
-            className="absolute w-[284px] h-[109px] gap-2 bg-white rounded-[30px] flex items-center justify-center -left-28 top-11 z-20"
-            variants={badgeAnimation}
-          >
-            <img src={Shield} alt="Check Icon" className="w-12 h-14 text-[rgba(168,192,130,1)] lg:ml-2" />
-            <h1 className="font-['Raleway'] font-semibold text-[16px] text-gray-700 text-left ipad-pro:text-left">Safe <br /><span className="font-['Raleway'] font-medium text-[16px] text-[#2F2F2F]"> Non-Toxic & Pet-Friendly Cleaning Solutions</span></h1>
-          </motion.div>
+  className="absolute w-full sm:w-64 md:w-72 lg:w-[284px] h-auto min-h-[95px] md:min-h-[109px] gap-2 bg-white rounded-xl md:rounded-[30px] flex items-center justify-center left-0 -translate-x-1/2 sm:-translate-x-24 md:-translate-x-28 top-8 sm:top-11 z-20"
+  variants={badgeAnimation}
+>
+  <img src={Shield} alt="Check Icon" className="w-10 h-12 sm:w-12 sm:h-14 text-[rgba(168,192,130,1)] ml-1 sm:ml-2" />
+  <h1 className="font-['Raleway'] font-semibold text-sm sm:text-[16px] text-gray-700 text-left">Safe <br /><span className="font-['Raleway'] font-medium text-sm sm:text-[16px] text-[#2F2F2F]"> Non-Toxic & Pet-Friendly Cleaning Solutions</span></h1>
+</motion.div>
 
-          <motion.div 
-            className="absolute -left-28 top-80 w-[284px] h-[109px] bg-white rounded-[30px] flex items-center gap-2 justify-center z-20"
-            variants={badgeAnimation}
-          >
-            <img src={Activity} alt="Check Icon" className="w-12 h-13 text-[rgba(168,192,130,1)] lg:ml-2" />
-            <h1 className="font-['Raleway'] font-semibold text-[16px] text-gray-700 text-left ipad-pro:text-left">Reliable <br /><span className="font-['Raleway'] font-medium text-[16px] text-[#2F2F2F]"> Fully Insured & Bonded for Your Peace of Mind</span></h1>
-          </motion.div>
+<motion.div 
+  className="absolute left-0 -translate-x-1/2 sm:-translate-x-24 md:-translate-x-28 top-60 sm:top-80 w-full sm:w-64 md:w-72 lg:w-[284px] h-auto min-h-[95px] md:min-h-[109px] bg-white rounded-xl md:rounded-[30px] flex items-center gap-2 justify-center z-20"
+  variants={badgeAnimation}
+>
+  <img src={Activity} alt="Check Icon" className="w-10 h-11 sm:w-12 sm:h-13 text-[rgba(168,192,130,1)] ml-1 sm:ml-2" />
+  <h1 className="font-['Raleway'] font-semibold text-sm sm:text-[16px] text-gray-700 text-left">Reliable <br /><span className="font-['Raleway'] font-medium text-sm sm:text-[16px] text-[#2F2F2F]"> Fully Insured & Bonded for Your Peace of Mind</span></h1>
+</motion.div>
 
-          <motion.div 
-            className="w-[250px] h-[107px] absolute bg-white rounded-tl-[20px] rounded-bl-[20px] flex items-center justify-center top-16 z-20"
-            variants={badgeAnimation}
-          >
-            <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center ml-5">
-              <svg className="w-12 h-12 text-[rgba(168,192,130,1)]" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 15.5a3.5 3.5 0 100-7 3.5 3.5 0 000 7z" />
-                <path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65z" />
-              </svg>
-            </div>
-            <h1 className="font-['Raleway'] font-semibold text-[16px] text-gray-700 text-left ml-5">Trusted<br /><span className="font-['Raleway'] font-medium text-[16px] text-[#2F2F2F]">Eco-Friendly & Family-Owned</span></h1>
-          </motion.div>
+<motion.div 
+  className="w-full sm:w-60 md:w-[250px] h-auto min-h-[95px] md:min-h-[107px] absolute bg-white rounded-tl-xl md:rounded-tl-[20px] rounded-bl-xl md:rounded-bl-[20px] flex items-center justify-center top-12 sm:top-16 right-0 sm:right-auto z-20"
+  variants={badgeAnimation}
+>
+  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg flex items-center justify-center ml-3 sm:ml-5">
+    <svg className="w-10 h-10 sm:w-12 sm:h-12 text-[rgba(168,192,130,1)]" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 15.5a3.5 3.5 0 100-7 3.5 3.5 0 000 7z" />
+      <path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65z" />
+    </svg>
+  </div>
+  <h1 className="font-['Raleway'] font-semibold text-sm sm:text-[16px] text-gray-700 text-left ml-3 sm:ml-5">Trusted<br /><span className="font-['Raleway'] font-medium text-sm sm:text-[16px] text-[#2F2F2F]">Eco-Friendly & Family-Owned</span></h1>
+</motion.div>
         </motion.div>
       </div>
 
