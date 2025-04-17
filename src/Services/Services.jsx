@@ -249,8 +249,7 @@ const Services = () => {
 
         {/* Service Cards - 2x2 Grid Layout with reduced column spacing */}
         <div className="mt-16 sm:mt-16 md:mt-20 lg:mt-24">
-          <h3 className="font-['Raleway'] font-bold text-2xl sm:text-3xl text-gray-900 mb-8 text-center">
-            Our <span className="text-[rgba(168,192,130,1)]">Services</span>
+        <h3 className="font-['Raleway'] font-bold text-2xl sm:text-3xl text-gray-900 mb-4 mt-[-10px] text-center">            Our <span className="text-[rgba(168,192,130,1)]">Services</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-y-9 md:gap-x-6 laptop-padding">
             {/* First row */}
