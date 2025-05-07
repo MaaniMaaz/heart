@@ -1,7 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Ecologo from "./pictures/Ecologo.png";
+import { useNavigate } from "react-router-dom";
 
 const EcoFriendlyCleaning = () => {
+  // Initialize the navigate function
+const navigate = useNavigate();
+
+// Function to handle button click and redirect to contact page
+const handleContactRedirect = () => {
+  navigate('/contact'); // Redirect to contact page
+  window.scrollTo(0, 0); // Scroll to top of the page
+};
   // Changed to true by default to load video immediately when component mounts
   const [videoLoaded, setVideoLoaded] = useState(true);
   const containerRef = useRef(null);
@@ -66,7 +75,8 @@ const EcoFriendlyCleaning = () => {
               <button className="w-[90px] h-[25px] sm:w-[160px] sm:h-[36px] md:w-[200px] md:h-[44px] rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] 
                             bg-[rgba(168,192,130,1)] text-white 
                             font-['Raleway']font-semibold text-[9px] sm:text-xs md:text-sm lg:text-[16px] 
-                            flex justify-center items-center ipad-pro:pl-7">
+                            flex justify-center items-center ipad-pro:pl-7"  onClick={handleContactRedirect} // Add this line
+>
                 Get Your Free Estimate
               </button>
             </div>

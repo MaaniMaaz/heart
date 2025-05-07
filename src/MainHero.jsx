@@ -6,12 +6,19 @@ import Shield from "./pictures/Shield-Done.png";
 import Activity from "./pictures/Activity.png";
 import Star from "./pictures/Star.png";
 import Brush from "./pictures/Brush.png";
+import { useNavigate } from "react-router-dom";
+
 // import "./MainHero.css";
 import BadgeGrid from "./Badges"
 
 const MainHero = () => {
 
+  const navigate = useNavigate();
 
+  // Function to handle button click and redirect to contact page
+  const handleContactRedirect = () => {
+    navigate('/contact'); // Redirect to contact page
+  };
 
   // Animation variants
   const fadeIn = {
@@ -91,6 +98,8 @@ const MainHero = () => {
             variants={scaleIn}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={handleContactRedirect} // Add this line
+
           >
             Get Your Free Estimate
           </motion.button>
@@ -223,6 +232,8 @@ const MainHero = () => {
             variants={scaleIn}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={handleContactRedirect} // Add this line
+
           >
             Get Your Free Estimate
           </motion.button>

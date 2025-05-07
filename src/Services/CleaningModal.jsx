@@ -1,8 +1,15 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from "react-router-dom";
 
 const CleaningModal = ({ service, onClose }) => {
+  const navigate = useNavigate();
+
+  const handleContactRedirect = () => {
+    navigate('/contact'); // Redirect to contact page
+    window.scrollTo(0, 0); // Scroll to top of the page
+  };
   if (!service || !service.details) return null;
 
   return (
@@ -44,7 +51,8 @@ const CleaningModal = ({ service, onClose }) => {
             ))}
           </div>
           
-          <button className="w-full md:w-[232px] h-[46px] rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] bg-[rgba(168,192,130,1)] text-white font-semibold mt-4 hover:bg-[rgba(140,170,110,1)] transition-colors">
+          <button className="w-full md:w-[232px] h-[46px] rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] bg-[rgba(168,192,130,1)] text-white font-semibold mt-4 hover:bg-[rgba(140,170,110,1)] transition-colors"  onClick={handleContactRedirect} // Add this line
+          >
             Get Your Free Estimate
           </button>
         </div>

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import HomeIcon from "./pictures/home.png";
 import Cleaning from "./pictures/cleaning.png";
 import Box from "./pictures/Box.png";
+import { useNavigate } from "react-router-dom";
 
 // Added laptop icon SVG
 const LaptopIcon = () => (
@@ -45,6 +46,13 @@ const services = [
 ];
 
 const OurServices = () => {
+  const navigate = useNavigate();
+
+// Function to handle button click and redirect to contact page
+const handleContactRedirect = () => {
+  navigate('/contact'); // Redirect to contact page
+  window.scrollTo(0, 0); // Scroll to top of the page
+};
   // Animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
@@ -228,7 +236,8 @@ const OurServices = () => {
       >
         <button 
           className="bg-[rgba(168,192,130,1)] hover:bg-[#94a871] text-white font-['Raleway']font-bold py-4 px-8 rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] text-sm sm:text-xl transition-colors duration-300 hover:shadow-xl"
-        >
+          onClick={handleContactRedirect} // Add this line
+>
           Get a Free Quote Today!
         </button>
       </motion.div>

@@ -33,7 +33,7 @@ const Contact = () => {
                                 Get Your Free Estimate!
                             </h2>
                             <p className="text-sm text-left font-['Raleway'] font-[400]">
-                                Say something to start a live chat!
+                            
                             </p>
                         </div>
                         <div className="space-y-6 -mt-9 mb-8">
