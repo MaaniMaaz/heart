@@ -1,0 +1,346 @@
+{
+    "home": {
+        "hero": {
+            "mainTitle": "<green>Eco-Friendly<\/green> Cleaning Services",
+            "description": "Welcome to <green>Heart & Home Green Clean<\/green>, your trusted provider of eco-friendly house cleaning services in Arizona West Valley. We specialize in non-toxic, sustainable cleaning solutions that keep your home fresh, safe, and spotless. Whether you need routine cleaning, deep cleaning, or move-in\/move-out services, we're here to help.",
+            "buttonText": "Get Your Free Estimate",
+            "badges": [
+                {
+                    "title": "Safe",
+                    "description": "Non-Toxic & Pet-Friendly Cleaning Solutions"
+                },
+                {
+                    "title": "Trusted",
+                    "description": "Eco-Friendly & Family-Owned"
+                },
+                {
+                    "title": "Reliable",
+                    "description": "Fully Insured & Bonded for Your Peace of Mind"
+                }
+            ]
+        },
+        "services": {
+            "title": "Our Services",
+            "subtitle": "Eco-Friendly Cleaning, Trusted by Your Neighbors",
+            "whyChooseUs": {
+                "title": "Why Choose Us?",
+                "points": [
+                    "100% Eco-Friendly & Non-Toxic Products",
+                    "Safe for Kids & Pets",
+                    "Trusted Local Cleaning Professionals",
+                    "Flexible Scheduling & Competitive Pricing"
+                ]
+            },
+            "serviceCards": [
+                {
+                    "title": "Routine Cleaning",
+                    "description": "Keep your home fresh with our weekly, bi-weekly, or monthly cleaning plans."
+                },
+                {
+                    "title": "Deep Cleaning",
+                    "description": "A top-to-bottom clean, perfect for seasonal refreshes."
+                },
+                {
+                    "title": "Move In\/Move Out",
+                    "description": "Get your home ready for the next chapter."
+                },
+                {
+                    "title": "Office Cleaning",
+                    "description": "Maintain a healthy and spotless workspace."
+                }
+            ],
+            "buttonText": "Get a Free Quote Today!"
+        },
+        "greenClean": {
+            "title": "<green>Green Clean for a Healthier Home<\/green>",
+            "description": "At Heart & Home Green Clean, we believe that a clean home shouldn't come at the expense of your health or the environment. Our eco-conscious cleaning services provide a deep clean using plant-based, non-toxic products, ensuring a safe and chemical-free space for your family."
+        },
+        "ecoFriendly": {
+            "title": "ECO-FRIENDLY CLEANING WITH HEART.",
+            "buttonText": "Get Your Free Estimate"
+        },
+        "steps": {
+            "title": "3 Easy Steps To A <green>Cleaner, Healthier Home<\/green>",
+            "items": [
+                {
+                    "title": "Get Your Free Estimate",
+                    "description": "Simply fill out our easy estimate form or call us at <green>(480) 999-8018<\/green> to get your estimate and we will schedule your cleaning!"
+                },
+                {
+                    "title": "Our Professionals Will Clean Your Home",
+                    "description": "Our professional cleaners will arrive promptly to your home at the scheduled time to clean."
+                },
+                {
+                    "title": "Relax, We've Got the Cleaning Covered",
+                    "description": "Come back to a clean home and spend your time with those you love and doing what you love."
+                }
+            ]
+        },
+        "testimonials": [
+            {
+                "name": "Rebecca Moxie",
+                "text": "Consistent, friendly, and always do a thorough job. We have worked with CP Complete Care Cleaning for 3 years & they always make our home clean & refreshed. Highly recommended."
+            },
+            {
+                "name": "Todd Gartman",
+                "text": "Jessica, Chelsea and their team ensures that our home is cleaned with care when they visit. We appreciate them and the service they have given us."
+            },
+            {
+                "name": "Anita Regalado-Geddes",
+                "text": "Jessica, Chelsea, and Mikey are amazing! My house has never been so clean. Thank you for a great job!"
+            }
+        ],
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "items": [
+                {
+                    "question": "What areas do you serve?",
+                    "answer": "We proudly serve Arizona West Valley, including surrounding communities."
+                },
+                {
+                    "question": "Are your cleaning products safe for children and pets?",
+                    "answer": "Yes! We use 100% eco-friendly, non-toxic products that are safe for kids, pets, and allergy-sensitive households."
+                },
+                {
+                    "question": "How do I book a cleaning?",
+                    "answer": "You can schedule online, call\/text us at (480) 999-8018, or email us at info@heartandhomegreenclean.com."
+                }
+            ]
+        },
+        "estimateBanner": {
+            "title": "Get Your Free Estimate Now",
+            "buttonText": "Get Your Free Estimate"
+        }
+    },
+    "about": {
+        "header": {
+            "title": "Where Clean Meets <green>Green<\/green>",
+            "subtitle": "Our <pink>Commitment<\/pink> to You"
+        },
+        "intro": {
+            "title": "Heart & Home <green>Green Clean<\/green> is here for you.",
+            "paragraphs": [
+                "To us, cleaning is more than just a service we provide physically. It is also a gift of time.",
+                "Our goal is to enrich the lives of our clients and their families by providing residential and commercial cleaning and organizational services.",
+                "We believe that your time is valuable and pride ourselves on helping maximize it for you."
+            ]
+        },
+        "mission": {
+            "title": "Our Mission",
+            "content": "Our mission is to <green>deliver exceptional green cleaning services<\/green> that promote healthier homes and a cleaner planet. Our Core Purpose: To give people back their time and provide peace of mind."
+        },
+        "purpose": {
+            "title": "Our Core Purpose",
+            "content": "<pink>To give people back their time and provide peace of mind.<\/pink>"
+        },
+        "values": {
+            "title": "Our Core Values",
+            "items": [
+                {
+                    "number": "01",
+                    "color": "green",
+                    "title": "Expertise, Focus, & Growth Mindset",
+                    "description": "We are experts in our field, committed to continuous learning and improvement. We approach challenges with a problem-solving mindset, think critically, and always look for ways to grow and deliver the best solutions for our clients."
+                },
+                {
+                    "number": "02",
+                    "color": "pink",
+                    "title": "Reliability & Work Ethic",
+                    "description": "We take pride in our work, show up on time, follow through on commitments, and do what it takes to get the job done right."
+                },
+                {
+                    "number": "03",
+                    "color": "green",
+                    "title": "Initiative & Problem-Solving",
+                    "description": "We ask the right questions, think independently, and take proactive steps to solve problems. We don't wait for instructions\u2014we take ownership and find solutions."
+                },
+                {
+                    "number": "04",
+                    "color": "pink",
+                    "title": "Fun & Professional",
+                    "description": "We maintain a can-do attitude, ensuring we are easy to work with and adaptable to the needs of our clients and team. We approach every job with professionalism and without complaints."
+                }
+            ]
+        }
+    },
+    "services": {
+        "header": {
+            "mainHeading": "From Homes to Businesses,",
+            "subHeading": "We Clean with Care\u2014<green>Naturally!<\/green>"
+        },
+        "subheader": {
+            "title": "Your All In One Destination For <green>Green Clean<\/green>"
+        },
+        "experienceSection": {
+            "title": "Experience the <green>Difference<\/green>",
+            "paragraphs": [
+                "Our eco-friendly approach doesn't just clean your space\u2014It transforms it. We believe that a truly clean environment should feel fresh and natural, without harsh chemicals or artificial fragrances.",
+                "Using environmentally conscious products and methods, we create spaces that are not only spotless but also healthier for you, your family, your employees, and our planet."
+            ],
+            "features": [
+                "Eco-friendly Products",
+                "Allergen Reduction",
+                "Sustainable Practices"
+            ]
+        },
+        "servicesSection": {
+            "title": "Our <green>Services<\/green>",
+            "items": [
+                {
+                    "id": "routine",
+                    "title": "Routine Cleaning",
+                    "icon": "spray",
+                    "description": "We'll fight the mess for you. Our routine weekly, biweekly or monthly cleanings will keep your home tidy.",
+                    "details": {
+                        "sections": [
+                            {
+                                "title": "All rooms include:",
+                                "items": [
+                                    "Light dusting - furniture, fixtures, and appliances",
+                                    "Light tidy - bed, side tables, dresser",
+                                    "Wipe down and polish - furniture, fixtures, appliances",
+                                    "Vacuum\/mop - vacuum and\/or mop all areas",
+                                    "Garbage removal - bag replaced"
+                                ]
+                            },
+                            {
+                                "title": "Bathroomss:",
+                                "items": [
+                                    "ALL THINGS LISTED ABOVE +",
+                                    "Clean\/disinfect - shower, tub, and toilets",
+                                    "Wipe down - counters, mirrors, and sink"
+                                ]
+                            },
+                            {
+                                "title": "Kitchen:",
+                                "items": [
+                                    "ALL THINGS LISTED ABOVE +",
+                                    "Wipe down - stove top, oven door, sink, refrigerator door, dishwasher door, cabinets (as needed), microwave (inside and out)"
+                                ]
+                            },
+                            {
+                                "title": "Rotating\/As needed:",
+                                "items": [
+                                    "Dusting\/wiping vents, fans, baseboards, and inside of oven"
+                                ]
+                            },
+                            {
+                                "title": "Add-ons (additional fee):",
+                                "items": [
+                                    "Dishes",
+                                    "Extra tidying",
+                                    "Laundry"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "office",
+                    "title": "Office Cleaning",
+                    "icon": "computer",
+                    "description": "Maintain a healthy and spotless workspace.",
+                    "details": {
+                        "sections": [
+                            {
+                                "title": "Office Cleaning Services:",
+                                "items": [
+                                    "Dusting & Surface Cleaning \u2013 Wipe down desks, tables, shelves, and other surfaces",
+                                    "Trash & Recycling Removal \u2013 Empty all wastebaskets and recycling bins",
+                                    "Vacuuming & Floor Care \u2013 Vacuum carpets, rugs, and hard floors; mop as needed",
+                                    "Restroom Sanitization \u2013 Clean and disinfect sinks, toilets, mirrors, and countertops",
+                                    "Kitchen\/Break Room Cleaning \u2013 Sanitize countertops, sinks, and appliances",
+                                    "Glass & Mirror Cleaning \u2013 Spot-clean windows, glass partitions, and mirrors",
+                                    "High-Touch Surface Disinfection \u2013 Disinfect doorknobs, light switches, and shared equipment",
+                                    "Reception & Common Area Cleaning \u2013 Ensure lobbies and meeting areas are welcoming"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "deep",
+                    "title": "Deep Cleaning",
+                    "icon": "home",
+                    "description": "More than a routine cleaning, deep cleans leave dirt and grime nowhere to hide.",
+                    "details": {
+                        "sections": [
+                            {
+                                "title": "All rooms:",
+                                "items": [
+                                    "Heavy dusting - furniture, fixtures, appliances, ceiling fans, vents, window sills, and blinds",
+                                    "Wipe down - baseboards, walls (touch-up), doors, door handles, furniture, fixtures, appliances, and window sills",
+                                    "Vacuum\/mop - vacuum and\/or mop all areas"
+                                ]
+                            },
+                            {
+                                "title": "Bathrooms:",
+                                "items": [
+                                    "ALL THINGS LISTED ABOVE +",
+                                    "Clean\/disinfect - shower, tub, and toilets",
+                                    "Wipe down - counters, mirrors, cabinet doors (inside and out), and sink"
+                                ]
+                            },
+                            {
+                                "title": "Kitchen:",
+                                "items": [
+                                    "ALL THINGS LISTED ABOVE +",
+                                    "Wipe down - oven and microwave (inside and out), stove top, cabinet doors (inside and out), sinks, outside of refrigerator, outside of dishwasher"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "moveinout",
+                    "title": "Move In\/Move Out",
+                    "icon": "box",
+                    "description": "Your move is already stressful. We'll clean where you're leaving, where you're going, or both so you can enjoy your new home sooner.",
+                    "details": {
+                        "sections": [
+                            {
+                                "title": "All rooms:",
+                                "items": [
+                                    "Heavy dusting - furniture, fixtures, appliances, ceiling fans, vents, window sills, and blinds",
+                                    "Wipe down - baseboards, walls (touch-up), doors, door handles, furniture, fixtures, appliances, and window sills",
+                                    "Vacuum\/mop - vacuum and\/or mop all areas"
+                                ]
+                            },
+                            {
+                                "title": "Bathrooms:",
+                                "items": [
+                                    "ALL THINGS LISTED ABOVE +",
+                                    "Clean\/disinfect - shower, tub, and toilets",
+                                    "Wipe down - counters, mirrors, cabinet doors (inside and out), and sink"
+                                ]
+                            },
+                            {
+                                "title": "Kitchen:",
+                                "items": [
+                                    "ALL THINGS LISTED ABOVE +",
+                                    "Appliances - clean out refrigerator, oven, and microwave",
+                                    "Wipe down - counters, sink, cabinets, drawers, outside of appliances, behind and under appliances"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "contact": {
+        "header": {
+            "mainTitle": "Let's Make Your Space <green>Shine!<\/green>",
+            "subTitle": "Get a <pink>Free<\/pink> Quote Today!",
+            "description": "Have questions? Need a custom cleaning plan? We're here to help!"
+        },
+        "contactInfo": {
+            "title": "Get Your Free Estimate!",
+            "phone": "(480) 999-8018",
+            "email": "info@heartandhomegreenclean.com"
+        },
+        "locationSection": {
+            "title": "Our Location"
+        }
+    }
+}

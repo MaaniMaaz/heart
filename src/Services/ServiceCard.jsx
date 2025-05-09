@@ -1,5 +1,7 @@
+// src/Services/ServiceCard.jsx (Updated)
 import React from "react";
 import LinkArrow from "../pictures/LinkArrow.png";
+import FormattedText from "../components/common/FormattedText";
 
 const ServiceCard = ({ service, onClick }) => {
   return (
@@ -9,29 +11,29 @@ const ServiceCard = ({ service, onClick }) => {
     >
       {/* Icon Circle */}
       <div
-        className="absolute -top-6 -left-6 sm:-top-8 sm:-left-8 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white border-[4px] sm:border-[6px] rounded-full flex items-center justify-center shadow"
-        style={{ borderColor: "rgba(168, 192, 130, 1)" }}
-      >
-        {service.type === "image" ? (
-          <img
-            src={service.icon}
-            alt={service.title}
-            className="w-4 h-4 sm:w-5 sm:h-5 lg:w-10 lg:h-10 object-contain"
-          />
-        ) : (
-          <span className="text-[#A8C082] text-lg sm:text-xl lg:text-2xl">
-            {service.icon}
-          </span>
-        )}
-      </div>
+      className="absolute -top-6 -left-6 sm:-top-8 sm:-left-8 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white border-[4px] sm:border-[6px] rounded-full flex items-center justify-center shadow"
+      style={{ borderColor: "rgba(168, 192, 130, 1)" }}
+    >
+      {service.type === "image" && typeof service.icon === 'string' ? (
+        <img
+          src={service.icon}
+          alt={service.title}
+          className="w-4 h-4 sm:w-5 sm:h-5 lg:w-10 lg:h-10 object-contain"
+        />
+      ) : (
+        <span className="text-[#A8C082] text-lg sm:text-xl lg:text-2xl">
+          {service.icon}
+        </span>
+      )}
+    </div>
 
       {/* Card Content */}
       <div className="mt-6 sm:mt-4 lg:mt-2 flex-grow">
         <h3 className="font-['Raleway']text-xl sm:text-2xl lg:text-[36px] font-normal leading-snug lg:leading-[50px] tracking-[0%] text-[#717171] text-justify mt-4">
-          {service.title}
+          <FormattedText content={service.title} />
         </h3>
         <p className="font-['Raleway']text-xs sm:text-sm lg:text-[16px] font-normal leading-normal lg:leading-[20px] tracking-[0%] text-[#717171] mt-1 sm:mt-2 text-justify">
-          {service.description}
+          <FormattedText content={service.description} />
         </p>
       </div>
 

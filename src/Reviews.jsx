@@ -1,24 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Left from "./pictures/LeftArrow.png";
 import Right from "./pictures/RightArrow.png";
-
-const testimonials = [
-  {
-    name: "Rebecca Moxie",
-    review: "Consistent, friendly, and always do a thorough job. We have worked with CP Complete Care Cleaning for 3 years & they always make our home clean & refreshed. Highly recommend.",
-  },
-  {
-    name: "Todd Gartman",
-    review: "Jessica, Chelsea and their team ensures that our home is cleaned with care when they visit. We appreciate them and the service they give us.",
-  },
-  {
-    name: "Anita Regalado-Geddes",
-    review: "Jessica, Chelsea, and Mikey are amazing!My house has never been so clean.Thank you for a great job! ",
-  },
-];
+import { useContent } from './contexts/ContentContext';
+import FormattedText from './components/common/FormattedText';
 
 const Reviews = () => {
+  const { content, fetchContent } = useContent();
+  const testimonials = content?.home?.testimonials || [];
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (!content?.home?.testimonials) {
+      fetchContent('home', 'testimonials');
+    }
+  }, [content?.home?.testimonials, fetchContent]);
 
   const nextReview = () => {
     setCurrentIndex((prevIndex) =>
@@ -32,17 +27,22 @@ const Reviews = () => {
     );
   };
 
+  // Fallback if testimonials aren't loaded yet
+  if (!testimonials || testimonials.length === 0) {
+    return null;
+  }
+
   return (
     <div className="bg-[url('./pictures/reveiws-section.jpg')] bg-cover bg-center w-full py-16 md:py-12 px-4 md:px-6 relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <h3 className="font-['Raleway'] font-normal text-2xl sm:text-3xl md:text-4xl lg:text-[48px] tracking-normal mt-2 md:mt-4 text-left">
-          {testimonials[currentIndex].name}
+          <FormattedText content={testimonials[currentIndex]?.name || "Customer Review"} />
         </h3>
         
         {/* Fixed-height container with reduced height */}
         <div className="min-h-[100px] md:min-h-[120px] lg:min-h-[150px]">
           <p className="font-['Raleway'] text-base sm:text-lg md:text-xl lg:text-[28px] leading-normal md:leading-[50px] text-left text-gray-800 mt-2 md:mt-4">
-            "{testimonials[currentIndex].review}"
+            "<FormattedText content={testimonials[currentIndex]?.text || ""} />"
           </p>
         </div>
 

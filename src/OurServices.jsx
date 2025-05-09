@@ -1,11 +1,14 @@
-import React from "react";
+// src/OurServices.jsx (Updated)
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import HomeIcon from "./pictures/home.png";
 import Cleaning from "./pictures/cleaning.png";
 import Box from "./pictures/Box.png";
 import { useNavigate } from "react-router-dom";
+import { useContent } from './contexts/ContentContext';
+import FormattedText from './components/common/FormattedText';
 
-// Added laptop icon SVG
+// LaptopIcon component remains the same
 const LaptopIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5 lg:w-10 lg:h-10 text-[#A8C082]">
     <rect width="18" height="12" x="3" y="4" rx="2" ry="2" />
@@ -14,46 +17,102 @@ const LaptopIcon = () => (
   </svg>
 );
 
-const services = [
+// Default services data (fallback if content API fails)
+const defaultServices = [
   {
     title: "Routine Cleaning",
-    description:
-      "Keep your home fresh with our weekly, bi-weekly, or monthly cleaning plans.",
+    description: "Keep your home fresh with our weekly, bi-weekly, or monthly cleaning plans.",
     icon: Cleaning,
     type: "image",
   },
   {
     title: "Deep Cleaning",
-    description:
-      " A top-to-bottom clean, perfect for seasonal refreshes.",
+    description: "A top-to-bottom clean, perfect for seasonal refreshes.",
     icon: HomeIcon,
     type: "image",
   },
   {
     title: "Move In/Move Out",
-    description:
-      "Get your home ready for the next chapter.",
+    description: "Get your home ready for the next chapter.",
     icon: Box,
     type: "image",
   },
   {
-    title: "Office Cleaning ",
-    description:
-      "Maintain a healthy and spotless workspace.",
-    icon: <LaptopIcon />, // Changed from Box to LaptopIcon
-    type: "svg", // Changed from "image" to "svg"
+    title: "Office Cleaning",
+    description: "Maintain a healthy and spotless workspace.",
+    icon: <LaptopIcon />, 
+    type: "svg", 
   },
+];
+
+// Default Why Choose Us points (fallback if content API fails)
+const defaultWhyChooseUsPoints = [
+  {
+    icon: "shield",
+    text: "100% Eco-Friendly & Non-Toxic Products"
+  },
+  {
+    icon: "heart",
+    text: "Safe for Kids & Pets"
+  },
+  {
+    icon: "connection",
+    text: "Trusted Local Cleaning Professionals"
+  },
+  {
+    icon: "calendar",
+    text: "Flexible Scheduling & Competitive Pricing"
+  }
 ];
 
 const OurServices = () => {
   const navigate = useNavigate();
+  const { content, fetchContent } = useContent();
+  const servicesContent = content?.home?.services || {};
+  
+  useEffect(() => {
+    if (!content?.home?.services) {
+      fetchContent('home', 'services');
+    }
+  }, [content?.home?.services, fetchContent]);
 
-// Function to handle button click and redirect to contact page
-const handleContactRedirect = () => {
-  navigate('/contact'); // Redirect to contact page
-  window.scrollTo(0, 0); // Scroll to top of the page
-};
-  // Animation variants
+  // Function to render appropriate icon based on the point
+  const renderWhyChooseUsIcon = (iconName) => {
+    const icons = {
+      shield: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      ),
+      heart: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+        </svg>
+      ),
+      connection: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M20 7h-9"/>
+          <path d="M14 17H5"/>
+          <circle cx="17" cy="17" r="3"/>
+          <circle cx="7" cy="7" r="3"/>
+        </svg>
+      ),
+      calendar: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect width="18" height="18" x="3" y="3" rx="2"/>
+          <path d="M3 9h18"/>
+          <path d="M9 21V9"/>
+        </svg>
+      )
+    };
+    
+    return icons[iconName] || icons.shield; // Default to shield if icon not found
+  };
+
+  // Get Why Choose Us points - use default if not available
+  const whyChooseUsPoints = servicesContent?.whyChooseUs?.points || defaultWhyChooseUsPoints;
+  
+  // Animation variants remain the same
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
@@ -83,6 +142,14 @@ const handleContactRedirect = () => {
     }
   };
 
+  const handleContactRedirect = () => {
+    navigate('/contact');
+    window.scrollTo(0, 0);
+  };
+
+  // Get the service cards data - use default if not available
+  const serviceCards = servicesContent?.serviceCards || defaultServices;
+
   return (
     <div className="bg-white px-5 py-10 sm:px-6 sm:py-8 md:px-20 md:py-12">
       {/* Header Section */}
@@ -102,7 +169,7 @@ const handleContactRedirect = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            Our Services
+            <FormattedText content={servicesContent.title || "Our Services"} />
           </motion.h4>
           <motion.h2 
             className="font-['Raleway'] font-normal text-3xl sm:text-4xl lg:text-[48px] leading-tight lg:leading-[50px] text-gray-900 mt-2 text-left lg:mb-20 ipad-pro:text-[40px]"
@@ -111,11 +178,11 @@ const handleContactRedirect = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Eco-Friendly Cleaning, Trusted by Your Neighbors
+            <FormattedText content={servicesContent.subtitle || "Eco-Friendly Cleaning, Trusted by Your Neighbors"} />
           </motion.h2>
         </motion.div>
 
-        {/* Right: Why Choose Us - IMPROVED ALIGNMENT */}
+        {/* Right: Why Choose Us - PRESERVED STRUCTURE */}
         <motion.div 
           className="mt-6 md:mt-20 lg:ml-0 xl:ml-16 bg-gray-50 rounded-lg p-6 shadow-sm border border-gray-100 w-full max-w-none"
           initial={{ opacity: 0, y: 20 }}
@@ -123,46 +190,25 @@ const handleContactRedirect = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           viewport={{ once: true, amount: 0.6 }}
         >
-          <h3 className="font-['Raleway'] font-semibold text-xl mb-5 text-gray-800 border-b border-gray-200 pb-2">Why Choose Us?</h3>
+          <h3 className="font-['Raleway'] font-semibold text-xl mb-5 text-gray-800 border-b border-gray-200 pb-2">
+            <FormattedText content={servicesContent?.whyChooseUs?.title || "Why Choose Us?"} />
+          </h3>
           <ul className="font-['Raleway'] text-sm sm:text-[15px] font-normal space-y-4">
-            <li className="flex items-start">
+          {defaultWhyChooseUsPoints.map((point, index) => (
+            <li key={index} className="flex items-start">
               <span className="text-[#A8C082] mr-3 mt-1 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                </svg>
+                {renderWhyChooseUsIcon(point.icon)}
               </span>
-              <span className="text-gray-700 leading-tight">100% Eco-Friendly & Non-Toxic Products</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#A8C082] mr-3 mt-1 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg>
+              <span className="text-gray-700 leading-tight">
+                {/* Safely pass content */}
+                {whyChooseUsPoints[index] ? 
+                  <FormattedText content={whyChooseUsPoints[index]} /> : 
+                  point.text
+                }
               </span>
-              <span className="text-gray-700 leading-tight">Safe for Kids & Pets</span>
             </li>
-            <li className="flex items-start">
-              <span className="text-[#A8C082] mr-3 mt-1 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M20 7h-9"/>
-                  <path d="M14 17H5"/>
-                  <circle cx="17" cy="17" r="3"/>
-                  <circle cx="7" cy="7" r="3"/>
-                </svg>
-              </span>
-              <span className="text-gray-700 leading-tight">Trusted Local Cleaning Professionals</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#A8C082] mr-3 mt-1 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect width="18" height="18" x="3" y="3" rx="2"/>
-                  <path d="M3 9h18"/>
-                  <path d="M9 21V9"/>
-                </svg>
-              </span>
-              <span className="text-gray-700 leading-tight">Flexible Scheduling & Competitive Pricing</span>
-            </li>
-          </ul>
+          ))}
+        </ul>
         </motion.div>
       </div>
 
@@ -174,7 +220,7 @@ const handleContactRedirect = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
       >
-        {services.map((service, index) => (
+        {defaultServices.map((service, index) => (
           <motion.div
             key={index}
             className="relative w-full max-w-[320px] sm:max-w-[398px] h-auto min-h-[180px] sm:min-h-[209px] border-[4px] sm:border-[6px] rounded-[16px] sm:rounded-[20px] bg-gray-50 shadow-sm p-5 sm:p-6 mx-auto"
@@ -195,7 +241,7 @@ const handleContactRedirect = () => {
               {service.type === "image" ? (
                 <img
                   src={service.icon}
-                  alt={service.title}
+                  alt={serviceCards[index]?.title || service.title}
                   className="w-4 h-4 sm:w-5 sm:h-5 lg:w-10 lg:h-10 object-contain"
                 />
               ) : (
@@ -208,12 +254,12 @@ const handleContactRedirect = () => {
             {/* Card Content */}
             <div className="mt-6 sm:mt-4 lg:mt-2">
               <motion.h3 
-                className="font-['Raleway'] text-xl sm:text-2xl lg:text-[29px]  font-normal leading-snug lg:leading-[50px] tracking-[0%] text-[#717171] text-left mt-4"
+                className="font-['Raleway'] text-xl sm:text-2xl lg:text-[29px] font-normal leading-snug lg:leading-[50px] tracking-[0%] text-[#717171] text-left mt-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.5 + index * 0.1 }}
               >
-                {service.title}
+                <FormattedText content={serviceCards[index]?.title || service.title} />
               </motion.h3>
               <motion.p 
                 className="font-['Raleway'] text-xs sm:text-sm lg:text-[20px] font-normal leading-normal lg:leading-[20px] tracking-[0%] text-[#717171] mt-1 sm:mt-2 text-left"
@@ -221,7 +267,7 @@ const handleContactRedirect = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
               >
-                {service.description}
+                <FormattedText content={serviceCards[index]?.description || service.description} />
               </motion.p>
             </div>
           </motion.div>
@@ -236,9 +282,9 @@ const handleContactRedirect = () => {
       >
         <button 
           className="bg-[rgba(168,192,130,1)] hover:bg-[#94a871] text-white font-['Raleway']font-bold py-4 px-8 rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] text-sm sm:text-xl transition-colors duration-300 hover:shadow-xl"
-          onClick={handleContactRedirect} // Add this line
->
-          Get a Free Quote Today!
+          onClick={handleContactRedirect}
+        >
+          <FormattedText content={servicesContent.buttonText || "Get a Free Quote Today!"} />
         </button>
       </motion.div>
     </div>

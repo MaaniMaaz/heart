@@ -1,13 +1,45 @@
+// src/Steps.jsx (Updated)
 import React, { useEffect } from "react";
 import Dollar from "./pictures/Doll.png";
 import Bad from "./pictures/bad.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBroom } from '@fortawesome/free-solid-svg-icons';
-import { faStar } from '@fortawesome/free-regular-svg-icons'
+import { faStar } from '@fortawesome/free-regular-svg-icons';
 import TopArrow from "./pictures/TopArrow.png";
 import BottomArrow from "./pictures/BottomArrow.png";
+import { useContent } from './contexts/ContentContext';
+import FormattedText from './components/common/FormattedText';
+
+// Define default steps in case API fails
+const defaultSteps = [
+  {
+    title: "Get Your Free Estimate",
+    description: "Simply fill out our easy estimate form or call us at (480) 999-8018 to get your estimate and we will schedule your cleaning!",
+    icon: "dollar"
+  },
+  {
+    title: "Our Professionals Will Clean Your Home",
+    description: "Our professional cleaners will arrive promptly to your home at the scheduled time to clean.",
+    icon: "broom"
+  },
+  {
+    title: "Relax, We've Got the Cleaning Covered",
+    description: "Come back to a clean home and spend your time with those you love and doing what you love.",
+    icon: "star"
+  }
+];
 
 const CleanHomeSteps = () => {
+  const { content, fetchContent } = useContent();
+  const stepsContent = content?.home?.steps || {};
+  const stepsItems = stepsContent?.items || defaultSteps;
+
+  useEffect(() => {
+    if (!content?.home?.steps) {
+      fetchContent('home', 'steps');
+    }
+  }, [content?.home?.steps, fetchContent]);
+
   useEffect(() => {
     // Set up Intersection Observer to trigger animations when elements are visible
     const observerOptions = {
@@ -36,10 +68,38 @@ const CleanHomeSteps = () => {
     };
   }, []);
 
+  // Function to render the appropriate icon
+  const renderIcon = (iconType) => {
+    switch(iconType) {
+      case "dollar":
+        return <img src={Dollar} alt="Estimate" className="w-12 floating" />;
+      case "broom":
+        return <FontAwesomeIcon icon={faBroom} className="w-12 h-12 text-white floating" />;
+      case "star":
+      default:
+        return (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="48"  
+            height="48" 
+            fill="none"
+            stroke="white"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="floating"
+          >
+            <path d="m12 3l-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275zM5 3v4m14 10v4M3 5h4m10 14h4" />
+          </svg>
+        );
+    }
+  };
+
   return (
     <div className="flex flex-col items-center text-center bg-pink-50 py-12 px-4">
       {/* CSS Animations */}
-      <style jsx>{`
+      <style jsx="true">{`
         /* Animation classes */
         .animate-on-scroll {
           opacity: 0;
@@ -89,57 +149,29 @@ const CleanHomeSteps = () => {
       `}</style>
 
       <h2 className="font-['Raleway'] font-normal text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight md:leading-[50px] tracking-normal text-center text-gray-800 mb-[80px] animate-on-scroll">
-        3 Easy Steps To A <span className="text-[rgba(168,192,130,1)]">Cleaner, Healthier Home</span>
-
+        <FormattedText content={stepsContent.title || "3 Easy Steps To A Cleaner, Healthier Home"} />
       </h2>
+      
       <div className="flex flex-col md:flex-row items-center justify-center gap-20 max-w-4xl mb-3">
-        {/* Step 1 */}
-        <div className="flex flex-col items-center max-w-xs animate-on-scroll step-1">
-          <div className="bg-[rgba(222,157,157,1)] w-[100px] p-6 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mb-4 top-[237px] left-[282px] pulse-on-hover">
-            <img src={Dollar} alt="Estimate" className="w-12 floating" />
-          </div>
-          <h3 className="font-['Raleway'] font-semibold text-base leading-[100%] tracking-normal text-center capitalize text-gray-500">Get Your Free Estimate</h3>
-          <p className="font-['Raleway'] font-light text-sm leading-6 tracking-normal text-[#423D3D] mt-2">
-            Simply fill out our easy estimate form or call us at 
-            <a href="tel:4809998018" className="text-[#DE9D9D] font-medium transition-colors duration-300 hover:text-[#c77e7e]"> (480) 999-8018 </a> 
-             to get your estimate and we will schedule your cleaning!
-          </p>
-        </div>
-        
-        {/* Step 2 */}
-        <div className="flex flex-col items-center max-w-xs animate-on-scroll step-2">
-          <div className="bg-[rgba(222,157,157,1)] w-[100px] p-6 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mb-4 top-[237px] left-[282px] pulse-on-hover">
-            <FontAwesomeIcon icon={faBroom} className="w-12 h-12 text-white floating" />
-          </div>
-          <h3 className="font-dm-sans font-semibold text-base leading-[100%] tracking-normal capitalize text-gray-500">Our Professionals Will Clean Your Home</h3>
-          <p className="font-['Raleway'] font-light text-sm leading-6 tracking-normal text-[#423D3D] mt-2">
-            Our professional cleaners will arrive promptly to your home at the scheduled time to clean.
-          </p>
-        </div>
-        
-        {/* Step 3 */}
-        <div className="flex flex-col items-center max-w-xs animate-on-scroll step-3">
-        <div className="bg-[rgba(222,157,157,1)] w-[100px] p-6 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mb-4 top-[237px] left-[282px] pulse-on-hover">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    width="48"  
-    height="48" 
-    fill="none"
-    stroke="white"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className="floating"
-  >
-    <path d="m12 3l-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275zM5 3v4m14 10v4M3 5h4m10 14h4" />
-  </svg>
-</div>
-<h3 className="font-dm-sans font-semibold text-base leading-[100%] tracking-normal capitalize text-gray-500">Relax, We've Got the Cleaning Covered</h3>
-<p className="font-['Raleway'] font-light text-sm leading-6 tracking-normal text-[#423D3D] mt-2">
-  Come back to a clean home and spend your time with those you love and doing what you love.
-</p>
-        </div>
+        {/* Always render 3 steps, using default if necessary */}
+        {defaultSteps.map((step, index) => {
+          // Get content data from API, fallback to default if not available
+          const stepData = stepsItems[index] || step;
+          
+          return (
+            <div key={index} className={`flex flex-col items-center max-w-xs animate-on-scroll step-${index + 1}`}>
+              <div className="bg-[rgba(222,157,157,1)] w-[100px] p-6 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mb-4 top-[237px] left-[282px] pulse-on-hover">
+                {renderIcon(step.icon)}
+              </div>
+              <h3 className="font-['Raleway'] font-semibold text-base leading-[100%] tracking-normal text-center capitalize text-gray-500">
+                <FormattedText content={stepData.title} />
+              </h3>
+              <p className="font-['Raleway'] font-light text-sm leading-6 tracking-normal text-[#423D3D] mt-2">
+                <FormattedText content={stepData.description} />
+              </p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

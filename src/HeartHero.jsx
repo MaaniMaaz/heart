@@ -1,7 +1,18 @@
 import React, { useEffect } from 'react';
 import DandS from "./pictures/D.JPG";
+import { useContent } from './contexts/ContentContext';
+import FormattedText from './components/common/FormattedText';
 
 const HeartHero = () => {
+  const { content, fetchContent } = useContent();
+  const greenCleanContent = content?.home?.greenClean || {};
+
+  useEffect(() => {
+    if (!content?.home?.greenClean) {
+      fetchContent('home', 'greenClean');
+    }
+  }, [content?.home?.greenClean, fetchContent]);
+
   useEffect(() => {
     // Set up Intersection Observer to detect when elements enter viewport
     const observerOptions = {
@@ -55,7 +66,7 @@ const HeartHero = () => {
   return (
 <div className="bg-[rgba(251,246,243,1)] flex justify-center px-4 sm:px-6 lg:px-8 py-20">
 {/* Add animation style tags */}
-      <style jsx>{`
+      <style jsx="true">{`
         @keyframes fadeInLeft {
           from {
             opacity: 0;
@@ -128,25 +139,13 @@ const HeartHero = () => {
         {/* Text Content - Fully Responsive */}
         <div className="w-full md:w-1/2 space-y-4 md:space-y-6 text-center md:text-left">
           <h1 className="font-['Raleway'] font-normal text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight md:leading-[50px] tracking-normal text-gray-800 title-animate">
-           {' '}
-            <span className="text-[rgba(168,192,130,1)] font-bold block md:inline relative">
-              Green Clean
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[rgba(168,192,130,1)] transition-all duration-1000 group-hover:w-full"></span>
-            </span>{' '}
-             for a Healthier Home
-
+            <FormattedText content={greenCleanContent.title || "Green Clean for a Healthier Home"} />
           </h1>
           
           <div className="space-y-4">
             <p className="font-['Raleway'] font-light text-base sm:text-lg md:text-xl lg:text-[20px] leading-relaxed md:leading-[25px] tracking-normal text-[rgba(113,113,113,1)] paragraph-animate" data-index="0">
-            At Heart & Home Green Clean, we believe that a clean home shouldn’t come at the expense of your health or the environment. Our eco-conscious cleaning services provide a deep clean using plant-based, non-toxic products, ensuring a safe and chemical-free space for your family.
+              <FormattedText content={greenCleanContent.description || "At Heart & Home Green Clean, we believe that a clean home shouldn't come at the expense of your health or the environment. Our eco-conscious cleaning services provide a deep clean using plant-based, non-toxic products, ensuring a safe and chemical-free space for your family."} />
             </p>
-            {/* <p className="font-['Raleway'] font-light text-base sm:text-lg md:text-xl lg:text-[20px] leading-relaxed md:leading-[25px] tracking-normal text-[rgba(113,113,113,1)] paragraph-animate" data-index="1">
-              Our goal is to enrich the lives of our clients and their families by providing residential and commercial cleaning and organizational services.
-            </p>
-            <p className="font-['Raleway'] font-light text-base sm:text-lg md:text-xl lg:text-[20px] leading-relaxed md:leading-[25px] tracking-normal text-[rgba(113,113,113,1)] paragraph-animate" data-index="2">
-              We believe that your time is valuable and pride ourselves on helping maximize it for you.
-            </p> */}
           </div>
         </div>
       </div>

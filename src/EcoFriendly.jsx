@@ -1,19 +1,27 @@
+// src/EcoFriendly.jsx (Updated)
 import React, { useState, useRef, useEffect } from 'react';
 import Ecologo from "./pictures/Ecologo.png";
 import { useNavigate } from "react-router-dom";
+import { useContent } from './contexts/ContentContext';
+import FormattedText from './components/common/FormattedText';
 
 const EcoFriendlyCleaning = () => {
-  // Initialize the navigate function
-const navigate = useNavigate();
-
-// Function to handle button click and redirect to contact page
-const handleContactRedirect = () => {
-  navigate('/contact'); // Redirect to contact page
-  window.scrollTo(0, 0); // Scroll to top of the page
-};
-  // Changed to true by default to load video immediately when component mounts
+  const navigate = useNavigate();
+  const { content, fetchContent } = useContent();
+  const ecoFriendlyContent = content?.home?.ecoFriendly || {};
   const [videoLoaded, setVideoLoaded] = useState(true);
   const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (!content?.home?.ecoFriendly) {
+      fetchContent('home', 'ecoFriendly');
+    }
+  }, [content?.home?.ecoFriendly, fetchContent]);
+
+  const handleContactRedirect = () => {
+    navigate('/contact');
+    window.scrollTo(0, 0);
+  };
 
   return (
     <div ref={containerRef} className="bg-white flex items-center justify-center py-8 md:py-16 lg:py-0 lg:min-h-screen ipad-pro:min-h-[55vh]">
@@ -57,27 +65,25 @@ const handleContactRedirect = () => {
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         </div>
         
-        {/* Mobile positioning uses absolute distance from left instead of percentage */}
-        <div className="absolute top-1/2 sm:left-[20%] transform -translate-y-1/2 sm:-translate-x-1/2 z-10 pl-3 sm:pl-0 ">
-          <div>
-            <h1 className="font-['Raleway'] font-bold text-[18px] sm:text-3xl md:text-[2rem] lg:text-5xl leading-tight tracking-normal text-left text-[#f5b7b7] ipad-pro:pl-7" 
+        {/* Fixed position for text content - IMPROVED ALIGNMENT */}
+        <div className="absolute top-1/2 left-[15%] sm:left-[15%] transform -translate-y-1/2 z-10">
+          <div className="text-left max-w-[450px]">
+            <h1 className="font-['Raleway'] font-bold text-[28px] sm:text-3xl md:text-[2.5rem] lg:text-5xl leading-tight tracking-normal text-[#f5b7b7]" 
                 style={{ 
                   textShadow: '2px 2px 4px rgba(0,0,0,0.2)',
                   letterSpacing: '0.5px'
                 }}>
-              ECO-FRIENDLY<br />
-              CLEANING WITH
-              <br></br>
-              HEART.
+              <FormattedText content={ecoFriendlyContent.title || "ECO-FRIENDLY\nCLEANING WITH\nHEART."} />
             </h1>
-            <div className="mt-2 sm:mt-6">
-              {/* Also increased button text size for mobile */}
-              <button className="w-[90px] h-[25px] sm:w-[160px] sm:h-[36px] md:w-[200px] md:h-[44px] rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] 
-                            bg-[rgba(168,192,130,1)] text-white 
-                            font-['Raleway']font-semibold text-[9px] sm:text-xs md:text-sm lg:text-[16px] 
-                            flex justify-center items-center ipad-pro:pl-7"  onClick={handleContactRedirect} // Add this line
->
-                Get Your Free Estimate
+            <div className="mt-4 sm:mt-6">
+              <button 
+                className="w-[180px] h-[45px] sm:w-[200px] sm:h-[46px] md:w-[220px] md:h-[48px] rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] 
+                bg-[rgba(168,192,130,1)] text-white 
+                font-['Raleway'] font-semibold text-[14px] sm:text-[16px] md:text-[16px] lg:text-[18px] 
+                flex justify-center items-center hover:bg-[rgba(145,170,105,1)] transition-colors duration-300"
+                onClick={handleContactRedirect}
+              >
+                <FormattedText content={ecoFriendlyContent.buttonText || "Get Your Free Estimate"} />
               </button>
             </div>
           </div>

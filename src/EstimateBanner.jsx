@@ -1,11 +1,24 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+import { useContent } from './contexts/ContentContext';
+import FormattedText from './components/common/FormattedText';
+
 const EstimateBanner = () => {
+  const { content, fetchContent } = useContent();
+  const bannerContent = content?.home?.estimateBanner || {};
   const navigate = useNavigate();
+  
+  useEffect(() => {
+    if (!content?.home?.estimateBanner) {
+      fetchContent('home', 'estimateBanner');
+    }
+  }, [content?.home?.estimateBanner, fetchContent]);
+  
   const handleContactRedirect = () => {
     navigate('/contact'); // Redirect to contact page
     window.scrollTo(0, 0); // Scroll to top of the page
   };
+  
   useEffect(() => {
     // Set up Intersection Observer to trigger animations when element is visible
     const observerOptions = {
@@ -48,7 +61,7 @@ const EstimateBanner = () => {
       className="bg-[url('./pictures/banner.jpg')] bg-no-repeat bg-cover bg-center w-full py-8 md:py-12 px-4 md:px-6 overflow-hidden min-h-[300px] md:min-h-[500px] flex items-center mt-3"
     >
       {/* CSS Animations */}
-      <style jsx>{`
+      <style jsx="true">{`
         /* Title animation */
         .banner-title {
           opacity: 0;
@@ -99,11 +112,13 @@ const EstimateBanner = () => {
       
       <div className="relative z-10 text-white container mx-auto px-4 md:pl-[157px]">
         <h2 className="font-['Raleway'] font-bold text-[32px] md:text-[60px] leading-[35px] md:leading-[60px] tracking-normal mb-4 md:mb-6 text-left banner-title">
-          Get Your Free Estimate <br className="hidden md:block"/> Now
+          <FormattedText content={bannerContent.title || "Get Your Free Estimate Now"} />
         </h2>
-        <button className="w-[190px] md:w-[232px] h-[40px] md:h-[46px] rounded-tr-[15px] md:rounded-tr-[20px] rounded-br-[8px] md:rounded-br-[10px] rounded-bl-[15px] md:rounded-bl-[20px] bg-white text-black hover:bg-gray-100 font-bold text-base font-['Raleway'] md:text-lg transition duration-300 flex items-center justify-center mt-6 md:mt-12 banner-button"   onClick={handleContactRedirect} // Add this line
+        <button 
+          className="w-[190px] md:w-[232px] h-[40px] md:h-[46px] rounded-tr-[15px] md:rounded-tr-[20px] rounded-br-[8px] md:rounded-br-[10px] rounded-bl-[15px] md:rounded-bl-[20px] bg-white text-black hover:bg-gray-100 font-bold text-base font-['Raleway'] md:text-lg transition duration-300 flex items-center justify-center mt-6 md:mt-12 banner-button"
+          onClick={handleContactRedirect}
         >
-          Get Your Free Estimate
+          {bannerContent.buttonText || "Get Your Free Estimate"}
         </button>
       </div>
     </div>
