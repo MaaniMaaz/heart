@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
+import { ArrowLeft } from 'lucide-react';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -27,8 +28,21 @@ const Login = () => {
     }
   };
 
+  const handleBack = () => {
+    navigate('/');
+  };
+
   return (
     <div className="min-h-screen bg-[rgba(251,246,243,1)] flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      {/* Back Button - Fixed Position */}
+      <button
+        onClick={handleBack}
+        className="absolute top-4 left-4 sm:top-8 sm:left-8 flex items-center gap-2 text-gray-600 hover:text-[rgba(168,192,130,1)] transition-colors duration-300 font-['Raleway']"
+      >
+        <ArrowLeft className="w-5 h-5" />
+        <span>Back to Website</span>
+      </button>
+
       <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow-lg">
         <div>
           <h2 className="mt-6 text-center text-3xl font-bold font-['Raleway'] text-gray-900">

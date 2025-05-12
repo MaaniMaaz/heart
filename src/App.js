@@ -22,7 +22,7 @@ import ServicesEditor from './components/Admin/ServicesEditor';
 import BlogListing from '../src/Blog/BlogListing';
 import Blog from '../src/Blog/Blog';
 
-// Import Admin Components
+//Admin imports
 import { AuthProvider } from './contexts/AuthContext';
 import { ContentProvider } from './contexts/ContentContext';
 import Login from './components/Admin/Login';
@@ -32,6 +32,9 @@ import Dashboard from './components/Admin/Dashboard';
 import HomeEditor from './components/Admin/HomeEditor';
 import AboutEditor from './components/Admin/AboutEditor';
 import ContactEditor from './components/Admin/ContactEditor';
+import FooterEditor from './components/Admin/FooterEditor';
+import BlogEditor from './components/Admin/BlogEditor';
+import BlogPostEditor from './components/Admin/BlogPostEditor';
 
 function App() {
   return (
@@ -104,7 +107,9 @@ function App() {
                   <Route path='about' element={<AboutEditor />} />
                   <Route path='services' element={<ServicesEditor />} />
                   <Route path='contact' element={<ContactEditor />} />
-                  <Route path='blog' element={<div>Blog Management (Coming Soon)</div>} />
+                  <Route path='footer' element={<FooterEditor />} />
+                  <Route path='blog' element={<BlogEditor />} />
+                  <Route path='blog-post/:blogId' element={<BlogPostEditor />} />
                 </Route>
               </Route>
             </Routes>

@@ -2,6 +2,40 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowLeft, FaCalendarAlt, FaShare, FaBookmark, FaRegBookmark } from 'react-icons/fa';
+import { useContent } from '../contexts/ContentContext';
+
+// Helper function to process content before rendering
+const processContent = (content) => {
+  if (!content) return '';
+  
+  // If content is already a string, return it
+  if (typeof content === 'string') return content;
+  
+  // Process arrays (formatted content from API)
+  if (Array.isArray(content)) {
+    return content.map((item, index) => {
+      if (typeof item === 'string') return item;
+      
+      // Process green and pink tags
+      if (item?.type === 'green' && item?.text) {
+        return `<span class="text-[rgba(168,192,130,1)]">${item.text}</span>`;
+      }
+      
+      if (item?.type === 'pink' && item?.text) {
+        return `<span class="text-[rgba(255,174,174,1)]">${item.text}</span>`;
+      }
+      
+      return '';
+    }).join('');
+  }
+  
+  // Handle object format (may happen in some cases)
+  if (typeof content === 'object') {
+    return JSON.stringify(content);
+  }
+  
+  return String(content);
+};
 
 const Blog = () => {
   const { blogId } = useParams();
@@ -10,6 +44,8 @@ const Blog = () => {
   const [loading, setLoading] = useState(true);
   const [bookmarked, setBookmarked] = useState(false);
   const [readingProgress, setReadingProgress] = useState(0);
+  
+  const { content, fetchContent } = useContent();
 
   // Track scroll progress for reading indicator
   useEffect(() => {
@@ -24,11 +60,24 @@ const Blog = () => {
     return () => window.removeEventListener('scroll', scrollListener);
   }, []);
 
-  // Blog data - mocked for all 9 blogs
   useEffect(() => {
-    // Simulate API fetch
+    // Fetch blog content if not already loaded
+    if (!content?.blog?.posts) {
+      fetchContent('blog');
+    }
+    
+    // Simulate API fetch with a short delay
     setTimeout(() => {
-      // Create data for all 9 blogs
+      if (content?.blog?.posts) {
+        const numericBlogId = parseInt(blogId, 10);
+        
+        // Find the blog with matching ID instead of using array index
+        const fetchedBlog = content.blog.posts.find(post => post.id === numericBlogId);
+        
+        setBlog(fetchedBlog || null);
+        setLoading(false);
+      } else {
+        // Fallback to original mock data if ContentContext not loaded yet
       const blogData = {
         1: {
           id: 1,
@@ -1157,15 +1206,16 @@ const Blog = () => {
       };
       
       // Convert blogId to a number since URL parameters are strings
-      const numericBlogId = parseInt(blogId, 10);
-      
-      // Get the blog data for the requested ID, or default to "not found"
-      const fetchedBlog = blogData[numericBlogId] || null;
-      
-      setBlog(fetchedBlog);
-      setLoading(false);
+        const numericBlogId = parseInt(blogId, 10);
+        
+        // Get the blog data for the requested ID, or default to "not found"
+        const fetchedBlog = blogData[numericBlogId] || null;
+        
+        setBlog(fetchedBlog);
+        setLoading(false);
+      }
     }, 1000);
-  }, [blogId]); // Now properly using blogId to get the correct blog data
+  }, [blogId, content?.blog?.posts, fetchContent]);
 
   if (loading) {
     return (
@@ -1231,16 +1281,16 @@ const Blog = () => {
       
       {/* Back button */}
       <div className="sticky top-0 z-30 bg-[rgba(255,174,174,0.95)] backdrop-blur-sm pt-4 pb-3 px-4 border-b border-[rgba(255,174,174,0.7)] shadow-sm">
-  <div className="container mx-auto max-w-3xl">
-    <button
-      onClick={() => navigate('/blog')}
-      className="inline-flex items-center text-white hover:text-gray-100 font-medium transition-all duration-200"
-    >
-      <FaArrowLeft className="mr-2 text-sm" /> 
-      <span>Back to Blogs</span>
-    </button>
-  </div>
-</div>
+        <div className="container mx-auto max-w-3xl">
+          <button
+            onClick={() => navigate('/blog')}
+            className="inline-flex items-center text-white hover:text-gray-100 font-medium transition-all duration-200"
+          >
+            <FaArrowLeft className="mr-2 text-sm" /> 
+            <span>Back to Blogs</span>
+          </button>
+        </div>
+      </div>
       
       <div className="container mx-auto max-w-3xl px-4">
         {/* Article Header */}
@@ -1274,7 +1324,7 @@ const Blog = () => {
         >
           <div className="p-6 sm:p-8">
             <div 
-              dangerouslySetInnerHTML={{ __html: blog.content }} 
+              dangerouslySetInnerHTML={{ __html: processContent(blog.content) }} 
               className="prose prose-slate max-w-none article-content"
             />
           </div>
@@ -1341,7 +1391,7 @@ const Blog = () => {
           text-align: left;
         }
         
-        .article-content li::before {
+        .article-content ul li::before {
           content: '';
           position: absolute;
           left: 0;
@@ -1350,6 +1400,27 @@ const Blog = () => {
           height: 0.4rem;
           background-color: #666;
           border-radius: 50%;
+        }
+        
+        /* Fix for ordered lists */
+        .article-content ol {
+          list-style-type: decimal;
+          margin-left: 1.5rem;
+          margin-bottom: 1.75rem;
+          text-align: left;
+        }
+        
+        .article-content ol li {
+          margin-bottom: 0.75rem;
+          line-height: 1.7;
+          position: relative;
+          padding-left: 0.5rem;
+          text-align: left;
+        }
+        
+        /* Override the bullet styles for ol li */
+        .article-content ol li::before {
+          display: none;
         }
         
         .article-content a {

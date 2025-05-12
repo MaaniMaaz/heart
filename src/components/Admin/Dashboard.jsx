@@ -31,6 +31,15 @@ const Dashboard = () => {
         <p className="text-gray-600 mb-4">Update contact page content and information.</p>
         <a href="/admin/contact" className="text-[rgba(255,174,174,1)] hover:underline">Edit Content →</a>
       </div>
+
+      
+        <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-[rgba(255,174,174,1)]">
+          <h3 className="text-lg font-semibold mb-2">Blog</h3>
+          <p className="text-gray-600 mb-4">Manage your blog content, posts, and articles.</p>
+          <a href="/admin/blog" className="text-[rgba(255,174,174,1)] hover:underline">Edit Content →</a>
+        </div>
+
+      
       </div>
     </div>
   );

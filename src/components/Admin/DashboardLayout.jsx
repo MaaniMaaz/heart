@@ -73,6 +73,15 @@ const DashboardLayout = () => {
                 Edit Request Quote Page
               </Link>
             </li>
+            <li>
+              <Link 
+                to="/admin/blog" 
+                className="block px-4 py-2 rounded-lg text-gray-700 hover:bg-[rgba(168,192,130,0.1)] hover:text-[rgba(168,192,130,1)]"
+              >
+                Edit Blog
+              </Link>
+            </li>
+            
             </ul>
           </nav>
         </div>
