@@ -118,6 +118,100 @@ function updateContent($page, $data, $section = null) {
 }
 
 /**
+ * Process a single string for formatting tags
+ * 
+ * @param string $text The text to process
+ * @return array|string The processed content
+ */
+function processStringFormatting($text) {
+    // If no special tags, return as is
+    if (strpos($text, '<green>') === false && 
+        strpos($text, '<pink>') === false && 
+        strpos($text, '<strong>') === false) {
+        return $text;
+    }
+    
+    $result = [];
+    $currentPos = 0;
+    $textLength = strlen($text);
+    
+    while ($currentPos < $textLength) {
+        // Find the next tag
+        $nextGreen = strpos($text, '<green>', $currentPos);
+        $nextPink = strpos($text, '<pink>', $currentPos);
+        $nextStrong = strpos($text, '<strong>', $currentPos);
+        
+        // Find the earliest tag
+        $nextTag = null;
+        $nextPos = $textLength;
+        $tagType = null;
+        
+        if ($nextGreen !== false && $nextGreen < $nextPos) {
+            $nextPos = $nextGreen;
+            $tagType = 'green';
+            $nextTag = '<green>';
+        }
+        
+        if ($nextPink !== false && $nextPink < $nextPos) {
+            $nextPos = $nextPink;
+            $tagType = 'pink';
+            $nextTag = '<pink>';
+        }
+        
+        if ($nextStrong !== false && $nextStrong < $nextPos) {
+            $nextPos = $nextStrong;
+            $tagType = 'strong';
+            $nextTag = '<strong>';
+        }
+        
+        // Add text before the tag
+        if ($nextPos > $currentPos) {
+            $beforeText = substr($text, $currentPos, $nextPos - $currentPos);
+            if (!empty($beforeText)) {
+                $result[] = $beforeText;
+            }
+        }
+        
+        // If no more tags, break
+        if ($tagType === null) {
+            break;
+        }
+        
+        // Find the closing tag
+        $closeTag = '</' . $tagType . '>';
+        $closePos = strpos($text, $closeTag, $nextPos);
+        
+        if ($closePos === false) {
+            // No closing tag found, treat as regular text
+            $result[] = substr($text, $nextPos);
+            break;
+        }
+        
+        // Extract content between tags
+        $tagContent = substr($text, $nextPos + strlen($nextTag), $closePos - $nextPos - strlen($nextTag));
+        
+        // Recursively process the content inside the tags
+        $processedContent = processStringFormatting($tagContent);
+        
+        // Add the formatted content
+        $result[] = [
+            'type' => $tagType,
+            'text' => $processedContent
+        ];
+        
+        // Move past the closing tag
+        $currentPos = $closePos + strlen($closeTag);
+    }
+    
+    // If we only have one plain text element, return it as string
+    if (count($result) === 1 && is_string($result[0])) {
+        return $result[0];
+    }
+    
+    return $result;
+}
+
+/**
  * Process special formatting tags in content
  * 
  * @param array $content The content to process
@@ -134,90 +228,7 @@ function processContentFormatting($content) {
         if (is_array($value)) {
             $result[$key] = processContentFormatting($value);
         } else if (is_string($value)) {
-            // Check if the string contains green or pink tags
-            if ((strpos($value, '<green>') !== false && strpos($value, '</green>') !== false) ||
-                (strpos($value, '<pink>') !== false && strpos($value, '</pink>') !== false)) {
-                
-                // Create arrays to store matches for both tag types
-                $greenMatches = [];
-                $pinkMatches = [];
-                
-                // Extract green-tagged content
-                preg_match_all('/<green>(.*?)<\/green>/s', $value, $greenMatches);
-                
-                // Extract pink-tagged content
-                preg_match_all('/<pink>(.*?)<\/pink>/s', $value, $pinkMatches);
-                
-                // Start with regular text parts split by both green and pink tags
-                $parts = preg_split('/<green>.*?<\/green>|<pink>.*?<\/pink>/s', $value);
-                $formatted = [];
-                
-                // Combine green matches
-                $allTags = [];
-                $allTypes = [];
-                
-                // Process green tags
-                if (!empty($greenMatches[0])) {
-                    foreach ($greenMatches[1] as $match) {
-                        $allTags[] = $match;
-                        $allTypes[] = 'green';
-                    }
-                }
-                
-                // Process pink tags
-                if (!empty($pinkMatches[0])) {
-                    foreach ($pinkMatches[1] as $match) {
-                        $allTags[] = $match;
-                        $allTypes[] = 'pink';
-                    }
-                }
-                
-                // If we have any formatted tags
-                if (!empty($allTags)) {
-                    // Find the original positions to sort them correctly
-                    $positions = [];
-                    $tagIndex = 0;
-                    
-                    // Find positions of green tags
-                    foreach ($greenMatches[0] as $match) {
-                        $pos = strpos($value, $match);
-                        $positions[] = ['pos' => $pos, 'index' => $tagIndex++, 'type' => 'green'];
-                    }
-                    
-                    // Find positions of pink tags
-                    foreach ($pinkMatches[0] as $match) {
-                        $pos = strpos($value, $match);
-                        $positions[] = ['pos' => $pos, 'index' => $tagIndex++, 'type' => 'pink'];
-                    }
-                    
-                    // Sort by position in the original string
-                    usort($positions, function($a, $b) {
-                        return $a['pos'] - $b['pos'];
-                    });
-                    
-                    // Build the parts array alternating between regular text and formatted text
-                    for ($i = 0; $i < count($parts); $i++) {
-                        if (!empty($parts[$i])) {
-                            $formatted[] = $parts[$i];
-                        }
-                        
-                        if (isset($positions[$i])) {
-                            $idx = $positions[$i]['index'];
-                            $type = $positions[$i]['type'];
-                            $formatted[] = [
-                                'type' => $type,
-                                'text' => $allTags[$idx]
-                            ];
-                        }
-                    }
-                    
-                    $result[$key] = $formatted;
-                } else {
-                    $result[$key] = $value;
-                }
-            } else {
-                $result[$key] = $value;
-            }
+            $result[$key] = processStringFormatting($value);
         } else {
             $result[$key] = $value;
         }

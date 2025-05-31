@@ -12,66 +12,86 @@ const FormattedText = ({ content, className = '' }) => {
     return <span className={className}>{content}</span>;
   }
   
-  // Process string content with green and pink tags
+  // Process string content with green, pink, and strong tags
   if (typeof content === 'string') {
     // If no special tags, return as is
-    if (!content.includes('<green>') && !content.includes('<pink>')) {
+    if (!content.includes('<green>') && !content.includes('<pink>') && !content.includes('<strong>')) {
       return <span className={className}>{content}</span>;
     }
     
-    // Process both types of tags
+    // Define tag configurations
+    const tagConfigs = [
+      {
+        openTag: '<green>',
+        closeTag: '</green>',
+        type: 'green',
+        className: 'text-[rgba(168,192,130,1)]'
+      },
+      {
+        openTag: '<pink>',
+        closeTag: '</pink>',
+        type: 'pink',
+        className: 'text-[rgba(255,174,174,1)]'
+      },
+      {
+        openTag: '<strong>',
+        closeTag: '</strong>',
+        type: 'strong',
+        className: 'font-bold'
+      }
+    ];
+    
     const parts = [];
     let lastIndex = 0;
-    let startTag, endTag, tagType;
     
     // Find and process all special tags
     while (true) {
-      const greenStart = content.indexOf('<green>', lastIndex);
-      const pinkStart = content.indexOf('<pink>', lastIndex);
+      let earliestTag = null;
+      let earliestIndex = content.length;
       
-      // Determine which tag comes first (if any)
-      if (greenStart === -1 && pinkStart === -1) {
-        break; // No more tags
+      // Find the earliest occurring tag
+      tagConfigs.forEach(config => {
+        const index = content.indexOf(config.openTag, lastIndex);
+        if (index !== -1 && index < earliestIndex) {
+          earliestIndex = index;
+          earliestTag = config;
+        }
+      });
+      
+      // If no more tags found, break
+      if (!earliestTag) {
+        break;
       }
       
-      if (greenStart !== -1 && (pinkStart === -1 || greenStart < pinkStart)) {
-        // Process green tag
-        startTag = greenStart;
-        tagType = 'green';
-        endTag = content.indexOf('</green>', startTag);
-        if (endTag === -1) break; // No closing tag
-      } else {
-        // Process pink tag
-        startTag = pinkStart;
-        tagType = 'pink';
-        endTag = content.indexOf('</pink>', startTag);
-        if (endTag === -1) break; // No closing tag
+      // Find the closing tag
+      const closeIndex = content.indexOf(earliestTag.closeTag, earliestIndex);
+      if (closeIndex === -1) {
+        break; // No closing tag found
       }
       
-      // Add text before tag
-      if (startTag > lastIndex) {
-        parts.push(content.substring(lastIndex, startTag));
+      // Add text before the tag
+      if (earliestIndex > lastIndex) {
+        parts.push(content.substring(lastIndex, earliestIndex));
       }
       
       // Extract the tagged text
-      const tagLength = tagType === 'green' ? '<green>'.length : '<pink>'.length;
-      const taggedText = content.substring(startTag + tagLength, endTag);
+      const taggedText = content.substring(
+        earliestIndex + earliestTag.openTag.length, 
+        closeIndex
+      );
       
-      // Add styled text
+      // Add styled text - handle nested tags by recursively processing
       parts.push(
         <span 
-          key={startTag} 
-          className={tagType === 'green' 
-            ? "text-[rgba(168,192,130,1)]" 
-            : "text-[rgba(255,174,174,1)]"}
+          key={earliestIndex} 
+          className={earliestTag.className}
         >
-          {taggedText}
+          <FormattedText content={taggedText} />
         </span>
       );
       
       // Update position
-      const closingTagLength = tagType === 'green' ? '</green>'.length : '</pink>'.length;
-      lastIndex = endTag + closingTagLength;
+      lastIndex = closeIndex + earliestTag.closeTag.length;
     }
     
     // Add any remaining text
@@ -88,16 +108,32 @@ const FormattedText = ({ content, className = '' }) => {
       <span className={className}>
         {content.map((item, index) => {
           if (typeof item === 'string') {
-            return <React.Fragment key={index}>{item}</React.Fragment>;
+            return <FormattedText key={index} content={item} />;
           }
           
           if (item && typeof item === 'object') {
             if (item.type === 'green' && 'text' in item) {
-              return <span key={index} className="text-[rgba(168,192,130,1)]">{item.text}</span>;
+              return (
+                <span key={index} className="text-[rgba(168,192,130,1)]">
+                  <FormattedText content={item.text} />
+                </span>
+              );
             }
             
             if (item.type === 'pink' && 'text' in item) {
-              return <span key={index} className="text-[rgba(255,174,174,1)]">{item.text}</span>;
+              return (
+                <span key={index} className="text-[rgba(255,174,174,1)]">
+                  <FormattedText content={item.text} />
+                </span>
+              );
+            }
+            
+            if (item.type === 'strong' && 'text' in item) {
+              return (
+                <span key={index} className="font-bold">
+                  <FormattedText content={item.text} />
+                </span>
+              );
             }
           }
           
@@ -111,12 +147,29 @@ const FormattedText = ({ content, className = '' }) => {
   if (typeof content === 'object' && content !== null) {
     // If it's a green formatted object
     if (content.type === 'green' && 'text' in content) {
-      return <span className={`text-[rgba(168,192,130,1)] ${className}`}>{content.text}</span>;
+      return (
+        <span className={`text-[rgba(168,192,130,1)] ${className}`}>
+          <FormattedText content={content.text} />
+        </span>
+      );
     }
     
     // If it's a pink formatted object
     if (content.type === 'pink' && 'text' in content) {
-      return <span className={`text-[rgba(255,174,174,1)] ${className}`}>{content.text}</span>;
+      return (
+        <span className={`text-[rgba(255,174,174,1)] ${className}`}>
+          <FormattedText content={content.text} />
+        </span>
+      );
+    }
+    
+    // If it's a strong formatted object
+    if (content.type === 'strong' && 'text' in content) {
+      return (
+        <span className={`font-bold ${className}`}>
+          <FormattedText content={content.text} />
+        </span>
+      );
     }
     
     // For other object types, stringify safely

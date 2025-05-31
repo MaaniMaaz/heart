@@ -134,19 +134,22 @@ const Services = () => {
       {/* Header Section */}
       <div className="bg-[rgba(251,246,243,1)] flex items-center justify-center lg:min-h-60 min-h-5">
       <div className="text-center">
-        <p className="font-bold text-xl md:text-2xl lg:text-5xl font-['Raleway'] leading-tight mb-8"> {/* Added mb-4 for spacing */}
-          <FormattedText content={headerContent.mainHeading || "From Homes to Businesses,"} />
+        <p className="font-bold text-xl md:text-2xl lg:text-5xl font-['Raleway'] leading-tight mb-2">
+          <FormattedText content={headerContent.mainHeading || "From Homes to Businesses, We"} />
         </p>
-        <p className="font-bold text-xl md:text-2xl lg:text-4xl font-['Raleway'] leading-tight lg:mb-14">
-          <FormattedText content={headerContent.subHeading || "We Clean with Care—<green>Naturally!</green>"} />
+        <p className="font-bold text-xl md:text-2xl lg:text-5xl font-['Raleway'] leading-tight lg:mb-14">
+          <FormattedText content={headerContent.subHeading || "Clean with Care—<green>Naturally!</green>"} />
         </p>
       </div>
-    </div>
+      </div>
 
       {/* Subheader Section */}
       <div className="bg-white px-5 py-10 sm:px-6 sm:py-8 md:px-10 lg:px-20 text-center">
+        <h2 className="font-['Raleway'] font-bold text-2xl sm:text-3xl lg:text-5xl xl:text-4xl mb-2">
+          Your All In One Destination
+        </h2>
         <h2 className="font-['Raleway'] font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-4xl mb-8">
-          <FormattedText content={subheaderContent.title || "Your All In One Destination For Green Clean"} />
+          For <span className="text-[rgba(168,192,130,1)]">Green Clean</span>
         </h2>
       </div>
 

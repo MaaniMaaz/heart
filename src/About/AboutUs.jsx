@@ -94,7 +94,7 @@ const About = () => {
               </p>
             </div>
 
-            {/* Core Purpose Section */}
+            {/* Core Purpose Section
             <div className="text-center mb-14">
               <h2 className="font-['Raleway'] font-bold text-3xl sm:text-4xl md:text-5xl mb-8 text-gray-800">
                 <FormattedText content={aboutContent?.purpose?.title || "Our Core Purpose"} />
@@ -102,7 +102,7 @@ const About = () => {
               <p className="font-['Raleway'] text-xl md:text-2xl text-[rgba(113,113,113,1)] max-w-3xl mx-auto font-medium">
                 <FormattedText content={aboutContent?.purpose?.content || "To give people back their time and provide peace of mind."} />
               </p>
-            </div>
+            </div> */}
 
           {/* Core Values Section */}
           <div className="relative py-20">
