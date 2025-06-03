@@ -1,7 +1,7 @@
 {
     "home": {
         "hero": {
-            "mainTitle": "<green>Eco Friendly<\/green><pink> Cleaning Services<\/pink> in Arizona West Valley",
+            "mainTitle": "<green>Eco-Friendly<\/green> Cleaning Services in Arizona West Valley",
             "description": "Welcome to <green>Heart & Home Green Clean<\/green>, your trusted provider of eco-friendly house cleaning services in Arizona West Valley. We specialize in non-toxic, sustainable cleaning solutions that keep your home fresh, safe, and spotless. Whether you need routine cleaning, deep cleaning, or move-in\/move-out services, we're here to help.",
             "buttonText": "Get Your Free Estimate",
             "badges": [
@@ -56,7 +56,7 @@
             "description": "At Heart & Home Green Clean, we believe that a clean home shouldn't come at the expense of your health or the environment. Our eco-conscious cleaning services provide a deep clean using plant-based, non-toxic products, ensuring a safe and chemical-free space for your family."
         },
         "ecoFriendly": {
-            "title": "ECO-FRIENDLY CLEANING WITH HEART.",
+            "title": "ECO-FRIENDLY  CLEANING WITH HEART.",
             "buttonText": "Get Your Free Estimate"
         },
         "steps": {
@@ -204,7 +204,7 @@
                                 ]
                             },
                             {
-                                "title": "Bathroomss:",
+                                "title": "Bathrooms:",
                                 "items": [
                                     "ALL THINGS LISTED ABOVE +",
                                     "Clean\/disinfect - shower, tub, and toilets",

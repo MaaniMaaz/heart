@@ -66,20 +66,21 @@ const EcoFriendlyCleaning = () => {
         </div>
         
         {/* Fixed position for text content - IMPROVED ALIGNMENT */}
-        <div className="absolute top-1/2 left-[15%] sm:left-[15%] transform -translate-y-1/2 z-10">
+        <div className="absolute top-1/2 left-[2%] sm:left-[5%] transform -translate-y-1/2 z-10">
           <div className="text-left max-w-[450px]">
-            <h1 className="font-['Raleway'] font-bold text-[28px] sm:text-3xl md:text-[2.5rem] lg:text-5xl leading-tight tracking-normal text-[#f5b7b7]" 
+            <h1 className="font-['Raleway'] font-bold text-[18px] sm:text-3xl md:text-[2.5rem] lg:text-5xl leading-tight tracking-normal text-[#f5b7b7]" 
                 style={{ 
                   textShadow: '2px 2px 4px rgba(0,0,0,0.2)',
                   letterSpacing: '0.5px'
                 }}>
               <FormattedText content={ecoFriendlyContent.title || "ECO-FRIENDLY\nCLEANING WITH\nHEART."} />
+
             </h1>
             <div className="mt-4 sm:mt-6">
               <button 
-                className="w-[180px] h-[45px] sm:w-[200px] sm:h-[46px] md:w-[220px] md:h-[48px] rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] 
+                className="w-[120px] h-[38px] sm:w-[200px] sm:h-[46px] md:w-[220px] md:h-[48px] rounded-tr-[20px] rounded-br-[10px] rounded-bl-[20px] 
                 bg-[rgba(168,192,130,1)] text-white 
-                font-['Raleway'] font-semibold text-[14px] sm:text-[16px] md:text-[16px] lg:text-[18px] 
+                font-['Raleway'] font-semibold text-[10px] sm:text-[16px] md:text-[16px] lg:text-[18px] 
                 flex justify-center items-center hover:bg-[rgba(145,170,105,1)] transition-colors duration-300"
                 onClick={handleContactRedirect}
               >

@@ -187,7 +187,7 @@ const Services = () => {
               </>
             }
             
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2">
               {experienceContent.features ? 
                 experienceContent.features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-2">

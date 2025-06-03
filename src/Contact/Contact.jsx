@@ -53,19 +53,19 @@ const Contact = () => {
                         </div>
                         <div className="space-y-6 -mt-9 mb-8">
                             <div className="flex items-center">
-                                <FaPhone className="mr-3" />
+                                <FaPhone className="mr-3 " />
                                 <span className="font-['Raleway'] font-[400] text-[16px]">
                                     <FormattedText content={contactInfoContent.phone || "(480) 999-8018"} />
                                 </span>
                             </div>
                             <div className="flex items-center">
-                                <FaEnvelope className="mr-3" />
-                                <span className="font-['Raleway'] font-[400] text-[16px]">
+                            <FaEnvelope className="mr-3" style={{ width: '20px', height: '20px', minWidth: '20px' }} />
+                            <span className="font-['Raleway'] font-[400] text-[16px]">
                                     <FormattedText content={contactInfoContent.email || "info@heartandhomegreenclean.com"} />
                                 </span>
                             </div>
                         </div>
-                        <div className="absolute lg:bottom-8 bottom-4 left-8 flex space-x-4">
+                        <div className="absolute lg:bottom-8 bottom-4 left-7 flex space-x-4">
                             <a href="https://www.facebook.com/heartandhomegreenclean" className="bg-black bg-opacity-20 p-2 rounded-full cursor-pointer">
                                 <FaFacebook className="text-white" />
                             </a>

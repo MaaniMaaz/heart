@@ -1,4 +1,4 @@
-// src/components/common/FormattedText.jsx
+// src/components/common/FormattedText.jsx (Updated with newline support)
 import React from 'react';
 
 const FormattedText = ({ content, className = '' }) => {
@@ -12,11 +12,22 @@ const FormattedText = ({ content, className = '' }) => {
     return <span className={className}>{content}</span>;
   }
   
-  // Process string content with green, pink, and strong tags
+  // Process string content with green, pink, strong tags, and newlines
   if (typeof content === 'string') {
-    // If no special tags, return as is
+    // First, split by newlines and process each part
+    const processWithNewlines = (text) => {
+      const lines = text.split('\n');
+      return lines.map((line, index) => (
+        <React.Fragment key={index}>
+          {line}
+          {index < lines.length - 1 && <br />}
+        </React.Fragment>
+      ));
+    };
+    
+    // If no special tags, just handle newlines
     if (!content.includes('<green>') && !content.includes('<pink>') && !content.includes('<strong>')) {
-      return <span className={className}>{content}</span>;
+      return <span className={className}>{processWithNewlines(content)}</span>;
     }
     
     // Define tag configurations
@@ -69,9 +80,10 @@ const FormattedText = ({ content, className = '' }) => {
         break; // No closing tag found
       }
       
-      // Add text before the tag
+      // Add text before the tag (with newline processing)
       if (earliestIndex > lastIndex) {
-        parts.push(content.substring(lastIndex, earliestIndex));
+        const beforeText = content.substring(lastIndex, earliestIndex);
+        parts.push(processWithNewlines(beforeText));
       }
       
       // Extract the tagged text
@@ -94,9 +106,10 @@ const FormattedText = ({ content, className = '' }) => {
       lastIndex = closeIndex + earliestTag.closeTag.length;
     }
     
-    // Add any remaining text
+    // Add any remaining text (with newline processing)
     if (lastIndex < content.length) {
-      parts.push(content.substring(lastIndex));
+      const remainingText = content.substring(lastIndex);
+      parts.push(processWithNewlines(remainingText));
     }
     
     return <span className={className}>{parts}</span>;
