@@ -2,7 +2,7 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
 
 // API URL - Change to your PHP server address
-const API_URL = 'http://localhost:8000/api';
+const API_URL = 'https://heartandhomegreenclean.com/api';
 
 // Default content to use if the API fails
 const DEFAULT_CONTENT = {
